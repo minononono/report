@@ -7,13 +7,10 @@ all:$(TARGET).pdf
 
 %.pdf:%.dvi
 	dvipdfmx $<
-	open $@
+	-open $@
 
 %.dvi:%.tex $(SRC)
 	for i in `seq 1 $(CNT)`; do platex $<; done
-
-copy:
-	cp $(SRC:%= $(DROPBOX)/%) .
 
 image:
 	cp -r $(DROPBOX)/figure .
