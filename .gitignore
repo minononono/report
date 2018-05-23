@@ -20,6 +20,8 @@ figure
 *.dvi
 *.out
 *.600pk
+*.600gf
+*.t1
 *.mf
 *.tfm
 *.pdf
