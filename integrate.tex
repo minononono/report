@@ -1,0 +1,62 @@
+\documentclass[titlepage]{jsarticle}
+
+\usepackage{here}
+\usepackage{array,booktabs} %表のためのarray環境
+%数式用パッケージ
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage{cases}
+\usepackage{bm}
+\usepackage{colortbl}
+\usepackage{float}
+\usepackage{subcaption}
+%ファインマングラフ用パッケージ
+\usepackage{feynmf}
+%ハイパーリンクの設定
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{
+  colorlinks=false, % リンクに色をつけない設定
+  bookmarks=true, % 以下ブックマークに関する設定
+  bookmarksnumbered=true,
+  pdfborder={0 0 0},
+  bookmarkstype=toc
+}
+
+\newcommand{\Slash}[1]{{\ooalign{\hfil/\hfil\crcr\(#1\)}}}
+\newcommand{\figref}[1]{\figurename\ref{#1}}
+\newcommand{\tabref}[1]{\tablename\ref{#1}}
+
+%\graphicspath{{./figure/}}
+
+\begin{document}
+%title
+\title{課題研究P2\\J-PARC MLF  のミューオンビームを用いた\\ミューオン崩壊に関する諸量の測定}
+\author{阿部倫史，池満拓司，小田川高大，田島正規\\羽田野真友喜，早川龍，三野裕哉}
+\date{\today}
+\maketitle
+%目次
+\tableofcontents
+\newpage
+%
+\include{report_abe}
+\include{hayakawa_1st}
+\include{tajima_1st}
+\include{report_ike}
+\include{odagawa_1st}
+\include{mino_1st}
+\include{hatano_1st}
+\newpage
+%Appendix
+\appendix
+\include{lifetime}
+%参考文献
+\begin{thebibliography}{99} 
+\bibitem{magnet} 加速器用超伝導磁石 - KEK (\url{http://accwww2.kek.jp/oho/OHO\%20text\%20archives\%202005-2011/OHO11\%20web\%20final/OHO11\%20ogitsu\%2020110906.pdf}) 
+\bibitem{leo} W.R.Leo (1994) Techniques for Nuclear and Particle Physics Experiments:Springer-Verlag
+\bibitem{Mandl} Franz Mandl and Graham Show (2010) Quantum Field Theory 2nd Edition:Wiley
+\end{thebibliography} 
+
+\end{document}

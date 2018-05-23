@@ -1,0 +1,301 @@
+%\documentclass[]{jsarticle}
+
+%\usepackage[dvipdfmx]{graphicx}
+%\usepackage{mathtools}
+%\usepackage{cancel}
+%\usepackage{amsmath,amssymb}
+%\usepackage{cases}
+%\usepackage{bm}
+
+%\usepackage{feynmf}
+
+%\newcommand{\Slash}[1]{{\ooalign{\hfil/\hfil\crcr\(#1\)}}}
+
+%\begin{document}
+
+%\appendix
+\section{$\mu^{+}$ の崩壊寿命の理論}%\cite{}三野(一部小田川が修正)
+
+\begin{align}
+\mathcal{M} = &-g_{W}^2\left[\Bar{u}(\bm{q_{1}})\gamma^{\alpha}(1 - \gamma_{5})v(\bm{p'})\right]
+\frac{-(-g_{\alpha\beta} + k_{\alpha}k_{\beta}/m_{W}^2)}{k^{2} - m_{W}^2 + i\epsilon}\left[\Bar{v}(\bm{p})\gamma^{\beta}(1 - \gamma_5)v(\bm{q_{2}})\right]
+\end{align}
+%
+$m_{W}^2$ が$k^2$ にくらべて十分大きいとし，$m_{W} \rightarrow \infty$ の極限をとると，
+%
+\begin{align}
+\mathcal{M} = &-\frac{iG}{\sqrt{2}}\left[\Bar{u}(\bm{q_{1}})\gamma^{\alpha}(1 - \gamma_{5})v(\bm{p'})\right]
+\left[\Bar{v}(\bm{p})\gamma_{\alpha}(1 - \gamma_5)v(\bm{q_{2}})\right]
+\end{align}
+%
+ミューオンの微分崩壊幅は次の式から得られる．
+%
+\begin{align}
+d\Gamma = (2\pi)^{4}\delta^{(4)}(p'+q_{1}+q_{2}-p)\frac{m_{\mu}m_{e}m_{\nu_{e}}m_{\nu_{\mu}}}{E}\times\frac{1}{(2\pi)^9}\frac{d^3\bm{p'}}{E'}
+\frac{d^3\bm{q_{1}}}{E_{1}}\frac{d^3\bm{q_{2}}}{E_{2}}|\mathcal{M}|^{2}\label{eq:decay}
+\end{align}
+%
+全崩壊幅を計算するために始状態のスピンについて平均をとり、終状態のスピンについて和をとる．
+\[\Gamma^{\alpha}=\gamma^{\alpha}(1 - \gamma_{5})\]
+%
+とおき、エネルギー射影演算子
+$\begin{dcases}
+\Delta^{+}_{\alpha\beta}(\bm{p})=\sum_{r=1}^{2}u_{r\alpha}(\bm{p})\bar{u}_{r\beta}(\bm{p})=\left(\frac{\Slash{p}+m}{2m}\right)_{\alpha\beta}\\
+\Delta^{-}_{\alpha\beta}(\bm{p})=-\sum_{r=1}^{2}v_{r\alpha}(\bm{p})\bar{v}_{r\beta}(\bm{p})=\left(\frac{-\Slash{p}+m}{2m}\right)_{\alpha\beta}
+\end{dcases}$
+を用いると
+%
+\begin{align}
+m_{\mu}m_{e}m_{\nu_{e}}m_{\nu_{\mu}}\frac{1}{2}\sum_\mathrm{spins}|\mathcal{M}|^{2}
+&=m_{\mu}m_{e}m_{\nu_{e}}m_{\nu_{\mu}}\frac{G^{2}}{4}\sum_\mathrm{spins}\left[\Bar{u}(\bm{q_{1}})\Gamma^{\alpha}v(\bm{p'})\right]\left[\Bar{v}(\bm{p})\Gamma_{\alpha}v(\bm{q_{2}})\right]
+\left[\Bar{v}(\bm{q_{2}})\Gamma_{\beta}v(\bm{p})\right]\left[\Bar{v}(\bm{p'})\Gamma^{\beta}u(\bm{q_{1}})\right]\notag\\
+&=m_{\mu}m_{e}m_{\nu_{e}}m_{\nu_{\mu}}\frac{G^{2}}{4}\sum_{r=1}^2\sum_{r'=1}^2\sum_{r_1=1}^2\sum_{r_2=1}^2\notag\\
+&\qquad\left[\Bar{u}_{r_{1}a}(\bm{q_{1}})\Gamma_{ab}^{\alpha}v_{r'b}(\bm{p'})\right]\left[\Bar{v}_{rc}(\bm{p})\Gamma_{\alpha cd}v_{r_{2}d}(\bm{q_{2}})\right]
+\left[\Bar{v}_{r_{2}e}(\bm{q_{2}})\Gamma_{\beta ef}v_{rf}(\bm{p})\right]\left[\Bar{v}_{r'g}(\bm{p'})\Gamma_{gh}^{\beta}u_{r_{1}h}(\bm{q_{1}})\right]\notag\\
+&=m_{\mu}m_{e}m_{\nu_{e}}m_{\nu_{\mu}}\frac{G^{2}}{4}\mathrm{Tr}\left[\frac{\Slash{q_{1}}+m_{\nu_{e}}}{2m_{\nu_{e}}}\Gamma^{\alpha}\frac{\Slash{p'}-m_{e}}{2m_{e}}\Gamma^{\beta}\right]
+\mathrm{Tr}\left[\frac{\Slash{p}-m_{\mu}}{2m_{\mu}}\Gamma_{\alpha}\frac{\Slash{q_{2}}-m_{\nu_{\mu}}}{2m_{\nu_{\mu}}}\Gamma_{\beta}\right]\notag\\
+&=\frac{G^{2}}{64}\mathrm{Tr}\left[\Slash{q_{1}}\Gamma^{\alpha}\Slash{p'}\Gamma^{\beta}\right]\mathrm{Tr}\left[\Slash{p}\Gamma_{\alpha}\Slash{q_{2}}\Gamma_{\beta}\right]\label{eq:spins}
+\end{align}
+%
+最後の式変形では$m_{\nu_{e}}\rightarrow 0$,$m_{\nu_{\mu}}\rightarrow 0$ の極限をとり、
+奇数個の$\gamma$ 行列の積のトレースは0 であることを用いた．
+まずは式(\ref{eq:spins}) の最初のトレースを計算する．
+%
+\begin{align}
+E^{\alpha\beta}\equiv \mathrm{Tr}\left[\Slash{q_{1}}\gamma^{\alpha}(1 - \gamma_{5})\Slash{p'}\gamma^{\beta}(1 - \gamma_{5})\right]
+\end{align}
+%
+と定義し、以下の関係式を用いると
+%
+\begin{align*}
+  \left\{
+    \begin{array}{l}
+      \left\{\gamma_{5},\gamma^{\alpha}\right\}=0\;(\alpha=0,\dots,3) \\
+      (1-\gamma_{5})^{2}=2(1-\gamma_{5}) \\
+      \mathrm{Tr}(\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta})=4(g^{\alpha\beta}g^{\gamma\delta}-g^{\alpha\gamma}g^{\beta\delta}+g^{\alpha\delta}g^{\beta\gamma}) \\
+      \mathrm{Tr}(\gamma_{5}\gamma^{\alpha}\gamma^{\beta}\gamma^{\gamma}\gamma^{\delta})=-4i\epsilon^{\alpha\beta\gamma\delta}
+    \end{array}
+  \right.
+\end{align*}
+\begin{align}
+E^{\alpha\beta}&=2q_{1\mu}p'_{\nu}\mathrm{Tr}\left[\gamma^{\mu}\gamma^{\alpha}\gamma^{\nu}\gamma^{\beta}(1-\gamma_{5})\right]\notag\\
+&=8q_{1\mu}p'_{\nu}(g^{\mu\alpha}g^{\nu\beta}-g^{\mu\nu}g^{\alpha\beta}+g^{\mu\beta}g^{\alpha\nu}+i\epsilon^{\mu\alpha\nu\beta})\notag\\
+&=8q_{1\mu}p'_{\nu}x^{\mu\alpha\nu\beta}\label{eq:E}
+\end{align}
+%
+ここで
+\[x^{\mu\alpha\nu\beta}\equiv g^{\mu\alpha}g^{\nu\beta}-g^{\mu\nu}g^{\alpha\beta}+g^{\mu\beta}g^{\alpha\nu}+i\epsilon^{\mu\alpha\nu\beta}\]
+と定義した．式(\ref{eq:spins}) の2 つ目のトレースも同様に計算すると、
+%
+\begin{align}
+  M_{\alpha\beta}&\equiv \mathrm{Tr}\left[\Slash{p}\gamma_{\alpha}(1 - \gamma_{5})\Slash{q_{2}}\gamma_{\beta}(1 - \gamma_{5})\right]\notag\\
+  &= 8p^{\sigma}q_{2}^{\tau}x_{\sigma\alpha\tau\beta}\label{eq:M}
+\end{align}
+%
+が得られる．
+%
+\begin{align}
+  x^{\mu\alpha\nu\beta}x_{\sigma\alpha\tau\beta}&=(g^{\mu\alpha}g^{\nu\beta}-g^{\mu\nu}g^{\alpha\beta}+g^{\mu\beta}g^{\alpha\nu}+i\epsilon^{\mu\alpha\nu\beta})\notag\\
+  &\qquad\qquad\times(g_{\sigma\alpha}g_{\tau\beta}-g_{\sigma\tau}g_{\alpha\beta}+g_{\sigma\beta}g_{\alpha\tau}+i\epsilon_{\sigma\alpha\tau\beta})\notag\\
+  &=g^{\mu}_{\sigma}g^{\nu}_{\tau}-\xcancel{g^{\mu\nu}g_{\sigma\tau}}+g^{\mu}_{\tau}g^{\nu}_{\sigma}\notag\\
+  &\qquad\xcancel{-g^{\mu\nu}g_{\sigma\tau}}+\xcancel{4g^{\mu\nu}g_{\sigma\tau}}-\xcancel{g^{\mu\nu}g_{\sigma\tau}}\notag\\
+  &\qquad\qquad +g^{\mu}_{\tau}g^{\nu}_{\sigma}-\xcancel{g^{\mu\nu}g_{\sigma\tau}}+g^{\mu}_{\sigma}g^{\nu}_{\tau}-\epsilon^{\mu\alpha\nu\beta}\epsilon_{\sigma\alpha\tau\beta}\notag\\
+  (\epsilon^{\mu\alpha\nu\beta}\epsilon_{\sigma\alpha\tau\beta}=-2(g^{\mu}_{\tau}g^{\nu}_{\tau}-g^{\mu}_{\tau}g^{\nu}_{\sigma})より)
+  &=2(g^{\mu}_{\sigma}g^{\nu}_{\tau}+g^{\mu}_{\tau}g^{\nu}_{\sigma})+2(g^{\mu}_{\sigma}g^{\nu}_{\tau}-g^{\mu}_{\tau}g^{\nu}_{\sigma})\notag\\
+  &=4g^{\mu}_{\sigma}g^{\nu}_{\tau}\label{eq:x}
+\end{align}
+%
+式(\ref{eq:E})(\ref{eq:M})(\ref{eq:x}) を用いると、
+%
+\begin{align}
+  m_{\mu}m_{e}m_{\nu_{e}}m_{\nu_{\mu}}\frac{1}{2}\sum_\mathrm{spins}|\mathcal{M}|^{2}
+  &=G^{2}q_{1\mu}p'_{\nu}x^{\mu\alpha\nu\beta}p^{\sigma}q_{2}^{\tau}x_{\sigma\alpha\tau\beta}\notag\\
+  &=4G^{2}(q_{1}p)(p'q_{2})\label{eq:spins_new}
+\end{align}
+%
+式(\ref{eq:decay}) と式(\ref{eq:spins_new}) を組み合わせると微分崩壊幅は
+%
+\begin{align}
+  d\Gamma = \frac{4G^{2}}{(2\pi)^{5}E}(q_{1}p)(p'q_{2})\delta^{(4)}(p'+q_{1}+q_{2}-p)\frac{d^3\bm{p'}}{E'}
+  \frac{d^3\bm{q_{1}}}{E_{1}}\frac{d^3\bm{q_{2}}}{E_{2}}
+\end{align}
+%
+次に2 つのニュートリノの運動量に関する積分を行う．
+%
+\begin{align}
+d\Gamma&=\frac{4G^{2}}{(2\pi)^{5}E}\frac{d^{3}\bm{p'}}{E'}p_{\mu}p'_{\nu}\int d^{3}\bm{q_{1}}d^{3}\bm{q_{2}}\frac{q_{1}^{\mu}q_{2}^{\nu}}{E_{1}E_{2}}\delta^{(4)}(q_{1}+q_{2}-p+p')\notag\\
+&=\frac{4G^{2}}{(2\pi)^{5}E}\frac{d^{3}\bm{p'}}{E'}p_{\mu}p'_{\nu}I^{\mu\nu}(q)\label{eq:decay_new}
+\end{align}
+%
+\[\begin{dcases}
+    I^{\mu\nu}(q)\equiv\int d^{3}\bm{q_{1}}d^{3}\bm{q_{2}}\frac{q_{1}^{\mu}q_{2}^{\nu}}{E_{1}E_{2}}\delta^{(4)}(q_{1}+q_{2}-q)\\
+    q\equiv p-p'
+\end{dcases}\]
+%
+$I^{\mu\nu}(q)$ のローレンツ共変性より、一般的な形は
+\[I^{\mu\nu}(q)=g^{\mu\nu}A(q^{2})+q^{\mu}q^{\nu}B(q^{2})\]
+と表せるので
+%
+\begin{subnumcases}
+{}
+g_{\mu\nu}I^{\mu\nu}(q)=4A(q^{2})+q^{2}B(q^{2})\label{eq:sub1}\\
+q_{\mu}q_{\nu}I^{\mu\nu}(q)=q^{2}A(q^{2})+(q^{2})^{2}B(q^{2})\label{eq:sub2}
+\end{subnumcases}
+%
+これ以降、ニュートリノの質量を0 とするので、$q_{1}^{2}=q_{2}^{2}=0$ となる．$I^{\mu\nu}(q)$ の$\delta$ 関数より、
+\begin{align}
+  q&=q_{1}+q_{2}\notag\\
+  \Rightarrow q^{2}&=q_{1}^{2}+2(q_{1}q_{2})+q_{2}^{2}\notag\\
+  \Rightarrow q^{2}&=2(q_{1}q_{2})\label{eq:momentum}
+\end{align}
+%
+$A(q^{2}) とB(q^{2})$ の形を求めるために式(\ref{eq:sub1}) と式(\ref{eq:sub2}) の左辺の形を計算する．
+%
+\begin{align}
+  g_{\mu\nu}I^{\mu\nu}(q)&=\int d^{3}\bm{q_{1}}d^{3}\bm{q_{2}}\frac{(q_{1}q_{2})}{E_{1}E_{2}}\delta^{(4)}(q_{1}+q_{2}-q)\notag\\
+  &=\frac{q^{2}}{2}\int\frac{d^{3}\bm{q_{1}}}{E_{1}}\frac{d^{3}\bm{q_{2}}}{E_{2}}\delta^{(4)}(q_{1}+q_{2}-q)\qquad(\because(\ref{eq:momentum}))\notag\\
+  &=\frac{q^{2}}{2}I(q^{2})\label{eq:sub3}
+\end{align}
+%
+\[I(q^{2})\equiv\int\frac{d^{3}\bm{q_{1}}}{E_{1}}\frac{d^{3}\bm{q_{2}}}{E_{2}}\delta^{(4)}(q_{1}+q_{2}-q)\]
+%
+定義より$I(q^{2})$ は不変量なので、どの座標系をとってもよい．2 つのニュートリノの重心系を選ぶと、
+\[\bm{q_{1}}=-\bm{q_{2}}\Leftrightarrow\bm{q}=0\]
+ニュートリノのエネルギー$\omega$ はともに
+\[\omega\equiv E_{1}=|\bm{q_{1}}|=E_{2}=|\bm{q_{2}}|\]
+したがって
+%
+\begin{align}
+  I(q^{2})&=\int\frac{d^{3}\bm{q_{1}}}{E_{1}}\frac{d^{3}\bm{q_{2}}}{E_{2}}\delta(E_{1}+E_{2}-q_{0})\delta^{(3)}(\bm{q_{1}}+\bm{q_{2}}-\bm{q})\notag\\
+  &=\int d^{3}\bm{q_{1}}\frac{\delta(2\omega-q_{0})}{\omega^{2}}\notag\\
+  &=4\pi\int d\omega\delta(2\omega-q_{0})\notag\\
+  &=2\pi\int d\omega\delta(\omega-\frac{q_{0}}{2})\qquad(\because\delta(ax)=\frac{1}{|a|}\delta(x))\notag\\
+  &=2\pi
+\end{align}
+%
+式(\ref{eq:sub3}) より
+%
+\begin{align}
+g_{\mu\nu}I^{\mu\nu}(q)=\pi q^{2}\label{eq:sub4}
+\end{align}
+%
+同様に式(\ref{eq:sub2}) の左辺を
+%
+\[\begin{cases}
+  qq_{1}=(q_{1}+q_{2})q_{1}=q_{1}q_{2}=\frac{q^{2}}{2}\quad(\because q_{1}^{2}=0)\\
+  qq_{2}=(q_{1}+q_{2})q_{2}=q_{1}q_{2}=\frac{q^{2}}{2}\quad(\because q_{2}^{2}=0)
+\end{cases}\]
+%
+を用いて計算する．
+%
+\begin{align}
+q_{\mu}q_{\nu}I^{\mu\nu}(q)&=\int\frac{d^{3}\bm{q_{1}}}{E_{1}}\frac{d^{3}\bm{q_{2}}}{E_{2}}(qq_{1})(qq_{2})\delta^{(4)}(q_{1}+q_{2}-q)\notag\\
+&=\left(\frac{q^{2}}{2}\right)^{2}I(q^{2})\notag\\
+&=\frac{\pi}{2}(q^{2})^{2}\label{eq:sub5}
+\end{align}
+%
+式(\ref{eq:sub4}) と式(\ref{eq:sub5}) をまとめると
+%
+\begin{subnumcases}
+{}
+g_{\mu\nu}I^{\mu\nu}(q)=4A(q^{2})+q^{2}B(q^{2})=\pi q^{2}\label{eq:sub6}\\
+q_{\mu}q_{\nu}I^{\mu\nu}(q)=q^{2}A(q^{2})+(q^{2})^{2}B(q^{2})=\frac{\pi}{2}(q^{2})^{2}\label{eq:sub7}
+\end{subnumcases}
+%
+$(\ref{eq:sub6})\times q^{2}-(\ref{eq:sub7})$ より
+\[3q^{2}A(q^{2})=\frac{\pi}{2}(q^{2})^{2}\Rightarrow A(q^{2})=\frac{\pi}{6}q^{2}\]
+(\ref{eq:sub6}) に代入すると
+\[q^{2}B(q^{2})=\frac{\pi}{3}q^{2}\Rightarrow B(q^{2})=\frac{\pi}{3}\]
+したがって、
+\begin{align}
+  I^{\mu\nu}(q)=\frac{\pi}{6}(g^{\mu\nu}q^{2}+2q^{\mu}q^{\nu})\label{eq:sub8}
+\end{align}
+%
+式(\ref{eq:decay_new}) に式(\ref{eq:sub8}) を代入すると微分崩壊幅は、
+%
+\begin{align}
+  d\Gamma&=\frac{4G^{2}}{(2\pi)^{5}E}\frac{d^{3}\bm{p'}}{E'}p_{\mu}p'_{\nu}\times \frac{\pi}{6}(g^{\mu\nu}q^{2}+2q^{\mu}q^{\nu})\notag\\
+  &=\frac{2\pi}{3}\frac{G^{2}}{(2\pi)^{5}E}\frac{d^{3}\bm{p'}}{E'}[(pp')+2(pq)(p'q)]
+\end{align}
+%
+最後に陽電子の運動量$\bm{p'}$ について積分する．ミューオンの静止系では
+\begin{align*}
+  &\begin{cases}
+    p=(m_{\mu},0)\\
+    q=p-p'
+  \end{cases}
+  \Rightarrow\quad
+  \begin{cases}
+    q_{0}=m_{\mu}-E'\\
+    \bm{q}=-\bm{p'}
+  \end{cases}\\
+  &\begin{cases}
+    pp'=m_{\mu}E'\\
+    q^{2}=p^{2}-2pp'+p'^{2}=m_{\mu}^{2}-2m_{\mu}E'+m_{e}^{2}\\
+    pq=m_{\mu}q_{0}=m_{\mu}(m_{\mu}-E')\\
+    p'q=E'q_{0}-\bm{p'\cdot q}=E'(m_{\mu}-E')+|\bm{p'}|^{2}=m_{\mu}E'-m_{e}^{2}
+  \end{cases}
+\end{align*}
+%
+\begin{align}
+  d\Gamma&=\frac{2\pi}{3}\frac{G^{2}}{(2\pi)^{5}m_{\mu}}\frac{d^{3}\bm{p'}}{E'}[m_{\mu}E'(m_{\mu}^{2}-2m_{\mu}E'+m_{e}^{2})+2m_{\mu}(m_{\mu}-E')(m_{\mu}E'-m_{e}^{2})]\notag\\
+  &=\frac{2\pi}{3}\frac{G^{2}}{(2\pi)^{5}m_{\mu}}|\bm{p'}|dE'd\Omega'[m_{\mu}E'(m_{\mu}^{2}-2m_{\mu}E'+m_{e}^{2})+2m_{\mu}(m_{\mu}-E')(m_{\mu}E'-m_{e}^{2})]
+\end{align}
+%
+ここで
+\begin{align*}
+  E'^{2}=m_{e}^{2}+|\bm{p'}|^{2}\Rightarrow E'dE'=|\bm{p'}|d|\bm{p'}|\\
+  \therefore d^{3}\bm{p'}=|\bm{p'}|^{2}d|\bm{p'}|d\Omega'=|\bm{p'}|E'dE'd\Omega'
+\end{align*}
+となることを用いた．$\frac{m_{e}^{2}}{m_{\mu}^{2}}$ のオーダーの項を無視すると、
+%
+\begin{align}
+  d\Gamma&=\frac{2\pi}{3}\frac{G^{2}}{(2\pi)^{5}}\frac{\sqrt{E'^{2}-\xcancel{m_{e}^{2}}}}{m_{\mu}}dE'd\Omega'[m_{\mu}E'(m_{\mu}^{2}-2m_{\mu}E'+\xcancel{m_{e}^{2}})+2m_{\mu}(m_{\mu}-E')(m_{\mu}E'-\xcancel{m_{e}^{2}})]\notag\\
+  &\approx\frac{2\pi}{3}\frac{G^{2}}{(2\pi)^{5}}m_{\mu}E'^{2}dE'd\Omega'(3m_{\mu}-4E')
+\end{align}
+%
+$E'$ について積分するために$\mu^{+}$ の崩壊によって放出される$e^{+}$ のエネルギー$E'$ の範囲を考える．ミューオンの静止系では
+%
+\[\begin{cases}
+  p=(m_{\mu},0)\\
+  p'=(E',\bm{p'})\\
+  q_{1}=(E_{1},\bm{q_{1}})\\
+  q_{2}=(E_{2},\bm{q_{2}})\\
+  q_{1}^{2}=0\Leftrightarrow E_{1}=|\bm{q_{1}}|\\
+  q_{2}^{2}=0\Leftrightarrow E_{2}=|\bm{q_{2}}|
+\end{cases}\]
+%
+エネルギー・運動量保存則より
+%
+\begin{align*}
+  &\qquad p=p'+q_{1}+q_{2}\\
+  &\Leftrightarrow (p-p')^{2}=(q_{1}+q_{2})^{2}\\
+  &\Leftrightarrow m_{\mu}^{2}-2m_{\mu}E'+m_{e}^{2}=2(E_{1}E_{2}-|\bm{q_{1}}||\bm{q_{2}}|cos\varphi)\quad(ただし\bm{q_{1}} と\bm{q_{2}} のなす角を\varphi とした)\\
+  &\Leftrightarrow E'=\frac{m_{\mu}^{2}+m_{e}^{2}-2E_{1}E_{2}(1-cos\varphi)}{2m_{\mu}}
+  \le \frac{m_{\mu}^{2}+m_{e}^{2}}{2m_{\mu}}
+\end{align*}
+%
+電子の質量を無視すると$E'$ の範囲は、
+%
+\[
+0\le E'\le \frac{1}{2}m_{\mu}
+\]
+%
+全立体角と$E'$ ($0\le E'\le\frac{1}{2}m_{\mu}$) について積分すると、
+\begin{align}
+  \Gamma&=\frac{2\pi}{3}\frac{G^{2}}{(2\pi)^{5}}m_{\mu}\int_{0}^{4\pi}d\Omega'\int_{0}^{\frac{1}{2}m_{\mu}}dE'E'^{2}(3m_{\mu}-4E')\notag\\
+  &=\frac{8\pi^{2}}{3}\frac{G^{2}}{(2\pi)^{5}}m_{\mu}\left[m_{\mu}E'^{3}-E'^{4}\right]_{0}^{\frac{1}{2}m_{\mu}}\notag\\
+  &=\frac{2}{3}\frac{G^{2}}{(2\pi)^{3}}m_{\mu}\times \frac{m_{\mu}^{4}}{16}\notag\\
+  &=\frac{G^{2}m_{\mu}^{5}}{192\pi^{3}}
+\end{align}
+%
+以上より$\mu^{+}$ の寿命$\tau_{\mu}$ は
+\[\tau_{\mu}=\frac{1}{\Gamma}=\frac{192\pi^{3}}{G^{2}m_{\mu}^{5}}\]
+%
+%\section{the Michel parameters の理論}
+%\section{Geant4 で実際に用いたシミュレーションコード}
+%\section{FEMM で実際の用いたシミュレーションコード}
+%\section{DAQ で用いたコード}
+%\section{ROOT で実際に解析に用いたコード}
+%
+%\end{document}

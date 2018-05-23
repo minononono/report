@@ -1,0 +1,249 @@
+%\documentclass[]{jsarticle}
+
+%\usepackage[dvipdfmx]{graphicx}
+%\usepackage[dvipdfmx]{color}
+
+%\usepackage{amsmath, amssymb}
+%\usepackage{mathtools}
+%\usepackage{cancel}
+%\usepackage{cases}
+%\usepackage{bm}
+
+%\usepackage{here}
+%\usepackage{colortbl}
+
+%\begin{document}
+
+%----------ここから-------------------
+%----------ミューオンビーム-------------------
+\section{実験方法}
+\subsection{MLFミューオンビーム}
+\subsubsection{加速器科学インターンシップの利用}
+KEKが学部3回生以上を対象に行っている加速器科学インターンシップを利用することにより，ロシアの実験チームの MLF 実験課題 2017B0163 のパラサイト実験という形でMLFミューオンビームを利用できることを知った．ミューオンビームの性能を踏まえて可能な測定量および測定方法を考え，実験の準備を行った．
+ \subsubsection{表面ミューオン}
+ MLFでは炭素原子核に高エネルギーの陽子を衝突させることによってパイオンを生成し，パイオンが崩壊して得られるミューオンを利用している．炭素標的から飛び出したパイオンが超伝導ソレノイド磁石内部で崩壊することによって得られるミューオンは崩壊ミューオンと呼ばれるが，今回利用したのは炭素標的の表面に静止した $\pi^+$ 中間子の崩壊によって得られる$\mu ^+$で，これは表面ミューオンと呼ばれる．表面ミューオンは 100\% のスピン偏極を持っており，非常にエネルギーが低いことを特徴とする．表面ミューオンがスピン偏極を持つのは弱い相互作用による崩壊でニュートリノのヘリシティーが左巻きであることに由来する．なお炭素標的の表面で静止した $\pi^-$ 中間子は原子核に捕獲されるため，取り出すことはできない．\par
+ 表面ミューオンビームラインの性能は表\ref{muon1}のとおりで，シングルバンチのミューオンビームが $25 \mathrm{Hz}$でやってくる．ビームの広がりのプロファイルは図\ref{muon2}のとおりである．
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figure/hayakawa/decay_pion.png}
+  \caption{$\pi^+$ 中間子の崩壊}
+\end{figure}
+
+  \footnotetext{上図は http:\slash\slash{}slowmuon.kek.jp\slash{}aboutMuon.htmlより引用 } 
+  
+
+      
+  \begin{table}[H]
+    \caption{表面ミューオンビームラインの性能}
+    \label{muon1}
+    \centering
+    \begin{tabular}{|c|c|}\hline
+      ビームエネルギー & 4.1 MeV \\ \hline
+      侵入長 & $\sim$ 0.2 mm \\ \hline
+      エネルギー分布 & $\sim$ 15  \% \\ \hline
+      パルス幅 (FWHM) & $\sim$ 100 ns \\ \hline
+      ビームサイズ & 30 mm $\times$ 40 mm \\ \hline
+      ビーム強度 & 3 $\times$ $10^7$ /s \\ \hline
+      ポート数 & 2 \\ \hline
+    \end{tabular}
+  \end{table}
+   
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figure/hayakawa/profile.pdf}
+    \caption{ミューオンビームの広がり(単位:$\mathrm{mm}$)}
+    \label{muon2}
+  \end{figure}
+  
+  %---------実験の方法-------------------
+  \subsection{測定量と検出器}
+  \subsubsection{実験概要}
+
+今回の実験ではミューオンの寿命，ミッシェルパラメータ，$g$因子を測定したい．基本的な実験の流れとしては，
+       \begin{itemize}
+        \item Beam Line から $\mu ^+$ が出て来る
+        \item ターゲットに止められた $\mu ^+$ が e$^+$に崩壊する
+        \item 検出器で時間情報・エネルギー情報を測定する
+        \end{itemize}
+という順序になる．そのために，時間分解能に優れたプラスチックシンチレータ(PS)検出器および，エネルギー分解能に優れたNaIシンチレータ検出器の二種類の検出器を作成した．
+       
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1\textwidth]{figure/hayakawa/lifetime.png}
+      \caption{実験概要}
+  \end{figure}
+
+  \subsubsection{検出器サイズの見積}
+
+図 \ref{PS_sim} はPS検出器の体積シミュレーションである．検出器サイズの縦横は $20 \mathrm{cm}$ で固定し，奥行きを $20 \mathrm{cm}$ から $24 \mathrm{cm}$ まで変化させた直方体状のPSシンチレータに $50 \mathrm{MeV}$ の陽電子を入射させた時に検出器に落とすエネルギーをヒストグラムで示している．奥行きを $24 \mathrm{cm}$ 以上に増やしても，光子としてエネルギーが漏れる影響でほとんどヒストグラムの形状は変化しないため，奥行きは $24 \mathrm{cm}$ で決定した．
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth,angle=-90]{figure/hayakawa/pl_20_24.pdf}
+    \caption{PS検出器の体積シミュレーション}
+    \label{PS_sim}
+  \end{figure}
+
+図 \ref{NaI_sim} はNaI検出器の体積シミュレーションである．NaI は光電子増倍管 (PMT) の接続された既製品を利用したため，既製品をどのように並べるべきか確認するために縦横の幅を変えながら同様のシミュレーションを行った．
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth,angle=-90]{figure/hayakawa/NaI_10_20.pdf}
+    \caption{NaI検出器の体積シミュレーション}
+    \label{NaI_sim}
+  \end{figure}
+
+  %---------検出器の製作-------------------
+\subsection{検出器の製作}
+\subsubsection{PS検出器の製作}
+
+光ファイバー読み出しの板を並べることで，縦横 $20 \mathrm{cm}$ 奥行き $24 \mathrm{cm}$ の体積のPS検出器を作成する．
+
+  \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\textwidth]{figure/hayakawa/psmd.png}
+        \caption{PS板}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figure/hayakawa/p7.png}
+        \caption{PS検出器寸法}
+        \label{PS_sunpou}
+  \end{figure}
+
+以下の順序で検出器を作成した．
+  \begin{itemize}
+    \item 厚み$6\mathrm{cm}$ に束ねたものを$4$セット作成する
+    \item 光ファイバーの片端をクッキーを用いて光学セメントで固定
+       \begin{figure}[H]
+         \centering
+         \includegraphics[width=0.5\textwidth]{figure/hayakawa/ps_kotei.jpg}
+         \caption{光ファイバーの固定の様子}
+       \end{figure}
+    \item PSに光ファイバーを貫通させ，もう片端も固定する
+    \item 光量を最大限確保するため，クッキーの端面を研磨する
+    \item クッキーの端面と PMT の境界に光学グリスを塗り接続する
+    \item 暗箱内に設置するための枠に収める．枠とPMTの結合にはアルミU型チャンネルを用いた
+       \begin{figure}[H]
+         \centering
+         \includegraphics[width=0.6\textwidth]{figure/hayakawa/waku1.png}
+         \caption{暗箱に固定するための枠の設計}
+       \end{figure}
+    \item 暗箱内に設置し前方にコリメータを配置する
+  \end{itemize}
+
+
+
+\begin{figure} [H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figure/hayakawa/PS_real.jpg}
+    \caption{PS検出器外観}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{figure/hayakawa/PS_in.jpg}
+  \caption{PS検出器内部}
+\end{figure}
+
+
+
+
+\subsubsection{NaI検出器の製作}
+$5.6\times 5.6\times 15\mathrm{cm}$の結晶がPMTに接続されたものを$3\times 3$個並べ，検出器の前面中央の前には$4\times 4\mathrm{cm}$のトリガー用カウンターを設置した．
+
+ \begin{figure}
+    \begin{tabular}{cc}
+      \begin{minipage}{0.5\hsize}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figure/hayakawa/p6.png}
+        \caption{NaI寸法(mm)}
+        \end{minipage}
+        \begin{minipage}{0.5\hsize}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figure/hayakawa/NaI_real.jpg}
+        \caption{NaI外観}
+      \end{minipage}
+    \end{tabular}
+  \end{figure}
+
+\subsection{架台の製作}
+ビームの高さが地表から $1565 \mathrm{mm}$ の高さで対応した架台が必要である．そこでアルミフレームの一種であるレコフレームを使用して架台を作成した．アジャスタ付きキャスタを用いることによって高さは微調整可能なように設計した．現場ではレーザーを用いて水平および垂直方向の位置調整を行った．
+
+
+  \begin{figure}[H]
+    \begin{tabular}{cc}
+      \begin{minipage}{0.5\hsize}
+        \centering
+        \includegraphics[width=0.9\textwidth]{figure/hayakawa/kadai_setup.jpg}
+        \caption{架台の組み立て}
+        \end{minipage}
+        \begin{minipage}{0.5\hsize}
+        \centering
+        \includegraphics[width=0.9\textwidth]{figure/hayakawa/laser1.jpg}
+        \caption{レーザーを用いた位置調整}
+      \end{minipage}
+    \end{tabular}
+  \end{figure}
+  
+      \begin{table}[H]
+      \caption{3種類の架台の外寸}
+      \label{tab:kadai}
+      \centering
+      \begin{tabular}{|c|c|}\hline
+        &  W $\times$ D $\times$ H ($\mathrm{mm}$)\\ \hline
+        PS検出器架台 &  1200 $\times$ 600 $\times$ 1283\\ \hline
+        NaI検出器架台 & 600 $\times$ 600 $\times$ 1358 \\ \hline
+        ターゲット架台 & 600 $\times$ 600 $\times$ 1331 \\ \hline
+      \end{tabular}
+    \end{table}
+
+\subsection{FADC}
+データ測定については波形をそのまま記録することができるフラッシュADC (FADC) をPS検出器およびNaI検出器用にそれぞれ利用した．測定開始の外部トリガには，加速器ライン側の信号入力している．
+\subsubsection{FADC(CAEN WaveForm Digitizer V1721)}
+  \begin{itemize}
+    \item 8channel 8bit 500MS/s Digitizer
+    \item 時間分解能が良いので，主に崩壊寿命測定用のPSの信号に用いた
+  \end{itemize}
+  \begin{figure}[H]
+    \begin{tabular}{cc}
+      \begin{minipage}{0.5\hsize}
+        \centering
+        \includegraphics[width=0.8\textwidth,angle=-90]{figure/hayakawa/ps_plot.pdf}
+        \caption{PS用のFADCで記録した波形}
+      \end{minipage}
+      \begin{minipage}{0.4\hsize}
+        \centering
+        \includegraphics[width=0.2\textwidth]{figure/hayakawa/1095_L.jpg}
+      \end{minipage}
+    \end{tabular}
+  \end{figure}
+
+
+
+
+\subsubsection{FADC(CAEN WaveForm Digitizer DT5725)}
+  \begin{itemize}
+    \item 8channel 14bit 250MS/s Digitizer
+    \item エネルギー分解能が良いので，主にエネルギー測定用のNaI検出器の信号の記録に用いた
+    \item 9本のNaIに対して8chなので，アナログ信号を合成して入力した
+  \end{itemize}
+  \begin{figure}[H]
+    \begin{tabular}{cc}
+      \begin{minipage}{0.5\hsize}
+        \centering
+        \includegraphics[width=0.8\textwidth,angle=-90]{figure/hayakawa/NaI_plot.pdf}
+        \caption{NaI用のFADCで記録した波形}
+      \end{minipage}
+      \begin{minipage}{0.4\hsize}
+        \centering
+        \includegraphics[width=0.6\textwidth]{figure/hayakawa/DT5725_L.png}
+      \end{minipage}
+    \end{tabular}
+  \end{figure}
+
+
+
+
+%----------ここまで-------------------
+%\end{document}

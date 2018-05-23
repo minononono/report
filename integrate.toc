@@ -1,0 +1,77 @@
+\contentsline {section}{\numberline {1}序論}{2}{section.1}
+\contentsline {section}{\numberline {2}理論}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}ミューオンとは}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}ミューオンの寿命}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}ミッシェルパラメータ}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}ミューオンの$g$因子}{4}{subsection.2.4}
+\contentsline {section}{\numberline {3}実験原理}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}寿命測定の原理}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}ミッシェルパラメータ測定の原理}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}$g$因子測定の原理}{6}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}検出器サイズの見積もり}{7}{subsection.3.4}
+\contentsline {section}{\numberline {4}シミュレーション}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Geant4 を用いたモンテカルロシミュレーション}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}FEMM}{8}{subsection.4.2}
+\contentsline {section}{\numberline {5}実験方法}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}MLFミューオンビーム}{9}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}加速器科学インターンシップの利用}{9}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}表面ミューオン}{9}{subsubsection.5.1.2}
+\contentsline {subsection}{\numberline {5.2}測定量と検出器}{10}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}実験概要}{10}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}検出器サイズの見積}{11}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}検出器の製作}{13}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}PS検出器の製作}{13}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}NaI検出器の製作}{16}{subsubsection.5.3.2}
+\contentsline {subsection}{\numberline {5.4}架台の製作}{17}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}FADC}{18}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}FADC(CAEN WaveForm Digitizer V1721)}{18}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}FADC(CAEN WaveForm Digitizer DT5725)}{18}{subsubsection.5.5.2}
+\contentsline {subsection}{\numberline {5.6}寿命測定のための銅板標的}{20}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}$g$因子測定のための磁場装置}{20}{subsection.5.7}
+\contentsline {subsubsection}{\numberline {5.7.1}磁石の発生原理について: $\qopname \relax o{cos}\theta $配置}{20}{subsubsection.5.7.1}
+\contentsline {subsection}{\numberline {5.8}予備実験}{22}{subsection.5.8}
+\contentsline {subsubsection}{\numberline {5.8.1}NaIのゲイン測定}{22}{subsubsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.2}NaIの宇宙線較正}{24}{subsubsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.3}磁場測定}{25}{subsubsection.5.8.3}
+\contentsline {subsection}{\numberline {5.9}ビームを用いた本実験}{26}{subsection.5.9}
+\contentsline {subsubsection}{\numberline {5.9.1}タイムスケジュール}{26}{subsubsection.5.9.1}
+\contentsline {subsubsection}{\numberline {5.9.2}セットアップ}{26}{subsubsection.5.9.2}
+\contentsline {subsubsection}{\numberline {5.9.3}回路}{27}{subsubsection.5.9.3}
+\contentsline {subsubsection}{\numberline {5.9.4}実験手順}{28}{subsubsection.5.9.4}
+\contentsline {section}{\numberline {6}プラスチックシンチレータで取得したデータの解析と結果・考察}{29}{section.6}
+\contentsline {subsubsection}{\numberline {6.0.1}解析手法}{29}{subsubsection.6.0.1}
+\contentsline {subsubsection}{\numberline {6.0.2}信号検出のthreshold値について}{29}{subsubsection.6.0.2}
+\contentsline {subsubsection}{\numberline {6.0.3}得られた崩壊曲線とfittingの結果}{30}{subsubsection.6.0.3}
+\contentsline {subsubsection}{\numberline {6.0.4}エネルギー分布}{33}{subsubsection.6.0.4}
+\contentsline {subsubsection}{\numberline {6.0.5}fitting範囲による寿命と$g$因子の系統誤差}{34}{subsubsection.6.0.5}
+\contentsline {subsubsection}{\numberline {6.0.6}この節のまとめ}{35}{subsubsection.6.0.6}
+\contentsline {subsection}{\numberline {6.1}プラスチックシンチレータのデータ解析}{37}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}使用データ}{37}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}FADC 波形の解析}{37}{subsubsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.3}ミュオン寿命解析}{37}{subsubsection.6.1.3}
+\contentsline {subsubsection}{\numberline {6.1.4}ミュオン$g$ 因子解析}{39}{subsubsection.6.1.4}
+\contentsline {subsubsection}{\numberline {6.1.5}磁場の系統誤差について}{40}{subsubsection.6.1.5}
+\contentsline {subsubsection}{\numberline {6.1.6}磁場の変化の確認}{43}{subsubsection.6.1.6}
+\contentsline {subsubsection}{\numberline {6.1.7}NaI シンチレータとの位相差の確認}{43}{subsubsection.6.1.7}
+\contentsline {section}{\numberline {7}NaIで取得したデータの解析と結果・考察}{46}{section.7}
+\contentsline {subsection}{\numberline {7.1}信号解析}{46}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}ノイズ除去}{47}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.2}ピーク検出}{47}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.3}波形データの抽出}{48}{subsubsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.4}波形データの外挿}{48}{subsubsection.7.1.4}
+\contentsline {subsubsection}{\numberline {7.1.5}解析データの抽出}{49}{subsubsection.7.1.5}
+\contentsline {subsection}{\numberline {7.2}NaIを用いた寿命と$g$因子の解析}{50}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}使用データ(NaI)}{50}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}時間分解能}{52}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.3}ミュオン寿命解析}{53}{subsubsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.4}ミュオン$g$因子解析}{54}{subsubsection.7.2.4}
+\contentsline {subsubsection}{\numberline {7.2.5}磁場の系統誤差について}{55}{subsubsection.7.2.5}
+\contentsline {subsection}{\numberline {7.3}エネルギー解析}{57}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}スピンの回転に関して}{57}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.2}イベントセレクション}{57}{subsubsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3}検出器の電磁シャワー応答について}{57}{subsubsection.7.3.3}
+\contentsline {subsubsection}{\numberline {7.3.4}ミッシェルパラメータ$\rho $の導出}{57}{subsubsection.7.3.4}
+\contentsline {subsubsection}{\numberline {7.3.5}ミッシェルパラメータ$\xi $の導出}{58}{subsubsection.7.3.5}
+\contentsline {subsubsection}{\numberline {7.3.6}ミッシェルパラメータ$\delta $の導出}{59}{subsubsection.7.3.6}
+\contentsline {subsection}{\numberline {7.4}ミッシェルパラメータのまとめ}{59}{subsection.7.4}
+\contentsline {section}{\numberline {付録A}$\mu ^{+}$ の崩壊寿命の理論}{62}{appendix.A}
