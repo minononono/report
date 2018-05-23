@@ -1,0 +1,25 @@
+# Common
+.*
+!.gitignore
+
+# For Image
+figure
+
+# For Vim
+*~
+*.swp
+
+# For Emacs
+#*~
+#\#*\#
+
+# For LaTeX
+*.aux
+*.log
+*.toc
+*.dvi
+*.out
+*.600pk
+*.mf
+*.tfm
+*.pdf
