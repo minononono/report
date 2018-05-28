@@ -27,8 +27,7 @@
 
 \subsubsection{WFD波形の解析}
 \label{subsubsec:PSEventDisplay}
-WFD (WaveDigitizer V1721) で得られたデータをプロットすると図\ref{fig:PSEventDisplayAll} のようになった．図\ref{fig:PSEventDisplayAll} は磁場標的を用いたランの1000 Event 目の波形であり，丸印はそれぞれの信号についてその点をピークとみなしたことを表す．ここでグラフの色はプラスチックシンチレータの各層に対応している（ただし3 層目にあたるch 4 はFinger Counter である）．
-%層の番号が標的から1,2,3,4となっている説明が前節までにない．？
+WFD (WaveDigitizer V1721) で得られたデータをプロットすると図\ref{fig:PSEventDisplayAll} のようになった．図\ref{fig:PSEventDisplayAll} は磁場標的を用いたランの1000 Event 目の波形であり，丸印はそれぞれの信号についてその点をピークとみなしたことを表す．ここでグラフの色はプラスチックシンチレータの各層に対応している（ただし3 層目にあたるch 4 はFinger Counter である）．ただし層の番号は1 から4 まであり，標的に近いものほど小さな番号がふられている．
 \begin{figure}[h]
 	\centering
 	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSEventDisplayAll.png}
@@ -86,8 +85,6 @@ WFD (WaveDigitizer V1721) で得られたデータをプロットすると図\re
 得られた時間分布について，まず早いところにピークが立っている．このピークは図\ref{fig:PSLifeDist_Layer3}, \ref{fig:PSLifeDistNoCoin_Layer3} を比較すると分かるように，コインシデンスをとることによって小さくなる．このピークは$\pi$ の崩壊によってできた表面ミュオンがすぐに崩壊し，生成した$e^{+}$ が，ビームラインを通り抜けて直接検出器に当たったときの信号によるものと考えられる．ビームラインにおいては運動量で粒子を選択しており（今回は$4.1~(\mathrm{MeV})$ の粒子を選択している），このようにしてできた$e^{+}$は同じ運動量の$\mu^{+}$ よりも高速で検出器に到達する．1 層目とのコインシデンスをとることでこのピークが低くなるのは，このコインシデンスにより粒子の飛来した方向を制限でき，銅板標的由来の信号の割合が多くなるためと考えられる．
 
 図\ref{fig:PSLifeDist_Layer0} - \ref{fig:PSLifeDist_Layer3} のヒストグラムに式\eqref{eq:PSLifeFitFunc} で表される関数$f(t)$を用いてフィッティングを行った．ここでバックグラウンドの影響を加味して定数項を加え，フィッテイング範囲は1000~(ns) から8000~(ns) とした．フィッティング結果が図\ref{fig:PSLifeFit_Layer0} - \ref{fig:PSLifeFit_Layer3} ，および表\ref{tab:PSLifetime} である．統計誤差はROOT のフィッティングによるものである．
-% ミューオンの4層目の値は外れ値？
-% 最終的なミューオンの寿命の解析の値は？
 \begin{equation}
 f(t) = A \exp(-t / \tau) + \mathrm{const.}
 \label{eq:PSLifeFitFunc}
@@ -122,6 +119,8 @@ f(t) = A \exp(-t / \tau) + \mathrm{const.}
 	4 & $2150 \pm 46$ \\ \bottomrule
 	\end{tabular}\label{tab:PSLifetime}
 \end{table}%
+
+ここで4~層目の値を外れ値とすると，2~層目の値が一番信頼できる値であり，ミュオンの寿命として$\tau = 2264 \pm 23~[\mathrm{\mu s}]$ という値が得られた．
 
 \newpage
 
@@ -233,8 +232,7 @@ g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 	\end{tabular}\label{tab:PSgStatErr}
 \end{table}%
 
-実際，$g$ 因子の値を考えるときは1 層目と4 層目とのコインシデンスをとったものが貫通イベントをとれている可能性が高く妥当であると考えると，得られた$g$ 因子の値は
-% 貫通イベントはどのようなイベントが多いから妥当？
+実際，$g$ 因子の値を考えるときは1 層目と4 層目とのコインシデンスをとったものが銅板にミュオンがあたった上で検出器に飛来したような貫通イベントをとれている可能性が高く磁場の影響を受けた$e^{+}$ が多いと考えられることからも妥当であると考えると，得られた$g$ 因子の値は
 \[g = 2.017 \pm 0.0023 ^{+0.008}_{-0.017}\]
 となった．ここで誤差の第一項は磁場の影響を含めた統計誤差であり，第二項はビームプロフィルの不定性による系統誤差である．
 
