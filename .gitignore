@@ -10,8 +10,8 @@ figure
 *.swp
 
 # For Emacs
-#*~
-#\#*\#
+*~
+\#*\#
 
 # For LaTeX
 *.aux
