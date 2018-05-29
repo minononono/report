@@ -91,18 +91,56 @@ $\sin\theta$としたのは磁石の向きをすべて動径方向に向けて�
 \subsubsection{プラスチックシンチレータの宇宙線較正}
 プラスチックシンチレータでミューオンの崩壊から生じる陽電子のエネルギーを測定するために, 宇宙線を用いてエネルギー較正を行った.
 
+%%%%%%挿入&修正by池満%%%%%%%%
 ケーブル類とHV値は本実験の状態と同様の状態にしたうえで,
-本実験において陽電子が入射面する面を上にむけて宇宙線の測定を行った.
-WFDの電圧信号を信号区間で時間積分し,さらに抵抗値$50(\mathrm{\Omega})$で割ることで,
-信号の電荷量$(\mathrm{pC})$を得た.
-この電荷量についてヒストグラムをつくり, Landau関数をガウシアンで畳み込み積分した関数(以下, Langau関数と呼ぶ.)でFittingを行った.
-そしてFittingにより得られた最頻値と$12(\mathrm{MeV})$で直線fittingをすることでエネルギー較正を行った.
-ただし,この$12(\mathrm{MeV})$とは宇宙線が厚さ$6(\mathrm{cm})$のプラスチックシンチレーターを通過するときの損失エネルギーである.
-この値は宇宙線を近似的に最小電離粒子とみなすことで計算した.\cite{leo}
+本実験において陽電子が入射する面を上にむけて宇宙線の測定を行った.
+各PMTにかけた電圧を表~\ref{PS_PMT_HV}に示す．
+データ取得の条件は，WFDのチャンネルトリガーを用いて全チャンネルのORでトリガーをとり，1波形分を取れるようにゲートを208~ns にした．
+このときのトリガーのしきい値は全チャンネルで共通にしていて，電圧値は各チャンネルのレートが約3〜5~Hzになるように選んだ．
+ \begin{table}[H]
+  \caption{プラスチックシンチレータ用のPMTのHV値}
+  \label{PS_PMT_HV}
+  \begin{center}
+   \begin{tabular}{cc}\toprule
+    PMT名&HV値 \\ \hline
+    チャンネル0（あけみ）&-1600V \\
+    チャンネル1（勝太郎）&-1418V \\
+    チャンネル2（畑さん）&-1940V \\
+    チャンネル3（紗智子）&-1762V \\
+    チャンネル4（蘭）  &-1871V \\
+    チャンネル5（矢部） &-1947V \\
+    チャンネル6（政子） &-1980V \\
+    チャンネル7（王）  &-1905V \\ \bottomrule
+   \end{tabular} 
+  \end{center}
+ \end{table}%
 
-図\ref{ps_langau}は各チャンネルの電荷分布をlangau関数(赤線)でFitingしたもので,
+得られたWFDの電圧信号を時間積分し,さらに抵抗値$50~\mathrm{\Omega}$で割ることで,
+信号の電荷量~$(\mathrm{pC})$を得た.
+各チャンネル毎の電荷量のヒストグラムは図~\ref{cosmicray}のようになり，図中の3つのピークの由来を左からそれぞれペデスタル，環境放射線，宇宙線と考えた．
+図~\ref{cosmicray}の横軸は電荷の積分値(pc)を表す．
+ \begin{figure}[H]
+  \centering
+  \includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/cosmicray.pdf}
+  \caption{宇宙線測定で得られたヒストグラム．}
+  \label{cosmicray}
+ \end{figure}%
+
+宇宙線によるピークの部分をLandau関数をガウシアンで畳み込み積分した関数(以下, Langau関数と呼ぶ.)でFittingを行った.
+ガウシアンで畳み込み積分をしたのは，プラスチックシンチレータとPMTで測定されるエネルギーには比較的大きいゆらぎがあるからである．
+そしてFittingにより得られた最頻値をエネルギー損失12~MeV に対応する電荷量とした．
+ただし，最頻値に対応するエネルギー損失の見積もりは次の2つの仮定を基にしている；
+\begin{itemize}
+ \item 宇宙線ミューオンは最小電離粒子でありプラスチックシンチレータ中でのエネルギー損失は$dE/dx\sim 2~\mathrm{MeV/cm }$である．
+ \item 最頻値をとるのは宇宙線がシンチレータの底面に対して垂直に入射したとき，すなわち1層を通過する飛跡の長さが6~cm のときである．
+\end{itemize}
+この仮定から，1層でのエネルギー損失の最頻値は$2~\mathrm{MeV/cm}\times6~\mathrm{cm} = 12~\mathrm{MeV }$に対応すると判断した．\cite{leo}
+
+さらにペデスタルをガウシアンでフィットしてエネルギーの0点に対応する電荷を求めた．
+
+図~\ref{ps_langau}は各チャンネルの電荷分布をLangau関数(赤線)でFitingしたもので,
 縦軸をカウント数,横軸を電荷量$(\mathrm{pC})$とした.
-図\ref{ps_cali}は宇宙線較正の結果を図にしたもので,
+図~\ref{ps_cali}は宇宙線較正の結果を図にしたもので,
 縦軸を電荷量$(\mathrm{pC})$,横軸をエネルギー$(\mathrm{MeV})$とした.
 また黒い誤差バー付きの点を較正点,赤線が直線をfitting直線とした.
 
@@ -116,6 +154,27 @@ WFDの電圧信号を信号区間で時間積分し,さらに抵抗値$50(\mathr
   \includegraphics[width=0.9\textwidth]{figure/tajima/fit_calibline.png}
   \caption{プラスチックシンチレータの宇宙線較正}\label{ps_cali}
 \end{figure}
+
+ キャリブレーションの結果は表~\ref{PS_calib_table}のようになった．
+ 表中のaとbは，エネルギー$E(~\mathrm{MeV })$と電荷$Q~(\mathrm{pc })$の対応を$E = \mathrm{a}Q + \mathrm{b}$としたときの定数である．
+ \begin{table}[h]
+  \caption{キャリブレーションの結果}
+  \label{PS_calib_table}
+  \begin{center}
+   \begin{tabular}{ccc}\toprule
+    チャンネル番号&a &b \\ \hline
+    0& 0.40$\pm$0.04 &0$\pm$0.3 \\
+    1& 0.25$\pm$0.03 &0$\pm$0.06 \\
+    2& 0.24$\pm$0.03 &0$\pm$0.2 \\
+    3& 0.34$\pm$0.045 &0$\pm$0.4 \\
+    4& 0.27$\pm$0.035 &0$\pm$0.07 \\
+    5& 0.24$\pm$0.03 &0$\pm$0.21 \\
+    6& 0.39$\pm$0.05 &0$\pm$0.3 \\
+    7& 0.27$\pm$0.04 &0$\pm$0.08 \\ \bottomrule
+   \end{tabular}
+  \end{center}
+ \end{table}%
+
 
 \subsubsection{NaIのゲイン測定}
 本実験で用いるNaI検出器が出力する信号は，NaIの9本とフィンガーカウンターの計10個であった．
