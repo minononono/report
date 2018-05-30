@@ -29,78 +29,98 @@
  以下ではそれぞれに解析手法Aと解析手法Bと名付けた．また，最後に両方の結果をまとめた．
  
   \subsection{解析手法A}
+  \subsubsection{解析の流れ}
   プラスチックシンチレータ(以下，PS)検出器を用いて取得したデータを以下の方法で解析し，寿命，$g$因子，エネルギー分布を求めた．
   \begin{enumerate}
-   \item イベントディスプレイから，初めの100 ns (50 Sample)の間は信号が来ていないことを確認し，0〜100 ns のデータの平均値をとってそれをbaselineとした．
+   \item イベントディスプレイから，初めの100~ns (50~Sample)の間は信号が来ていないことを確認し，0〜100~ns のデータの平均値をとってそれをbaselineとした．
    \item 信号のしきい値(threshold)の決定
 	 \begin{itemize}
-	  \item 宇宙線を用いた予備実験の結果から，12 MeV のエネルギーに対応する信号のピーク値を求めた．%宇宙線を用いた予備実験の説明は？？ 12MeVがMIPがPSの厚さを通った時に落とすエネルギーである説明．
+	  \item 宇宙線を用いた予備実験の結果から，12~MeV のエネルギーに対応する信号のピーク値を求めた．(表~\ref{12MeVpeak})%宇宙線を用いた予備実験の説明は？？ 12MeVがMIPがPSの厚さを通った時に落とすエネルギーである説明．
 	  \item そのピーク値から，各チャンネルごとのthresholdを以下の値に決めた．
-	  \item 寿命測定と$g$因子測定用には全層とも4 MeV 相当とした．threshold値の決め方についてはあとで述べる．
-	  \item エネルギー測定用には，1層目にのみ4 MeV 相当のthresholdを設けた．2層目以降はthresholdを設けなかったのは，4 MeV 相当のthresholdを超えるエネルギーを持つイベントを全て取るためである．
-	  %\item エネルギー測定用には，1層目：4 MeV 相当とし，2層目以降はthresholdを設けなかった．%なぜ？
+		ただし，本実験ではチャンネル4でfingerの信号を取ったので，fingerのthresholdはイベントディスプレイを元に適当な値(20~mV)に決めた．
+	  \item 寿命測定と$g$因子測定用には全チャンネルとも4~MeV 相当とした．threshold値の決め方については後述する．
+	  \item エネルギー測定用には，1層目にのみ4~MeV 相当のthresholdを設けた．2層目以降はthresholdを設けなかったのは，4~MeV 相当のthresholdを超えるエネルギーを持つイベントを全て取るためである．
+	  %\item エネルギー測定用には，1層目：4~MeV 相当とし，2層目以降はthresholdを設けなかった．%なぜ？
 	 \end{itemize}
    \item 各チャンネルごとで，thresholdを越えた時間を信号の時間(peaktime)とした．
-   \item イベントディスプレイからおおよその信号の時間幅を決め，信号が検出されてから次の信号を検出するようになるまでのveto時間を40 ns にした．
-   \item peaktimeから40 ns の間のデータを足すことで信号のchargeを求めた．
+   \item イベントディスプレイからおおよその信号の時間幅を決め，信号が検出されてから次の信号を検出するようになるまでのveto時間を40~ns にした．
+   \item peaktimeから40~ns の間のデータを足すことで信号のchargeを求めた．
    \item 寿命と$g$因子について
 	 \begin{itemize}
 	  \item 各層の両側のチャンネルの信号のcoincidenceを取った．ただし，3層目は片側のみの信号である．
-	  \item ここでcoincidenceの条件は，互いのpeaktimeが10 ns よりも近いものとした．
-	  \item 寿命測定では，fingerを要求せずに層ごとのcoincidenceのみをとった．
-	  \item $g$因子測定では，立体角を制限するために，層ごとだけでなくフィンガーカウンターとのcoincidenceを要求した．
+	  \item ここでcoincidenceの条件は，互いのpeaktimeが10~ns よりも近いものとした．
+	  \item 寿命測定では，フィンガーカウンター(以下，finger)を要求せずに層ごとのcoincidenceのみをとった．
+	  \item $g$因子測定では立体角を制限するために，層ごとだけでなくfingerとのcoincidenceを要求した．
 	 \end{itemize}
    \item エネルギーについて
 	 \begin{itemize}
 	  \item 予備実験のデータから，各チャンネルごとにキャリブレーションをした.%上に同じ，実験説明が無い．
 	  \item 各層のエネルギーとして，1，2，4層目では両側のチャンネルのエネルギーの平均を取り，3層目では片方のチャンネルのエネルギーを使用した．
 	  \item fingerと1層目の両側のチャンネルの信号のcoincidenceをとり，そのときの全層のエネルギーの和を求めた．
-		2層目以降のチャンネルで信号がない場合，そのチャンネルのエネルギーは0とした．
 	  \item fingerとのcoincidenceを取ったのは，検出器の中心に入ったe$^{+}$の信号のみを選択するためである．
-		電磁シャワーで生じたフォトンが検出器内で反応せずに外に漏れ出ると，検出されるエネルギーは実際のe$^{+}$のエネルギーよりも低い値になる．
-		e$^{+}$が検出器の端の方に入射するときは検出器中央に入射するときより電磁シャワーによるフォトンが検出器の外に漏れやすいと考えた．
-		以上のことから，fingerとのcoincidenceをとって検出器の中央に入射したイベントのみを解析に用いた．
+		高エネルギーのe$^{+}$が入射すると検出器との相互作用によって電磁シャワーが生じる．
+		シャワー中の電子や陽電子が検出器内で反応せずに外に漏れ出ることがあり，このとき検出されるエネルギーは実際のe$^{+}$のエネルギーよりも低い値になる．
+		e$^{+}$の入射位置が検出器の端にある場合，検出器中央に入射する場合よりも電磁シャワーの電子や陽電子が検出器の外に漏れやすいと考えた．
+		以上のことからe$^{+}$が検出器の中央に入射したイベントのみを解析に用いるべきだと考え，fingerとのcoincidenceを要求した．
 	  %\item fingerとのcoincidenceを取ったのは，検出器の中心に入ったe$^{+}$の信号のみを選択し，エネルギー漏れを減らすためである．%エネルギー漏れとは？
 	 \end{itemize}
   \end{enumerate}
-  
+
+  解析方法Bとの主な違いは，thresholdの値を各チャンネル毎に変えていること，信号検出後にveto時間を設けていること，層間のcoincidenceやfingerとのcoincidenceをとっていることの3点である．
+  \begin{table}[h]
+   \caption{12~MeV に対応するchargeをもつ信号のピーク}
+   \label{12MeVpeak}
+  \begin{center}
+   \begin{tabular}{cc}\toprule
+    PMT名&ピーク値~(mV) \\ \hline
+    チャンネル0（あけみ）&110 $\pm$ 21 \\
+    チャンネル1（勝太郎）&145 $\pm$ 25 \\
+    チャンネル2（畑さん）&160 $\pm$ 28 \\
+    チャンネル3（紗智子）&112 $\pm$ 22 \\
+    チャンネル4（蘭）  &140 $\pm$ 23 \\
+    チャンネル5（矢部） &161 $\pm$ 28 \\
+    チャンネル6（政子） &105 $\pm$ 21 \\
+    チャンネル7（王）  &140 $\pm$ 25 \\ \bottomrule
+   \end{tabular}
+  \end{center} 
+  \end{table}
+
+
   \subsubsection{信号検出のthreshold値について}
   信号検出時のthresholdの値の判断理由について触れておく．
   
-  thresholdの値を1 MeV 相当から6 MeV 相当まで変化させて寿命を求めると，1 MeV 相当からthresholdが高くなるにつれて寿命は短くなり，4 MeV 相当以上のときに誤差の範囲で一定の値になった．
-  このことから3 MeV 相当以下のthresholdでは低エネルギーのノイズを信号として処理していると考えた．
-  よって，thresholdの値には4 MeV 相当の電圧値が妥当だと考えた．
+  thresholdの値を1~MeV 相当から6~MeV 相当まで変化させて寿命を求めると，thresholdが1~MeV 相当から高くなるにつれて寿命は短くなり，4~MeV 相当以上のときに誤差の範囲で一定の値になった．
+  このことから3~MeV 相当以下のthresholdでは低エネルギーのノイズを信号として処理していると考えた．
+  よって，thresholdの値には4~MeV 相当の電圧値が妥当だと考えた．
   %1層目のthresholdを他層よりも高く設定しているのは，このようなバックグラウンドを除去するためである．%なぜ除去できる？
   %一方，寿命測定に関して，thresholdを上げてもfittingの結果は変わらず，統計誤差が大きくなるだけだった.%表現に違和感
 
-  
-
   \subsubsection{得られた崩壊曲線とfittingの結果}
-  図\ref{lt_layercoin}は，磁場なし標的を用いたときのミューオンの崩壊曲線である．
-  それを次の$f_{\mathrm{life}}(t)$でfittingした結果が図\ref{lt_layercoin_fit}である．
+  図~\ref{lt_layercoin}は，磁場なし標的を用いたときのミューオンの崩壊曲線である．
+  それを次の$f_{\mathrm{life}}(t)$でfittingした結果が図~\ref{lt_layercoin_fit}である．
   \begin{equation*}
    f_{\mathrm{life}}(t) = \exp[-(t+A)/\tau].
   \end{equation*}
-  また，図\ref{g_layercoin}は磁場あり標的を用いたときのミューオンの崩壊曲線である．
-  それを次の$f_{g}(t)$でfittingした結果が図\ref{g_layercoin_fit}である．
+  また，図~\ref{g_layercoin}は磁場あり標的を用いたときのミューオンの崩壊曲線である．
+  それを次の$f_{g}(t)$でfittingした結果が図~\ref{g_layercoin_fit}である．
   \begin{equation*}
    f_{g}(t) = \exp[-(t+A)/\tau](1+B\cos(\omega t + \delta)).
   \end{equation*}
   
-  fittingの範囲は1050 ns から7950 ns までとした． 
-  今回使用したミューオンビームの分布はFWHM$\sim$100 ns ，すなわち$\sigma\sim$50 ns のガウス分布と考えることができる．
-  図\ref{lt_layercoin}のヒストグラムがピーク値をとる約800 ns をガウシアンのピークだと考えて，その点から$5\sigma\sim 250$ns はfittingの対象外とした．
-  また，ピークを検出してから40 ns のveto時間をとる解析方法から，8000 ns から後ろに40 ns 分は解析に用いることができない．
+  fittingの範囲は1050~ns から7950~ns までとした． 
+  今回使用したミューオンビームの分布はFWHM$\sim$100~ns ，すなわち$\sigma\sim$50~ns のガウス分布と考えることができる．
+  図~\ref{lt_layercoin}のヒストグラムがピーク値をとる約800~ns をガウシアンのピークだと考えて，その点から$5\sigma\sim 250$~ns はfittingの対象外とした．
+  また，ピークを検出してから40~ns のveto時間をとるという解析方法から，8000~ns から後ろに40~ns 分は解析に用いることができない．
   以上のことからfitting範囲を決定した．
   
-  fittingの結果は表\ref{fit_lt}，\ref{fit_g}のようになった．表中の誤差はfittingに由来する統計誤差である．
+  fittingの結果は表~\ref{fit_lt}，~\ref{fit_g}のようになった．表中の誤差はfittingに由来する統計誤差である．
   
   \begin{table}[H]
    \caption{寿命$\tau$のfitting結果}
    \label{fit_lt}
    \begin{center}
     \begin{tabular}{cc}\toprule
-     coincidenceを取った層& $\tau$ (ns) \\ \midrule
+     coincidenceを取った層& $\tau$~(ns) \\ \midrule
      1 		        & 2223.7 $\pm$ 7.7 \\
      1+2 		& 2224 $\pm$ 10 \\
      1+2+3 		& 2217 $\pm$ 15 \\
@@ -114,7 +134,7 @@
    \label{fit_g}
    \begin{center}
     \begin{tabular}{cccc}\toprule
-     coincidenceを取った層&$\tau$ (ns)& $\omega$ ($\times 10^{-3}$/ns) & $g$ \\ \midrule
+     coincidenceを取った層&$\tau$~(ns)& $\omega$~($\times 10^{-3}$/ns) & $g$ \\ \midrule
      finger+1             &2170.4 $\pm$ 9.1 & $( 4.621 \pm 0.012 ) $ & 2.0091 $\pm$ 0.0054 \\
      finger+1+2 	  &2199 $\pm$ 13    & $( 4.614 \pm 0.011 ) $ & 2.0063 $\pm$ 0.0050 \\
      finger+1+2+3 	  &2205 $\pm$ 18    & $( 4.594 \pm 0.013 ) $ & 1.9973 $\pm$ 0.0055\\
@@ -147,7 +167,7 @@
    \begin{subfigure}{\columnwidth}
     \centering
     \includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/g_layer_f_coin.pdf}
-    \caption{層でcoincidenceを取って得られたヒストグラム(磁場あり標的)}
+    \caption{fingerと層でcoincidenceを取って得られたヒストグラム(磁場あり標的)}
     \label{g_layercoin}
    \end{subfigure}
    \begin{subfigure}{\columnwidth}
@@ -162,17 +182,21 @@
 
   
     \subsubsection{fitting範囲の妥当性について}
-  %よって，図\ref{lt_layercoin}のヒストグラムのピーク点は750 ns であるが，その点から1000 ns はfittingの対象外とし，%なぜ1000ns？
-  %図\ref{lt_layercoin_fit}と図\ref{g_layercoin_fit}ではfittingの範囲を1750 ns から7950 ns までとした．
-  上で述べたようにfittingの範囲は1050 ns から7950 ns としたが，この範囲の前側と後側で範囲を分けてfittingをすると，$\tau$と$g$の値は表\ref{fitrange1}〜\ref{fitrange4}のようになった．
+  上で述べたようにfittingの範囲は1050~ns から7950~ns としたが，この範囲の前側と後側で範囲を分けてfittingをすると，$\tau$と$g$の値は表~\ref{fitrange1}〜~\ref{fitrange4}のようになった．
+  表~\ref{fitrange1}・表~\ref{fitrange2}を表~\ref{fit_lt}と比較し，
+  表~\ref{fitrange3}・表~\ref{fitrange4}を表~\ref{fit_g}と比較すると，fittingの範囲を変えても得られた$\tau$と$g$の値は各層ごとで誤差の範囲内で一致していると言える．
+  このことから，fittingの範囲として1050~ns から7950~ns までは適切だと考えられる．
+  %よって，図~\ref{lt_layercoin}のヒストグラムのピーク点は750~ns であるが，その点から1000~ns はfittingの対象外とし，%なぜ1000ns？
+  %図~\ref{lt_layercoin_fit}と図~\ref{g_layercoin_fit}ではfittingの範囲を1750~ns から7950~ns までとした．
+  %寿命に関して全層のcoincidenceがfittingの範囲が前半の時と後半の時とではコンシステントではない．系統誤差となるのでは？
   \begin{table}[H]
    \centering
    \begin{minipage}{0.4\columnwidth}
-   \caption{寿命$\tau$;fitting範囲1050 ns 〜4550 ns }
+   \caption{寿命$\tau$;fitting範囲1050~ns 〜4550~ns }
    \label{fitrange1}
    \begin{center}
     \begin{tabular}{cc}\toprule
-     coincidenceを取った層 & $\tau$ (ns) \\ \midrule
+     coincidenceを取った層 & $\tau$~(ns) \\ \midrule
      1 			   & 2233 $\pm$ 14 \\
      1+2 		   & 2234 $\pm$ 19 \\
      1+2+3 		   & 2249 $\pm$ 27 \\
@@ -182,11 +206,11 @@
    \end{minipage}
    \hspace*{5mm}
    \begin{minipage}{0.4\columnwidth}
-    \caption{寿命$\tau$;fitting範囲4450 ns 〜7950 ns }
+    \caption{寿命$\tau$;fitting範囲4450~ns 〜7950~ns }
     \label{fitrange2}
     \begin{center}
      \begin{tabular}{cc}\toprule
-      coincidenceを取った層 & $\tau$ (ns) \\ \midrule
+      coincidenceを取った層 & $\tau$~(ns) \\ \midrule
       1 			   & 2250 $\pm$ 32 \\
       1+2 		   & 2238 $\pm$ 42 \\
       1+2+3 		   & 2257 $\pm$ 61 \\
@@ -197,11 +221,11 @@
   \end{table}%
 
   \begin{table}[H]
-    \caption{$g$因子;fitting範囲1050 ns 〜4550 ns }
+    \caption{$g$因子;fitting範囲1050~ns 〜4550~ns }
     \label{fitrange3}
     \begin{center}
      \begin{tabular}{cccc}\toprule
-      coincidenceを取った層&$\tau$ (ns)& $\omega$ ($\times 10^{-3}$/ns) & $g$ \\ \midrule
+      coincidenceを取った層&$\tau$~(ns)& $\omega$~($\times 10^{-3}$/ns) & $g$ \\ \midrule
       finger+1             &2134 $\pm$ 15 & $( 4.638 \pm 0.020 ) $ & 2.0165 $\pm$ 0.0088 \\
       finger+1+2 	  &2185 $\pm$ 21 & $( 4.612 \pm 0.020 ) $ & 2.0054 $\pm$ 0.0085 \\
       finger+1+2+3 	  &2221 $\pm$ 32 & $( 4.615 \pm 0.021 ) $ & 2.0068 $\pm$ 0.0093\\
@@ -211,11 +235,11 @@
   \end{table}%
 
   \begin{table}[H]
-   \caption{$g$因子;fitting範囲4450 ns 〜7950 ns }
+   \caption{$g$因子;fitting範囲4450~ns 〜7950~ns }
    \label{fitrange4}
    \begin{center}
     \begin{tabular}{cccc}\toprule
-     coincidenceを取った層&$\tau$ (ns)& $\omega$ ($\times 10^{-3}$/ns) & $g$ \\ \midrule
+     coincidenceを取った層&$\tau$~(ns)& $\omega$~($\times 10^{-3}$/ns) & $g$ \\ \midrule
      finger+1             &2254 $\pm$ 42 & $( 4.569 \pm 0.059 ) $ & 1.986 $\pm$ 0.026 \\
      finger+1+2 	  &2267 $\pm$ 58 & $( 4.618 \pm 0.053 ) $ & 2.008 $\pm$ 0.023 \\
      finger+1+2+3 	  &2245 $\pm$ 86 & $( 4.571 \pm 0.056 ) $ & 1.987 $\pm$ 0.024\\
@@ -224,22 +248,18 @@
    \end{center}
   \end{table}%
 
-  表\ref{fitrange1}・表\ref{fitrange2}を表\ref{fit_lt}と比較し，
-  表\ref{fitrange3}・表\ref{fitrange4}を表\ref{fit_g}と比較すると，fittingの範囲を変えても得られた$\tau$と$g$の値は各層ごとで誤差の範囲内で一致していると言える．
-  このことから，fittingの範囲として1050 ns から7950 ns までは適切だと考えられる．
-  %寿命に関して全層のcoincidenceがfittingの範囲が前半の時と後半の時とではコンシステントではない．系統誤差となるのでは？
-
-  寿命に関して，全層でcoincidenceをとったときに3層目までよりも寿命が短くなっている．
+  \subsubsection{coincidenceをとる層数による寿命の違いについて}
+  寿命に関して，全層でcoincidenceをとったときのfitting結果が3層目までの結果よりも短くなっている．
 
   
   \subsubsection{エネルギー分布}
-  磁場なし標的を用いたときのデータから求めたエネルギーのヒストグラムは図\ref{michel_PS}のようになった．
-  ミューオンが散乱されて直接検出器に入射してくるイベントを除去するために，解析にはpeaktimeが1050 ns 以降のイベントのみを使用した．
-  ガウシアンで入射してくるミューオンビームのピークと考えられる時間（800 ns 付近）から約$5\sigma$の間隔を開けることでビーム由来のミューオンはほぼ無視できると考えた．
+  磁場なし標的を用いたときのデータから求めたエネルギーのヒストグラムは図~\ref{michel_PS}のようになった．
+  ミューオンが散乱されて直接検出器に入射してくるイベントを除去するために，解析にはpeaktimeが1050~ns 以降のイベントのみを使用した．
+  ガウシアンで入射してくるミューオンビームのピークと考えられる時間（800~ns 付近）から約$5\sigma$の間隔を開けることでビーム由来のミューオンはほぼ無視できると考えた．
   
-  \ref{michel_PS}において横軸と縦軸の誤差としてそれぞれキャリブレーション由来のエネルギー分解能と統計誤差をつけたグラフが図\ref{michel_PS_gosa}である．
-  %磁場なし標的を用いたときのデータから求めたエネルギー分布は図\ref{michel_PS}のようになった．
-  %さらに，\ref{michel_PS}の各点において，キャリブレーションに由来するエネルギー分解能と統計誤差をそれぞれ横軸と縦軸の誤差として付けたのが図\ref{michel_PS_gosa}である．%図の縦軸の説明 2つの図で全然スケールが違うのはなぜ？
+  ~\ref{michel_PS}において横軸と縦軸の誤差としてそれぞれキャリブレーション由来のエネルギー分解能と統計誤差をつけたグラフが図~\ref{michel_PS_gosa}である．
+  %磁場なし標的を用いたときのデータから求めたエネルギー分布は図~\ref{michel_PS}のようになった．
+  %さらに，~\ref{michel_PS}の各点において，キャリブレーションに由来するエネルギー分解能と統計誤差をそれぞれ横軸と縦軸の誤差として付けたのが図~\ref{michel_PS_gosa}である．%図の縦軸の説明 2つの図で全然スケールが違うのはなぜ？
   \begin{figure}[H]
    \centering
    \includegraphics[height = 0.7\columnwidth , angle = -90]{figure/ikemitsu/michel_PS.pdf}
@@ -254,45 +274,56 @@
    \label{michel_PS_gosa}
   \end{figure}
   
-  ミューオンのスピンに対して角度$\theta$の方向に崩壊する$\mathrm{e}^{+}$のエネルギー分布は，式\ref{eq:theory_michel}で与えられた．
+  ミューオンのスピンに対して角度$\theta$の方向に崩壊する$\mathrm{e}^{+}$のエネルギー分布は，式~\ref{eq:theory_michel}で与えられた．
   この式に$\rho$以外のパラメータの値として，標準模型で予想されている$\eta = 0 , \xi = 1 , \xi \delta = 3/4$を代入して計算すると，
   \begin{equation*}
    \frac{d\Gamma}{dx} \propto x^{2} [\frac{2}{3}(\rho + \frac{3}{8}\cos \theta - \frac{1}{8})(4x-3) + \frac{1}{4}(\cos \theta + 3)]
   \end{equation*}
   となる．
 
-  図\ref{michel_PS_gosa}のグラフを$f_{\mathrm{michel}}(x) = x^{2} (A(4x -3) + B)$でfittingすることにより$\rho$を求めることができると考えた．
-  しかし，高エネルギー側での横軸の誤差が大きいこともありfittingはうまくいかなかった．以下ではエネルギー解析についての課題を述べる．
+  図~\ref{michel_PS_gosa}のグラフを$f_{\mathrm{michel}}(x) = x^{2} (A(4x -3) + B)$でfittingすることにより$\rho$を求めることができると考えたが，fittingはうまくいかなかった．
+  この原因として，高エネルギー側での横軸の誤差が大きいことや検出器のエネルギー分解能を考慮せずにfittingを行っていることが考えられる．
+  本解析では時間の都合上これ以上の解析は行なわなかった．
 
-  PSは無機シンチレータに比べて密度が小さいので，電磁シャワーで生じたフォトンが検出器の外側に漏れやすい．%フォトンの発生の頻度がNaIに比べて低いことも注目すべき
-  これによって測定されるエネルギーが入射粒子のエネルギーよりも低くなるイベントが生じる．
-  したがって測定の結果得られるエネルギー分布は入射粒子の分布と比較して高エネルギー側が少なく低エネルギー側が多い分布になる．
+  \subsubsection{エネルギー測定についての今後の課題}
+  以下ではエネルギー分布測定についての今後の方針を述べる．
+
+  PSは無機シンチレータに比べて密度が小さいので制動放射で生じるフォトンは少ない．
+  したがってフォトンによるエネルギー漏れは少なく，これに起因する測定エネルギーのゆらぎは比較的小さい．
+  しかし，シンチレーション効率が低いPSの信号をPMTで読み出すにはゲインを高くする必要があり，PMTの電子増倍過程の確率的なゆらぎによってエネルギー分解能は悪くなる．
+  %PSは無機シンチレータに比べて密度が小さいので，電磁シャワーで生じたフォトンが検出器の外側に漏れやすい．%フォトンの発生の頻度がNaIに比べて低いことも注目すべき
+  %これによって測定されるエネルギーが入射粒子のエネルギーよりも低くなるイベントが生じる．
+  %したがって測定の結果得られるエネルギー分布は入射粒子の分布と比較して高エネルギー側が少なく低エネルギー側が多い分布になる．
   %これによって高エネルギーの粒子の観測数が減ると考えられる．%観測数とはなにか？
-  解析的にこの課題を解決するには，シミュレーションによって入射粒子のエネルギーと観測されるエネルギーの対応を求めてfitting関数にその寄与を組み込む必要がある．
+  したがって，解析においては測定されるエネルギーにPMT由来のゆらぎがあることを考慮する必要がある．
+  %解析的にこの課題を解決するには，シミュレーションによって入射粒子のエネルギーと観測されるエネルギーの対応を求めてfitting関数にその寄与を組み込む必要がある．
 
-  具体的には，シミュレーションによってあるエネルギー$E_\mathrm{incident}$をもつ粒子が入射したときの検出器中での損失エネルギー$E_\mathrm{detect}$の分布を求め，それを適当な関数で近似する．
-  これを0から50 MeV の$E_\mathrm{incident}$に対して行い，得られた$E_\mathrm{detect}$の分布関数を$f(E_\mathrm{incident})$とおく．
-  入射粒子のエネルギー分布$g_{\mathrm{real}}(E)$を$f(E_\mathrm{incident})$でたたみ込み積分することで，予想される分布関数$g_{\mathrm{measure}}(E)$が得られる．
-  $g_{\mathrm{measure}}(E)$を用いれば測定で得られるグラフをfittingすることができると考えられる．
+  具体的には，まず，あるエネルギー$E_\mathrm{in}$をもつ粒子が検出器中で失うエネルギー$E_\mathrm{loss}$の分布をシミュレーションによって求め，それを適当な関数で近似する．
+  これを0から50~MeV の$E_\mathrm{in}$に対して行い，$E_\mathrm{loss}$の分布関数$f(E_\mathrm{in},E_\mathrm{loss})$を求める．
+  次に，入射粒子のエネルギー分布$g_{\mathrm{real}}(E)$を$f(E_\mathrm{in},E_\mathrm{loss})$でたたみ込み積分することで，損失エネルギーの分布関数$g_{\mathrm{loss}}(E)$が得られる．
+  最後に，PMTに起因するゆらぎの寄与として$g_{\mathrm{loss}}(E)$をガウシアンでたたみ込み積分して，予想される測定値の分布関数$g_{\mathrm{measure}}(E)$が得られる．
+  $g_{\mathrm{measure}}(E)$を用いてfitting行う．
   %解析的にこの課題を解決するには，シミュレーションによって入射粒子のエネルギーと観測されるエネルギーの対応を求めてfitting関数にその寄与を組み込む必要がある．%それでそれに対してどうするのか？
   
   また，この実験ではPSのエネルギー較正に改善の余地が大いに残されている．
-  宇宙線ミューオンを用いたキャリブレーションならば，fingerとのcoincidenceを取ることによって測定する宇宙線の飛跡を制限できる．
-  こうすることで測定される宇宙線の損失エネルギーの幅は狭くなり，また，いくつかの飛跡に対してエネルギー測定を行うことで異なる損失エネルギーに対する電荷量をもとめられる．
-  これらの理由から，測定する宇宙線の飛跡を制限することで較正直線の誤差を小さくすることができると考えられる．
+  一つの方法としてベータ線源の$Q$~値を求めることで較正点を増やすことが考えられる．
+  他に，宇宙線ミューオンを用いたキャリブレーションならば，fingerとのcoincidenceを取ることによって宇宙線の飛跡を制限して測定を行うことが考えられる．
+  こうすることで測定される宇宙線の損失エネルギーの幅は図~\ref{ps_langau}よりも狭くなり，また，いくつかの飛跡に対してエネルギー測定を行うことで異なる損失エネルギーに対する電荷量を求められる．
+  すなわち，エネルギー較正の点が増え，各点における誤差が小さくなると予想される．
+  したがって，測定する宇宙線の飛跡を制限することで較正直線の誤差を小さくすることができると考えられる．
   %宇宙線ミューオンを用いたキャリブレーションならば，NaI検出器で行っているような，fingerとのcoincidenceをとることで精度を上げることができると考えられる．
   % NaIではfingerとのcoincidenceをとるといった処理はしていない．事実誤認．
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %しかし，寿命に関して表\ref{fitrange1}と表\ref{fitrange2}の1，2段目を比較すると，遅い時間側でfittingを行うと寿命が長くなっていると分かる．
+  %しかし，寿命に関して表~\ref{fitrange1}と表~\ref{fitrange2}の1，2段目を比較すると，遅い時間側でfittingを行うと寿命が長くなっていると分かる．
   %これは，バックグラウンドなどのノイズを信号として処理しており，その影響がイベント数の少ない部分で強く出ていることによると考えることができる．
   %これを除くためには，より詳しい波形解析によってノイズとみなせる信号の性質を特定しなければならない．
   %今回の実験ではバックグラウンド計測をしなかったが，今後の課題として，ノイズ除去を目的とした解析を行う必要がある．
   %ノイズとして想定されるものには，
   %WFDを用いた実験では波形をデータとして残せるので，こうしたノイズに起因する信号を取り除くことは可能だと考えられる．
-  %寿命の解析結果として，表\ref{fit_lt}と表\ref{fitrange1}・表\ref{fitrange2}の違いをfitting範囲による系統誤差に含めた．%どのように？
+  %寿命の解析結果として，表~\ref{fit_lt}と表~\ref{fitrange1}・表~\ref{fitrange2}の違いをfitting範囲による系統誤差に含めた．%どのように？
   %WFDを用いた実験では波形をデータとして残せるので，ノイズに起因する信号を取り除くことは可能だと考えられる．%どのようなノイズが想定されている？
-  %寿命の解析結果として，表\ref{fit_lt}と表\ref{fitrange1}・表\ref{fitrange2}の違いをfitting範囲による系統誤差に含めた．%どのように？
+  %寿命の解析結果として，表~\ref{fit_lt}と表~\ref{fitrange1}・表~\ref{fitrange2}の違いをfitting範囲による系統誤差に含めた．%どのように？
 
   %$g$因子については，バックグラウンドがあっても振動の周期への影響はないと考えられる．%なぜ?
   %したがって，fitting範囲による系統誤差はないとした．
