@@ -22,229 +22,229 @@
 %\begin{document}
 
 \section{序論}
-	本研究ではミューオンの崩壊現象を通して，標準模型，とくに弱い相互作用に関する各種の検証を目的とする．今回の実験で測定したい量は以下の三つである．
+本研究の目的はミューオンの崩壊現象を通して，標準模型，とくに弱い相互作用に関する各種の検証を行うことである．今回の実験で測定したい量は以下の三つである．
 
-	\begin{description}
-	\item[ミューオンの寿命]
+\begin{description}
+\item[ミューオンの寿命]
 
-	ミューオンは弱い相互作用によって崩壊することが知られており，その寿命は標準模型によって計算されている．今回の実験ではミューオンビームを標的中で止めることで，ミューオンの寿命を測定し．その値を理論値と比較することで標準模型の検証を行う．
+ミューオンは弱い相互作用によって崩壊することが知られており，その寿命は標準模型によって計算されている．今回の実験ではミューオンビームを標的中で止めることで，ミューオンの寿命を測定し．その値を理論値と比較することで標準模型の検証を行う．
+\item[ミッシェルパラメータ]
 
-	\item[ミッシェルパラメータ]
+ミューオンの崩壊によって出てきた電子（陽電子）のエネルギースペクトルにおいて，ミッシェルパラメータと呼ばれるいくつかのパラメータを考えることができ，弱い相互作用の$V - A$ 理論ではこの値が決定されている．また，このエネルギースペクトルには$\cos \theta$ に比例する特徴的な項が存在し，これは弱い相互作用のパリティ対称性の破れを表している．今回の実験ではこのエネルギースペクトルを求めることでミッシェルパラメータの値を決定し，弱い相互作用のパリティ対称性の破れを確認するとともに，$V - A$ 理論の妥当性を検証する．
+\item[$g$ 因子]
 
-	ミューオンの崩壊によって出てきた電子（陽電子）のエネルギースペクトルにおいて，ミッシェルパラメータと呼ばれるいくつかのパラメータを考えることができ，弱い相互作用の$V - A$ 理論ではこの値が決定されている．また，このエネルギースペクトルには$\cos \theta$ に比例する特徴的な項が存在し，これは弱い相互作用のパリティ対称性の破れを表している．今回の実験ではミューオンの崩壊寿命を測定すると同時にこのエネルギースペクトルを求めることでミッシェルパラメータの値を決定し，弱い相互作用のパリティ対称性の破れを確認するとともに，$V - A$ 理論の妥当性を検証する．
+ミューオンの$g$ 因子の測定は標準模型の検証に用いられる典型的な実験の一つであり，とくに現在，標準模型を超えた物理の存在をも示唆する実験である．今回の実験ではミューオンビームを止める標的中に磁場をかけることでミューオンのスピンを歳差運動させ，$g$ 因子の測定をめざす．
+\end{description}
 
-	\item[$g$ 因子]
-
-	ミューオンの$g$ 因子の測定は標準模型の検証に用いられる典型的な実験の一つであり，とくに現在，標準模型を超えた物理の存在をも示唆する実験である．今回の実験ではミューオンビームを止める標的中に磁場をかけることでミューオンのスピンを歳差運動させ，$g$ 因子の測定をめざす．
-	\end{description}
-
-	また，これらの実験を通して粒子ビームを用いた素粒子実験に触れ，その方法を会得することを目的とする．
+また，これらの実験を通して粒子ビームを用いた素粒子実験に触れ，その方法を会得することを目的とする．
 
 \section{理論}
-	本節では今回の実験で測定する物理量についてその背景にある理論を概説する．なお，詳しい計算等については一部については付録を見るか，あるいは参考文献を参照してほしい．
-	以下,自然単位系($\hbar = c = 1$)を用いた.
-	\subsection{ミューオンとは}
-	ミューオン（$\mu^{\pm}$）は1936年にAnderson らによって宇宙線から発見された，標準模型におけるレプトンの第二世代に属する素粒子である．$\mu^{\pm}$ は電子と同じ電荷$\pm e$，スピン$1/2$ を持ち，質量はその約$200$ 倍である．より正確には
-	\[ m_{\mu} = 105.6583745 \pm 0.0000024 \,(\mathrm{MeV})\]
-	と測定されている．\cite{PDG}
+本節では今回の実験で測定する物理量についてその背景にある理論を概説する．なお，詳しい計算等については一部については付録を見るか，あるいは参考文献を参照してほしい．以下,自然単位系($\hbar = c = 1$)を用いる．
+
+\subsection{ミューオンとは}
+ミューオン（$\mu^{\pm}$）は1936年にAnderson らによって宇宙線から発見された，標準模型におけるレプトンの第二世代に属する素粒子である．$\mu^{\pm}$ は電子と同じ電荷$\pm e$，スピン$1/2$ を持ち，質量はその約$200$ 倍である．より正確には
+	\[ m_{\mu} = 105.6583745 \pm 0.0000024~\mathrm{MeV}\]
+と測定されている\cite{PDG}．
 	
-	\subsection{ミューオンの寿命}
-	$\mu^{\pm}$ はほぼ100 \% の崩壊確率で次の崩壊を起こす．\cite{PDG}
-	\begin{eqnarray}
-	\mu^{-} \rightarrow e^{-} + \nu_{\mu} + \Bar{\nu}_{e}\\
-	\mu^{+} \rightarrow e^{+} + \Bar{\nu}_{\mu} + \nu_{\mu}
-	\label{eq:theory_muondecay}
-	\end{eqnarray}
-	今回の実験では$\mu^{+}$ を用いるので，以下$\mu^{+}$ についてその寿命を計算する．
+\subsection{ミューオンの寿命}
+$\mu^{\pm}$ はほぼ100 \% の崩壊確率で次の崩壊を起こす\cite{PDG}．
+\begin{eqnarray}
+\mu^{-} \rightarrow e^{-} + \nu_{\mu} + \Bar{\nu}_{e}\\
+\mu^{+} \rightarrow e^{+} + \Bar{\nu}_{\mu} + \nu_{\mu}
+\label{eq:theory_muondecay}
+\end{eqnarray}
+今回の実験では$\mu^{+}$ を用いるので，以下$\mu^{+}$ についてその寿命を計算する．
 	
-	\begin{figure}
-		\centering
-		\begin{fmffile}{feynmanzu1}
-			\begin{fmfgraph*}(120,80)
+\begin{figure}
+\centering
+\begin{fmffile}{feynmanzu1}
+\begin{fmfgraph*}(120,80)
+
+\fmfleft{mui}
+\fmfright{numuo,eo,nueo}
 				
-				\fmfleft{mui}
-				\fmfright{numuo,eo,nueo}
+\fmflabel{$\mu^{+}(p, r)$}{mui}
+\fmflabel{$e^{+}(p', r')$}{eo}
+\fmflabel{$\nu_e(q_{1}, r_{1})$}{nueo}
+\fmflabel{$\bar{\nu}_{\mu}(q_{2}, r_{2})$}{numuo}
 				
-				\fmflabel{$\mu^{+}(p, r)$}{mui}
-				\fmflabel{$e^{+}(p', r')$}{eo}
-				\fmflabel{$\nu_e(q_{1}, r_{1})$}{nueo}
-				\fmflabel{$\bar{\nu}_{\mu}(q_{2}, r_{2})$}{numuo}
+\fmf{fermion}{numuo,numumu,mui}
+\fmf{boson,label=$W(k)$}{numumu,enue}
+\fmf{fermion}{eo,enue}
+\fmf{fermion}{enue,nueo}
 				
-				\fmf{fermion}{numuo,numumu,mui}
-				\fmf{boson,label=$W(k)$}{numumu,enue}
-				\fmf{fermion}{eo,enue}
-				\fmf{fermion}{enue,nueo}
-				
-				\fmflabel{$\alpha$}{enue}
-				\fmflabel{$\!\!\!\beta$}{numumu}
-			\end{fmfgraph*}
-		\end{fmffile}
-		\vspace{10pt}
-		\caption{$\mu^{+}$ の崩壊のファインマン図}
-		\label{zu:muondecay}
-	\end{figure}
+\fmflabel{$\alpha$}{enue}
+\fmflabel{$\!\!\!\beta$}{numumu}
+
+\end{fmfgraph*}
+\end{fmffile}
+\vspace{10pt}
+\caption{$\mu^{+}$ の崩壊のファインマン図}
+\label{zu:muondecay}
+\end{figure}
 	
-	$\mu^{+}$ の崩壊を表すファインマン図は図\ref{zu:muondecay} である．標準模型(ワインバーグ＝サラム理論)によればこの過程のファインマン振幅は
-	\begin{align}
-	\mathcal{M} = &-g_{W}^2\left[\Bar{u}(\bm{q_{1}})\gamma^{\alpha}(1 - \gamma_{5})v(\bm{p'})\right] \notag \\ 
-	&\times \frac{-(-g_{\alpha\beta} + k_{\alpha}k_{\beta}/m_{W}^2)}{k^{2} - m_{W}^2 + i\epsilon}\left[\Bar{v}(\bm{p})\gamma^{\beta}(1 - \gamma_5)v(\bm{q_{2}})\right]
-	\label{eq:theory_muondecayamp}
-	\end{align}
-	と書ける．ただし$p, q, k, \alpha, \beta$などは図\ref{zu:muondecay} に対応し，$g_{W}$ は弱い相互作用の結合定数である．その他の記法は付録に記載している通りである．ここで，$m_{W}^2$ が$k^2$ にくらべて十分大きいとし，$m_{W} \rightarrow \infty$の極限をとって計算すると，V-A理論の結果と一致する.この詳細な計算は付録に掲載するが結果として$\mu^+$ の寿命
-	\begin{equation}
-	\tau_{\mu} = \frac{192\pi^3}{G^{2} m_{\mu}^{5}}
-        \label{eq:thory_muonlifetime}
-	\end{equation}
-	が得られる．ここで$G$ はFermi 結合定数である．
+$\mu^{+}$ の崩壊は図\ref{zu:muondecay} のようなファインマン図で表される．標準模型（ワインバーグ＝サラム理論）によればこの過程のファインマン振幅は
+\begin{align}
+\mathcal{M} = &-g_{W}^2\left[\Bar{u}(\bm{q_{1}})\gamma^{\alpha}(1 - \gamma_{5})v(\bm{p'})\right] \notag \\ 
+&\times \frac{-(-g_{\alpha\beta} + k_{\alpha}k_{\beta}/m_{W}^2)}{k^{2} - m_{W}^2 + i\epsilon}\left[\Bar{v}(\bm{p})\gamma^{\beta}(1 - \gamma_5)v(\bm{q_{2}})\right]
+\label{eq:theory_muondecayamp}
+\end{align}%下の文章に対応する記号がありません
+と書ける．ただし$p, q, k, \alpha, \beta$などは図\ref{zu:muondecay} に対応し，$g_{W}$ は弱い相互作用の結合定数である．その他の記法は付録に記載している通りである．ここで，$m_{W}^2$ が$k^2$ にくらべて十分大きいとし，$m_{W} \rightarrow \infty$の極限をとって計算すると，$V-A$理論の結果と一致する.この詳細な計算は付録に掲載するが結果として$\mu^+$ の寿命
+\begin{equation}
+\tau_{\mu} = \frac{192\pi^3}{G^{2} m_{\mu}^{5}}
+\label{eq:thory_muonlifetime}
+\end{equation}
+が得られる．ここで$G$ はFermi 結合定数である．
 
-	実際の測定値としては
-	\[\tau_{\mu} = 2.1969811 \pm 0.0000022 \times 10^{-6} \,(\mathrm{s})\]
-	という値が得られている．\cite{PDG}
+実際の測定値としては
+\[\tau_{\mu} = 2.1969811 \pm 0.0000022 \times 10^{-6}~\mathrm{s}\]
+という値が得られている\cite{PDG}.
 	
-	\subsection{ミッシェルパラメータ}
-        % 崩壊陽電子の最大エネルギー〜53MeVについての記載を追加スべき
-        %ーしました
-	式\eqref{eq:theory_muondecay}で書かれる$\mu^{+}$ の崩壊で出てくる$e^{+}$ を考える．静止した$\mu^{+}$が崩壊する時，運動量とエネルギーの保存から$e^{+}$が持ちうる最大エネルギーは$1/2 m_{\mu} \simeq 53$MeVであり，完全に偏極された$\mu^{+}$ の崩壊を静止系で考えると，出てくる$e^{+}$ のエネルギー及び角度分布はミッシェルパラメータと呼ばれる四つのパラメータ$\rho, \eta, \xi, \delta$ を用いて次のようにあらわすことができる．\cite{michel_parameter}
-	\begin{align}
-	\frac{d^2\Gamma}{x^{2}dxd(\cos \theta)} \propto& \,\,(3 - 3x) + \frac{2}{3}\rho (4x - 3) \notag \\
-	&+ 3 \eta \,x_{0} \frac{1-x}{x} + \xi \cos \theta \left[(1 - x) + \frac{2}{3} \delta (4x - 3)\right]
-	\label{eq:theory_michel}
-	\end{align}
-	ここでニュートリノの質量や輻射補正は無視した．ただし，$\theta$ は$e^{+}$ の運動量と$\mu^{+}$ のスピンのなす角度であり，$x$ は$e^{+}$ のエネルギーの最大値が1となるように規格化したものである．また，$x_0$ は$e^{+}$ のエネルギーが$m_{e}$ のときの$x$ の値であり，これは通常無視できるので第3 項は考えないことも多い．以上の計算の詳細は付録に掲載する．
+\subsection{ミッシェルパラメータ}
+式\eqref{eq:theory_muondecay} で書かれる$\mu^{+}$ の崩壊で出てくる$e^{+}$ を考える．静止した$\mu^{+}$ が崩壊する時，運動量とエネルギーの保存から$e^{+}$ が持ちうる最大エネルギーは$1/2 m_{\mu} \simeq 53~\mathrm{MeV}$ であり，完全に偏極された$\mu^{+}$ の崩壊を静止系で考えると，出てくる$e^{+}$ のエネルギー及び角度分布はミッシェルパラメータと呼ばれる四つのパラメータ$\rho, \eta, \xi, \delta$ を用いて次のようにあらわすことができる\cite{michel_parameter}．
+\begin{align}
+\frac{d^2\Gamma}{x^{2}dxd(\cos \theta)} \propto& \,\,(3 - 3x) + \frac{2}{3}\rho (4x - 3) \notag \\
+&+ 3 \eta \,x_{0} \frac{1-x}{x} + \xi \cos \theta \left[(1 - x) + \frac{2}{3} \delta (4x - 3)\right]
+\label{eq:theory_michel}
+\end{align}
+ここでニュートリノの質量や輻射補正は無視した．ただし，$\theta$ は$e^{+}$ の運動量と$\mu^{+}$ のスピンのなす角度であり，$x$ は$e^{+}$ のエネルギーの最大値が1 となるように規格化したものである．また，$x_0$ は$e^{+}$ のエネルギーが$m_{e}$ のときの$x$ の値であり，これは通常無視できるので第3 項は考えないことも多い．以上の計算の詳細は付録に掲載する．
 
-	$\theta = \pi/2$ で，もしくは全$\theta$にわたって測定した場合にはスピンに関係する第4項が0となるため，第1 項，第2 項のみを考えればよい．このとき式\eqref{eq:theory_michel} から
-	\begin{equation}
-	\frac{d\Gamma}{x^{2}dx} \propto (3 - 3x) + \frac{2}{3}\rho (4x - 3)
-	\label{eq:theory_michel2}
-	\end{equation}
-	となる．Michel \cite{michel_origin}
-によると，Lorentz 共変な相互作用においては$\rho = 0, 0.75, 1$ のいずれかになることが分かっている．\cite{micher_interaction}入射粒子数で規格化すると，結局$\Gamma$ は$\rho$ によらないので式\eqref{eq:theory_michel2} をそのまま描いて，測定で得られるグラフの形は図\ref{zu:michelpar} のいずれかのようになる．
-
-	\begin{figure}[htbp]
-	\centering
-	\includegraphics[width = 0.5\textwidth]{figure/abe/michelgraph.png}
-	\caption{Michel 崩壊の各$\rho$ に対するスペクトル}
-	\label{zu:michelpar}
-	\end{figure}
-	これらのグラフは大きく形が異なっているため，測定で得られたスペクトルを見ればある程度の相互作用の形を知ることができる．
-
-	特に，V-A理論では%V-A理論では?(cf.PDG)
-	\[ \rho = \xi\delta = \frac{3}{4},\, \eta = 0,\, \xi = 1 \]
-	となる．
-
-	また，輻射補正を考えるとたとえば$\rho$ は$3 \sim 7$ \% ほど小さくなることが知られている．
-
-	現在のミッシェルパラメータの測定値は
-	\begin{align*}
-	\rho &= 0.74979 \pm 0.00026\\
-	\eta &= 0.057 \pm 0.034\\
-	\delta &= 0.75047 \pm 0.00034\\
-	\xi &= 1.0009^{+0.0016}_{-0.0007}
-	\end{align*}
-	である．\cite{PDG}
-	
-	\subsection{ミューオンの$g$因子}
-	$\mu^{+}$ を含む，ディラック場で表されるようなフェルミ粒子の運動は次のDirac 方程式で記述される．
-	\begin{equation}
-	(i\Slash{\partial} - m)\psi(x) = 0
-	\label{eq:theory_dirac}
-	\end{equation}
-        ここで記法は付録と同じとする．
-
-	次に式\eqref{eq:theory_dirac} をもとにして外場としての電磁場$A_{\mu}$ が存在する状態での方程式を考える．U(1) 局所ゲージ対称性を課すと，共変微分$D_{\mu} = \partial_{\mu} + ieA_{\mu}$ を定義できて，
-	\begin{equation}
-	(i\Slash{D} - m)\psi(x) = 0
-	\label{eq:theory_diracwitha}
-	\end{equation}
+$\theta = \pi/2$ の位置で，もしくは全$\theta$にわたって測定した場合にはスピンに関係する第4項が0となるため，第1 項，第2 項のみを考えればよい．このとき式\eqref{eq:theory_michel} から
+\begin{equation}
+\frac{d\Gamma}{x^{2}dx} \propto (3 - 3x) + \frac{2}{3}\rho (4x - 3)
+\label{eq:theory_michel2}
+\end{equation}
 となる．
 
-	ここから非相対論的近似を行うために，いままで自然単位系$\hbar = c = 1$ を用いてきたが$\hbar$ と$c$ を復活させる．$A_{\mu} = (\phi, \bm{A})$ とおくと，
-	\begin{equation}
-	i\hbar\frac{\partial}{\partial t}\psi(x) = \left\{c\bm{\alpha}\cdot (\bm{p} - e\bm{A}) + \beta m c^{2} + e \phi\right\}\psi(x)
-	\label{eq:theory_diracwithaphi}
-	\end{equation}
-	となる．スピノル$\psi(x)$ を
-	\begin{equation}
-	\psi(x) = \begin{pmatrix}
-			\chi_{1} (x)\\
-			\chi_{2} (x)
-			\end{pmatrix} \exp \left( - i \frac{mc^{2}}{\hbar} t\right)
-	\end{equation}
-	と書き，式\eqref{eq:theory_diracwithaphi} に代入すると
-	\begin{align}
-	i\hbar\left( -i\frac{mc^{2}}{\hbar} + \frac{\partial}{\partial t}\right) \chi_{1} = c\bm{\sigma}\cdot(\bm{p} - e \bm{A})\chi_{2} + (mc^{2} + e\phi)\chi_{1} \label{eq:theory_chi1}\\ 
-	i\hbar\left( -i\frac{mc^{2}}{\hbar} + \frac{\partial}{\partial t}\right) \chi_{2} = c\bm{\sigma}\cdot(\bm{p} - e \bm{A})\chi_{1} - (mc^{2} - e\phi)\chi_{2} \label{eq:theory_chi2}
-	\end{align}
+Michel \cite{michel_origin} によると，Lorentz 共変な相互作用においては$\rho = 0, 0.75, 1$ のいずれかになることが分かっている\cite{michel_interaction}．入射粒子数で規格化すると，結局$\Gamma$ は$\rho$ によらないので式\eqref{eq:theory_michel2} をそのまま描いて，測定で得られるグラフの形は図\ref{zu:michelpar} のいずれかのようになる．
+\begin{figure}[htbp]
+\centering
+\includegraphics[width = 0.5\textwidth]{figure/abe/michelgraph.png}
+\caption{Michel 崩壊の各$\rho$ に対するスペクトル}
+\label{zu:michelpar}
+\end{figure}
+これらのグラフは大きく形が異なっているため，測定で得られたスペクトルを見ればある程度の相互作用の形を知ることができる．
 
-	非相対論近似においては式\eqref{eq:theory_chi2} について時間微分項が無視でき，またスカラーポテンシャルによるエネルギーも無視できるので
-	\begin{equation}
-	\chi_{2} = \frac{1}{2mc}\bm{\sigma}\cdot(\bm{p} - e\bm{A})\chi_{1}
-	\end{equation}
-	となる．これを式\eqref{eq:theory_chi1} に代入し，$\sigma$ 行列に関する計算を行えば
-	\begin{equation}
-	i\hbar\frac{\partial}{\partial t}\chi_{1} = \left\{\frac{(\bm{p} - e\bm{A})^{2}}{2m} + e\phi - \frac{e\hbar\bm{\sigma}}{2m}\cdot\bm{B}\right\}\chi_{1}
-	\label{eq:theory_pauli}
-	\end{equation}
-	という，Pauli 方程式が得られる．ここで$\bm{B} = \nabla \times \bm{A}$ であり，磁束密度を表す．式\eqref{eq:theory_pauli} よりスピン$\hbar\bm{\sigma}/2$ がもつ磁気モーメントは軌道角運動量の場合の二倍であり，この場合$g$ 因子は2 であることがわかる．
+特に，$V-A$ 理論では
+\[ \rho = \xi\delta = \frac{3}{4},\, \eta = 0,\, \xi = 1 \]
+となる．
 
-	上のような計算を行えばDirac 方程式からミューオンの$g$ 因子は2 と求まる.QED (量子電磁力学)による考察を行うと,その結果$g$ 因子には補正がかかることが分かっている．g因子のこの2 からのずれを異常磁気能率 (anomalous magnetic moment) と呼ぶ．例えば2 次の摂動において異常磁気能率に寄与する過程はSchwinger によって説明された図\ref{zu:vertexcorr} で表される過程である．
+また，実際には輻射補正を考えるとたとえば$\rho$ は$3 \sim 7$~\% ほど小さく測定されることが知られている．
 
-	\begin{figure}[h]
-		\centering
-		\begin{fmffile}{feynmanzu2}
-			\begin{fmfgraph*}(100,80)
+現在のミッシェルパラメータの測定値は
+\begin{align*}
+\rho &= 0.74979 \pm 0.00026\\
+\eta &= 0.057 \pm 0.034\\
+\delta &= 0.75047 \pm 0.00034\\
+\xi &= 1.0009^{+0.0016}_{-0.0007}
+\end{align*}
+である\cite{PDG}．
+	
+\subsection{ミューオンの$g$因子}
+$\mu^{+}$ を含む，ディラック場で表されるようなフェルミ粒子の運動は次のDirac 方程式で記述される．
+\begin{equation}
+(i\Slash{\partial} - m)\psi(x) = 0
+\label{eq:theory_dirac}
+\end{equation}
+ここで記法は付録と同じとする．
+
+次に式\eqref{eq:theory_dirac} をもとにして外場としての電磁場$A_{\mu}$ が存在する状態での方程式を考える．U(1) 局所ゲージ対称性を課すと，共変微分$D_{\mu} = \partial_{\mu} + ieA_{\mu}$ を定義できて，
+\begin{equation}
+(i\Slash{D} - m)\psi(x) = 0
+\label{eq:theory_diracwitha}
+\end{equation}
+となる．
+
+ここから非相対論的近似を行うために，いままで用いてきた自然単位系$\hbar = c = 1$ から$\hbar$ と$c$ を復活させる．$A_{\mu} = (\phi, \bm{A})$ とおくと，
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\psi(x) = \left\{c\bm{\alpha}\cdot (\bm{p} - e\bm{A}) + \beta m c^{2} + e \phi\right\}\psi(x)
+\label{eq:theory_diracwithaphi}
+\end{equation}
+となる．スピノル$\psi(x)$ を
+\begin{equation}
+\psi(x) = \begin{pmatrix}
+\chi_{1} (x)\\
+\chi_{2} (x)
+\end{pmatrix} \exp \left( - i \frac{mc^{2}}{\hbar} t\right)
+\end{equation}
+と書き，式\eqref{eq:theory_diracwithaphi} に代入すると
+\begin{align}
+i\hbar\left( -i\frac{mc^{2}}{\hbar} + \frac{\partial}{\partial t}\right) \chi_{1} = c\bm{\sigma}\cdot(\bm{p} - e \bm{A})\chi_{2} + (mc^{2} + e\phi)\chi_{1} \label{eq:theory_chi1}\\ 
+i\hbar\left( -i\frac{mc^{2}}{\hbar} + \frac{\partial}{\partial t}\right) \chi_{2} = c\bm{\sigma}\cdot(\bm{p} - e \bm{A})\chi_{1} - (mc^{2} - e\phi)\chi_{2} \label{eq:theory_chi2}
+\end{align}
+
+非相対論近似においては式\eqref{eq:theory_chi2} について時間微分項が無視でき，またスカラーポテンシャルによるエネルギーも無視できるので
+\begin{equation}
+\chi_{2} = \frac{1}{2mc}\bm{\sigma}\cdot(\bm{p} - e\bm{A})\chi_{1}
+\end{equation}
+となる．これを式\eqref{eq:theory_chi1} に代入し，$\sigma$ 行列に関する計算を行えば
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\chi_{1} = \left\{\frac{(\bm{p} - e\bm{A})^{2}}{2m} + e\phi - \frac{e\hbar\bm{\sigma}}{2m}\cdot\bm{B}\right\}\chi_{1}
+\label{eq:theory_pauli}
+\end{equation}
+という，Pauli 方程式が得られる．ここで$\bm{B} = \nabla \times \bm{A}$ であり，磁束密度を表す．式\eqref{eq:theory_pauli} よりスピン$\hbar\bm{\sigma}/2$ がもつ磁気モーメントは軌道角運動量の場合の二倍であり，この場合$g$ 因子は2 であることがわかる．
+
+上のような計算を行えばDirac 方程式からミューオンの$g$ 因子は2 と求まる．QED （量子電磁力学）による考察を行うと，その結果$g$ 因子には補正がかかることが分かっている．$g$ 因子のこの2 からのずれを異常磁気能率 (anomalous magnetic moment) と呼ぶ．例えば二次の摂動において異常磁気能率に寄与する過程はSchwinger によって説明された図\ref{zu:vertexcorr} で表される過程である．
+
+\begin{figure}[h]
+\centering
+\begin{fmffile}{feynmanzu2}
+\begin{fmfgraph*}(100,80)
 				
-				\fmfleft{mui}
-				\fmfright{muo}
-				\fmfbottom{ai}
+\fmfleft{mui}
+\fmfright{muo}
+\fmfbottom{ai}
 				
-				\fmflabel{$\mu$}{mui}
-				\fmflabel{$\mu$}{muo}
-				\fmflabel{$\gamma$}{ai}
+\fmflabel{$\mu$}{mui}
+\fmflabel{$\mu$}{muo}
+\fmflabel{$\gamma$}{ai}
 				
-				\fmf{fermion}{mui,muig,muia}
-				\fmf{boson}{ai,muia}
-				\fmf{boson,left=0.5,tension=0.2}{muig,muog}
-				\fmf{fermion}{muia,muog,muo}
+\fmf{fermion}{mui,muig,muia}
+\fmf{boson}{ai,muia}
+\fmf{boson,left=0.5,tension=0.2}{muig,muog}
+\fmf{fermion}{muia,muog,muo}
 				
-			\end{fmfgraph*}
-		\end{fmffile}
-		\vspace{10pt}
-		\caption{2 次の摂動における異常磁気能率への寄与過程}
-		\label{zu:vertexcorr}
-	\end{figure}
-	図\ref{zu:vertexcorr} で表される寄与は$\alpha/2\pi$ (ここで$\alpha$ は微細構造定数$1/137$)である．
+\end{fmfgraph*}
+\end{fmffile}
+\vspace{10pt}
+\caption{二次の摂動における異常磁気能率への寄与過程}
+\label{zu:vertexcorr}
+\end{figure}
+
+図\ref{zu:vertexcorr} で表される過程の寄与は$\alpha/2\pi$ (ここで$\alpha$ は微細構造定数$1/137$)である．
 %g因子の値はpdgのものではない?要追記
 %ー参照論文が少し古かった(2006)ので修正ーhttps://physics.nist.gov/cuu/Constants/index.html を参照(測定値)
 %ー理論値の方、https://arxiv.org/abs/hep-ph/0611102 を参照
-	このような寄与をQED のより高次の摂動についても考えることができ，また一方でQED のレプトニックな過程以外の$W, Z$ ボソンを含む電弱理論に関して，あるいはハドロンが関与する過程に関しても考えることができる．このようにして，さまざまな相互作用を加味した異常磁気能率の理論値は
-	\[a_{\mu} = (g -2)/2 = 116591804(51) \times 10^{-11}\]
-であり，一方でその測定値は
-	\[a_{\mu} = 116592089(63) \times 10^{-11}\]
+このような寄与をQED のより高次の摂動についても考えることができ，また一方でQED のレプトニックな過程以外の$W, Z$ ボソンを含む電弱理論に関して，あるいはハドロンが関与する過程に関しても考えることができる．このようにして，さまざまな相互作用を加味した異常磁気能率の理論値は
+\[a_{\mu} = (g -2)/2 = 116591804(51) \times 10^{-11}\]
+であり，その測定値は
+\[a_{\mu} = 116592089(63) \times 10^{-11}\]
 である．%\cite{}
-これらはQEDの正しさを証明する一方で,標準模型の理論値とも$3\sigma$ 以上の有意な差があり，ここに新たな物理があることが期待されている．実際，未発見の粒子が存在して上に述べたような過程の他にその粒子の寄与を考えると，計算するべきファインマン図が増え，その分異常磁気能率に対する計算値も変わることになる．
+これらはQED の正しさを証明する一方で，標準模型の理論値とも$3\sigma$ 以上の有意な差があり，ここに新たな物理があることが期待されている．実際，未発見の粒子が存在して上に述べたような過程の他にその粒子の寄与を考えると，計算するべきファインマン図が増え，その分異常磁気能率に対する計算値も変わることになる．
 
-	そのため,$g$ 因子の測定は新しい物理の探索を目的として現在の素粒子物理学実験においてもっとも精密な計算と測定が行われている例である．
+そのため，$g$ 因子の測定は新しい物理の探索を目的として現在の素粒子物理学実験においてもっとも精密な計算と測定が行われている例である．
 
 \section{実験原理}
-	本節では今回の実験の原理について説明する．今回の実験ではミューオン($\mu^{+}$) ビームを用いてミューオンの崩壊寿命，ミッシェルパラメータ，そして$g$ 因子を測定する．そのために用いる検出器としてNaI(Tl) シンチレータとプラスチックシンチレータを採用する．
-        なお,ミューオンビームの詳細は次節に含めている.
+本節では今回の実験の原理について説明する．今回の実験ではミューオン ($\mu^{+}$) ビームを用いてミューオンの崩壊寿命，ミッシェルパラメータ，そして$g$ 因子を測定する．そのために用いる検出器としてNaI (Tl) シンチレータとプラスチックシンチレータを採用する．なお，ミューオンビームの詳細は次節に含めている．
+
 \subsection{寿命測定の原理}
-	ミューオンビームは標的で止められる.その静止したミューオンは式\eqref{eq:thory_muonlifetime}の寿命を持つため,
-	\begin{equation}
-		\frac{dN_\mu}{dt} = -\frac{1}{\tau_\mu} N_{\mu}
-	\end{equation}
-に従い崩壊する．この際にミューオンはほぼ100\%の確率で陽電子を一つ出して崩壊するため，崩壊して出てくる陽電子の数は崩壊したミューオンの数と一致し
-	\begin{equation}
-		\frac{dN}{dt} = N_0 \exp{\left(-\frac{t}{\tau_\mu}\right) }
-	\end{equation}
+ミューオンビームは標的で止められる．静止したミューオンは式\eqref{eq:thory_muonlifetime}の寿命を持つため,
+\begin{equation}
+\frac{dN_\mu}{dt} = -\frac{1}{\tau_\mu} N_{\mu}
+\end{equation}
+に従い崩壊し，この際にミューオンはほぼ100~\%の確率で陽電子を一つ出す．崩壊して出てくる陽電子の数は崩壊したミューオンの数と一致し
+\begin{equation}
+\frac{dN}{dt} = N_0 \exp{\left(-\frac{t}{\tau_\mu}\right) }
+\end{equation}
 で減少する．つまり陽電子を検出し，計数の時間変化を指数関数でフィッティングすれば寿命を求めることができる．
+
 \subsection{ミッシェルパラメータ測定の原理}
-	今回はミッシェルパラメータのうち$\rho$を測定するための実験を行なった．
-        理論の節と述べたように$\rho$の測定にはミュオンのスピンの向きに対して,$\theta=\frac{\pi}{2}$の位置で観測，または無偏極のミューオンのエネルギーを測定しなくてはならない.
-ミュオンビームは進行方向にスピン偏極しているため，標的からビーム方向に対して90°の向きに検出器を設置してエネルギーを測定，得られたエネルギースペクトルを式\eqref{eq:theory_michel2}でフィッティングすれば，$\rho$を求めることができる．この際，最大50MeVの陽電子が出るので，50MeV陽電子を止めきるような検出器が要求される．また実際には，90°方向に検出器を置くのが困難だったことやデータ量の関係から，後述する$g$因子測定のデータを利用して，全スピン方向で積分した無偏極ミューオンとして$\rho$を求めた．また,この解析によりスピン部分のデータが得られたため,最終的にはミッシェルパラメータの$\xi,\delta$の解析も行った.
-\subsection{$g$因子測定の原理}
-ミュオンのスピンは磁場中で歳差運動をする．一様磁場中において，磁場方向をz軸とすると，磁場とスピンの相互作用のハミルトニアンは，
+今回はミッシェルパラメータのうち$\rho$ を測定するための実験を行なった．理論の節と述べたように$\rho$ の測定にはミュオンのスピンの向きに対して，$\theta=\frac{\pi}{2}$ の位置で観測，または無偏極のミューオンのエネルギーを測定しなくてはならない.
+
+ミュオンビームは進行方向にスピン偏極しているため，標的からビーム方向に対して$90^{\circ}$ の向きに検出器を設置してエネルギーを測定，得られたエネルギースペクトルを式\eqref{eq:theory_michel2} でフィッティングすれば，$\rho$ を求めることができる．この際，最大50~MeVの陽電子が出るので，50~MeV陽電子を止めきるような検出器が要求される．また実際には，$90^{\circ}$ 方向に検出器を置くことが困難だったことやデータ量の関係から，後述する$g$ 因子測定のデータを利用して，全スピン方向で積分した無偏極ミューオンとして$\rho$ を求めた．また，この解析によりスピン部分のデータが得られたため，最終的にはミッシェルパラメータの$\xi,\;\delta$ の解析も行った．
+
+\subsection{$g$ 因子測定の原理}
+ミュオンのスピンは磁場中で歳差運動をする．一様磁場中において，磁場方向を$z$軸とすると，磁場とスピンの相互作用のハミルトニアンは，
 \begin{equation}
 \hat{H} = - g \frac{e}{2m_\mu} \hat {\textsl{\textbf {S}}} \cdot \textsl{\textbf {B}} = - g \frac{e}{2m_\mu}  \hat{S_z} B
 \end{equation} 
@@ -252,21 +252,16 @@
 \begin{equation}
 \frac{d\hat{S_x}}{dt} =  g \frac{eB}{2m_\mu}\hat{S_y} 
 \end{equation} 
-
 \begin{equation}
 \frac{d\hat{S_y}}{dt} = - g \frac{eB}{2m_\mu}\hat{S_x} 
 \end{equation} 
-
 \begin{equation}
 \frac{d\hat{S_z}}{dt} = 0 
 \end{equation} 
-
 を得る．スピン初期状態を
-
 \begin{equation}
 \langle \textsl{\textbf {S}}(t=0)\rangle = (C,0,0)
 \end{equation} 
-
 とすれば，
 \begin{equation}
 \langle S_x \rangle= C\cos{(g\frac{eB}{2m_\mu}t)}
@@ -274,40 +269,41 @@
 \begin{equation}
 \langle S_y \rangle= -C\sin{(g\frac{eB}{2m_\mu}t)}
 \end{equation}
-
-と，スピンが$xy$平面内で回転することがわかり，その角速度$\omega$は，
+とスピンが$xy$平面内で回転することがわかり，その角速度$\omega$は，
 \begin{equation}
 \omega = g\frac{eB}{2m_\mu}
 \end{equation}
-となる．式\eqref{eq:theory_michel}の通り陽電子はミュオンのスピンの方向に出やすいので，磁場を通した標的でミュオンビームを止めると，陽電子の計数は指数的な減少に周期$\frac{2\pi}{\omega}$の振動が加わったものになる．よってその周期から$g$因子を求めることができる．
+となる．式\eqref{eq:theory_michel} の通り陽電子はミューオンのスピンの方向に出やすいので，磁場を通した標的でミューオンビームを止めると，陽電子の計数は指数的な減少に周期$\frac{2\pi}{\omega}$ の振動が加わったものになる．よってその周期から$g$ 因子を求めることができる．
+
 \subsection{検出器サイズの見積もり}
-今回の実験ではミューオンの崩壊の際に放出される陽電子を測定するが，この陽電子の最大エネルギーはおよそ50MeVである事を前節で確認した．
-もし検出器に50MeVの陽電子が物質に入射すると，制動放射と対生成による電磁シャワーを形成する．今回の検出器は全吸収型のカロリメーターとして設計したため，その電磁シャワーが検出器の寸法内に収まるように設計しなければならない．電磁シャワーの広がりはモリエール半径$R_M$によって記述される．具体的にはモリエール半径の内部にシャワーのエネルギーの90％が含まれる．モリエール半径は次のように定義される．
+今回の実験ではミューオンの崩壊の際に放出される陽電子を測定するが，この陽電子の最大エネルギーはおよそ50~MeVである事を前節で確認した．
+もし検出器に50~MeVの陽電子が物質に入射すると，制動放射と対生成による電磁シャワーを形成する．今回の検出器は全吸収型のカロリメータとして設計したため，その電磁シャワーが検出器の寸法内に収まるように設計しなければならない．電磁シャワーの広がりはその内部にシャワーのエネルギーの90~％が含まれるような長さで記述され，その長さをモリエール半径$R_\mathrm{M}$ と呼ぶ．モリエール半径は次のように定義される．
 \begin{equation}
-R_{\rm M} = L_{\rm rad}\frac{21.2{\rm (MeV)}}{E_c}
+R-\mathrm{M} = L_\mathrm{rad}\frac{21.2~\mathrm{MeV}}{E_\mathrm{c}}
 \end{equation}
-ここで$L_{\rm rad}$は放射長，$E_c$はcritical energyである．NaIおよびプラスチックにおける$L_{\rm rad}$と$E_c$，およびモリエール半径の値を表に示す．
-\begin{table}[b]
+ここで$L_\mathrm{rad}$ は放射長，$E_\mathrm{c}$ はcritical energy である．NaI およびプラスチックシンチレータ (PS) における$L_{\rm rad}$ と$E_\mathrm{c}$ ，$R_\mathrm{M}$ の値を表\ref{tab:abe_rm} に示す．
+\begin{table}[hbtp]
 \centering
-  \begin{tabular}{cccc}
-    物質 & $L_{\rm rad}$(cm) & $E_c$(MeV) & $R_{\rm M}$(cm) \\\hline \hline
-    NaI & 2.59 & 17.4 & 3.2 \\
-    PS & 42.9 & 109 & 8.34 \\
-  \end{tabular}
-  \caption{物質ごとの$L_{\rm rad}$と$E_c$，およびモリエール半径}
+\begin{tabular}{cccc}\toprule
+物質 & $L_\mathrm{rad}~[\mathrm{cm}]$ & $E_\mathrm{c}~[\mathrm{MeV}]$ & $R_\mathrm{M}~[\mathrm{cm}]$ \\ \midrule
+NaI & 2.59 & 17.4 & 3.2 \\
+PS & 42.9 & 109 & 8.34 \\ \bottomrule
+\end{tabular}
+\caption{物質ごとの$L_\mathrm{rad}$と$E_\mathrm{c}$，およびモリエール半径$R_\mathrm{M}$}
+\label{tab:abe_rm}
 \end{table}
-この値から，検出器の横幅はNaIは5cm,プラスチックシンチレータは10cm程度の半径でよいと見積もった．なお実際にはGeant4のシミュレーション結果も用いて，奥行き方向の長さも含めた検出器サイズを決定した．
+この値から，検出器の横幅はNaIは5~cm，プラスチックシンチレータは10~cm程度の半径でよいと見積もった．なお実際にはGeant4 のシミュレーション結果も用いて，奥行き方向の長さも含めた検出器サイズを決定した．
 % 奥行き方向に関する理論はなかったということ?
 %ーLeoに乗っている奥行き方向に関する簡単なモデルではよい計算結果は出ないです，Leoで次に書いてあるのもシミュレーションなのでシャワーの奥行きについての理論的見積もりはないとしました
 \newpage
 
-\section{シミュレーション}
-	本節では前節で述べた実験原理を基に各種シミュレーションを行い，セットアップの詳細やジオメトリーの決定を行う．標的や検出器内での電磁相互作用の各種シミュレーションについてはGeant4 を用い，磁場のシミュレーションにはFEMM を用いた．
+\section{シミュレーション}%このセクションには大したことが書いてないけどいる？(05.30 Odagawa)
+本節では前節で述べた実験原理を基に各種シミュレーションを行い，セットアップの詳細やジオメトリーの決定を行う．標的や検出器内での電磁相互作用の各種シミュレーションについてはGeant4 を用い，磁場のシミュレーションにはFEMM を用いた．
 	
-	\subsection{Geant4 を用いたモンテカルロシミュレーション}
-	Geant4 (for Geometry and Tracking) は物質中での粒子の運動をモンテカルロシミュレーションするためのツールキットでありCERNなどによって開発され，Geant4 Collaboration によって管理されている．高エネルギー物理学分野をはじめ核物理学や，加速器物理，医療などの分野で広く用いられており，LHC での様々な実験やT2K 実験などでも用いられている．今回の我々の実験では，Geant4 を用いて検出器の設計や，コリメータの寸法の調節，またそれらのシミュレーション結果を用いての解析手法の開発などを行った．%cite{}
-	\subsection{FEMM}
-		FEMM (Finite Element Method Magnetics) は有限要素法を用いて2次元軸対称な電磁場や熱，電流などのシミュレーションを行うことができるソフトである．FEMM は線形および非線形な静磁場問題に対応しており，また，さまざまな境界条件を用いることができる．今回の我々の実験では$g$ 因子を測定する際の均一な磁場を作成するためにFEMM を用いたシミュレーションを行った．
+\subsection{Geant4 を用いたモンテカルロシミュレーション}
+Geant4 (for Geometry and Tracking) は物質中での粒子の運動をモンテカルロシミュレーションするためのツールキットでありCERNなどによって開発され，Geant4 Collaboration によって管理されている．高エネルギー物理学分野をはじめ核物理学や，加速器物理，医療などの分野で広く用いられており，LHC での様々な実験やT2K 実験でも用いられている．今回の我々の実験では，Geant4 を用いて検出器の設計や，コリメータの寸法の調節，またそれらのシミュレーション結果を用いての解析手法の開発などを行った．%cite{}
 
+\subsection{FEMM}
+FEMM (Finite Element Method Magnetics) は有限要素法を用いて2 次元軸対称な電磁場や熱，電流などのシミュレーションを行うことができるソフトである．FEMM は線形および非線形な静磁場問題に対応しており，また，さまざまな境界条件を用いることができる．今回の我々の実験では$g$ 因子を測定する際の均一な磁場を作成するためにFEMM を用いたシミュレーションを行った．
 
 %\end{document}
