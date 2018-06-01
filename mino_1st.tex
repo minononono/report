@@ -9,7 +9,7 @@
 
 \subsection{信号解析}
 NaI 検出器で測定した波形解析の手法について述べる．実際の測定データの中で典型的なものを\figref{hatano_fig:rawdata} に示す．波形解析ではここからフィンガーカウンター（チャンネル1）が鳴っている時にNaI に落としたエネルギーと鳴った時の時間という２ つの情報を抽出した．この際に高周波のノイズが小さくないという事とNaI の減衰時間が長いという事の2 つが解析時の注意点となった．特に前者は信号が鳴ったという判定をするためのピーク検出をする際に誤った判定を行う可能性がある．それは本来は1回の信号であるのにノイズがのることにより短い時間に何度も振動する影響で複数のピークとして誤認識してしまう危険性がるためである．そのため，今回の解析ではノイズ除去の処理を最初に行った．その後ピーク検出を行った後に時間情報とエネルギー情報を取り出すが，この際に後者の注意点の影響があった．実際に\figref{hatano_fig:rawdata} でも分かるように別の由来のNaI 信号が重なり合う（パイルアップ）現象を起こしている．これを処理しないまま適当な領域で積分を行いエネルギーを求めると，本来の信号でないものの影響でエネルギーが大きく見積もられる原因となる．このため，今回の解析では波形データのサンプリングを行いそれに基づきパイルアップしてない部分の波形からパイルアップしている部分に外挿し，その分の補正を行った．以下具体的な処理について述べる．
-\begin{figure}[bht]
+\begin{figure}[hbt]
 \centering
 \includegraphics[width=0.8\textwidth]{figure/hatano/rawdata.eps}
 \caption{NaI 検出器の測定信号}
@@ -19,7 +19,7 @@ NaI 検出器で測定した波形解析の手法について述べる．実際�
 \subsubsection{ノイズ除去}
 ピーク検出の際に邪魔となる高周波でのっているノイズを除去することについて考える．今回はピーク検出の前段としての高周波成分が処理されてピークと誤認識するような大きな変動がなくなればいいので，簡単に実装ができかつ高速な処理ができるという観点で単純移動平均をとるということを行った．具体的には各サンプリング点で前後4 サンプリング，計9 サンプリングの平均をとった．実際にノイズ除去を行った前後の信号の差異は\figref{hatano_fig:smoothdata}（\figref{hatano_fig:smoothdata} と同じデータの一部）のようになった．薄い色で示したのが元の信号，濃い色で示したのがノイズ除去を行った信号である．チャンネル6 の左側の信号などはノイズによって2 つのピークのように見かけ上分裂していたのが改善しているのが分かる．
 
-\begin{figure}[bht]
+\begin{figure}[hbt]
 \centering
 \includegraphics[width=0.8\textwidth]{figure/hatano/smoothdata.eps}
 \caption{ノイズ除去された測定信号}
@@ -29,7 +29,7 @@ NaI 検出器で測定した波形解析の手法について述べる．実際�
 \subsubsection{ピーク検出}
 以上のノイズ除去を行った信号を元にピーク検出を行うことを考える．基本的にはthreshold を適切に設定しそれを超えたところからピークが始まったと考えることにする．ただし，この方法ではパイルアップしている際には過剰に信号を検出しうる事がありうる．すなわち，本来の適切な信号の前にあるパイルアップの原因となった信号によりオフセットがのることになり，パイルアップしている際のみ，その分threshold が下がっているのと同じ状態になることで，低エネルギーのものを拾いやすくなる．そのため，threshold のbaseline となる値を信号が来る前のピークが無い部分における最小値とすることにした．このような工夫をすることで，パイルアップしている際はbaseline が高くなるため，パイルアップによるオフセットの影響をある程度キャンセルすることができる．そのようにしてピーク検出を行った際の信号が\figref{hatano_fig:peakdata} である．それぞれ色が濃くなっている部分がピークまでの立ち上がりとして判定されている領域で，点で示されているのがピーク（最大値）である.
 
-\begin{figure}[bht]
+\begin{figure}[hbt]
 \centering
 \includegraphics[width=0.8\textwidth]{figure/hatano/peakdata.eps}
 \caption{ピークとして検出された信号}
@@ -41,7 +41,7 @@ NaI 検出器で測定した波形解析の手法について述べる．実際�
 
 ピーク検出された信号のうちパイルアップしていない信号の減衰部分に対して指数関数でフィッティングを行った．パイルアップしていない信号とは，具体的には次のピーク信号がくるまで400~ns 以上の間隔があるものとした．また減衰部分の領域はピーク部分の影響やバックグラウンド部分の影響を減らすため，ピークの時間から80~ns 後から次の信号が来るまでの最後の10~\%を外した領域とした．これに対してフィッティングを行いその$\chi^2$のConfidence Level (CL) が50~\% を切るものはフィッティングが失敗ないしは適切な信号ではなかったと考え解析には使用しなかった．実際のフィッティングを行った時の様子が\figref{hatano_fig:decayfit} である．濃い色で示されているのがフィッティングした関数であり，赤の線で示したのはCL が50~\% 以下であったため以降用いなかった信号である.
 
-\begin{figure}[bht]
+\begin{figure}[hbt]
 \centering
 \includegraphics[width=0.8\textwidth]{figure/hatano/decayfit.eps}
 \caption{波形データに対するフィッティング}
@@ -49,23 +49,23 @@ NaI 検出器で測定した波形解析の手法について述べる．実際�
 \end{figure}
 
 これを全ての測定データに行い出された結果が\figref{hatano_fig:decaytime} である．チャンネル7 のヒストグラムは2 峰になっているが，これは2 つのNaI の信号をアナログ的に加算したため異なる減衰特性のNaI の信号がひとつにまとめられたことに由来すると考えられる．実際他のチャンネルのデータのピーク値もその程度のばらつきがある事が確認される．また外挿の際にはピークからそれがどちらの信号であるかを識別する事はできないため，これらを選別することを考えず各チャンネル毎に減衰時間を単純に平均し，それを減衰時間とした．
-\begin{figure}[bht]
+\begin{figure}[hbt]
 \centering
 \includegraphics[width=0.8\textwidth]{figure/hatano/decaytime.eps}
 \caption{NaI の減衰時間の測定}
 \label{hatano_fig:decaytime}
 \end{figure}
 その結果が\tabref{hatano_tab:decaytime}である．
-\begin{table}[bht]
+\begin{table}[hbt]
 \centering
 \caption{各チャンネルにおける減衰時間}
-\begin{tabular}{cc}\\ \hline
-チャンネル番号 & 減衰時間~[ns]\\ \hline
+\begin{tabular}{cc}\\ \toprule
+チャンネル番号 & 減衰時間~[ns]\\ \midrule
 3 & 232.6 \\
 4 & 236.7 \\
 5 & 224.2 \\
 6 & 233.4 \\
-7 & 228.6 \\ \hline
+7 & 228.6 \\ \bottomrule
 \end{tabular}
 \label{hatano_tab:decaytime}
 \end{table}
@@ -73,7 +73,7 @@ NaI 検出器で測定した波形解析の手法について述べる．実際�
 \subsubsection{波形データの外挿}
 波形データの外挿は次のように行った．ピークが終わった後の減衰中に次のピークが見つかった場合は，減衰時間中の最小値から前5サンプリング分のデータを基準に求めた減衰時間(\tabref{hatano_tab:decaytime}) の指数関数を外挿した．実際に外挿を行った時の信号の様子が\figref{hatano_fig:analysis} であり，濃い色の線で示しているのが外挿した波形データである．
 
-\begin{figure}[bht]
+\begin{figure}[hbt]
 \centering
 \includegraphics[width=0.8\textwidth]{figure/hatano/analysis.eps}
 \caption{波形の外挿の様子}
@@ -85,7 +85,7 @@ NaI 検出器で測定した波形解析の手法について述べる．実際�
 
 さらに本当に欲しいデータは標的から飛んできた陽電子の信号は手前のフィンガーカウンターを通ったデータだけであるので，フィンガーカウンターの信号と同時に鳴ったとみなせるNaI 信号を考えたい．シンチレータの差などからわずかに時間の基準からずれている分を考慮するため，フィンガーカウンターと各NaI信号の時間差をとると\figref{hatano_fig:coincidence} となった．よって，フィンガーカウンターが鳴った時を基準にその後20~nsの間に鳴ったNaI 信号のエネルギーの合計値をフィンガーカウンターが鳴った時に入ったエネルギーとした.
 
-\begin{figure}[bht]
+\begin{figure}[hbt]
 \centering
 \includegraphics[width=0.8\textwidth]{figure/hatano/coincidence.eps}
 \caption{フィンガーカウンターと各NaI の時間差}
