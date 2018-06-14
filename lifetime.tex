@@ -28,6 +28,7 @@ $m_{W}^2$ が$k^2$ にくらべて十分大きいとし，$m_{W} \rightarrow \in
 \left[\Bar{v}(\bm{p})\gamma_{\alpha}(1 - \gamma_5)v(\bm{q_{2}})\right]
 \end{align}
 %
+となる.\\
 ミューオンの微分崩壊幅は次の式から得られる．
 %
 \begin{align}
@@ -39,10 +40,12 @@ d\Gamma = (2\pi)^{4}\delta^{(4)}(p'+q_{1}+q_{2}-p)\frac{m_{\mu}m_{e}m_{\nu_{e}}m
 \[\Gamma^{\alpha}=\gamma^{\alpha}(1 - \gamma_{5})\]
 %
 とおき、エネルギー射影演算子
-$\begin{dcases}
-\Delta^{+}_{\alpha\beta}(\bm{p})=\sum_{r=1}^{2}u_{r\alpha}(\bm{p})\bar{u}_{r\beta}(\bm{p})=\left(\frac{\Slash{p}+m}{2m}\right)_{\alpha\beta}\\
-\Delta^{-}_{\alpha\beta}(\bm{p})=-\sum_{r=1}^{2}v_{r\alpha}(\bm{p})\bar{v}_{r\beta}(\bm{p})=\left(\frac{-\Slash{p}+m}{2m}\right)_{\alpha\beta}
-\end{dcases}$
+\begin{eqnarray}
+  \begin{cases}
+    \Delta^{+}_{\alpha\beta}(\bm{p})=\sum_{r=1}^{2}u_{r\alpha}(\bm{p})\bar{u}_{r\beta}(\bm{p})=\left(\frac{\Slash{p}+m}{2m}\right)_{\alpha\beta} &\\
+    \Delta^{-}_{\alpha\beta}(\bm{p})=-\sum_{r=1}^{2}v_{r\alpha}(\bm{p})\bar{v}_{r\beta}(\bm{p})=\left(\frac{-\Slash{p}+m}{2m}\right)_{\alpha\beta} &
+  \end{cases}
+\end{eqnarray}
 を用いると
 %
 \begin{align}
@@ -92,7 +95,7 @@ E^{\alpha\beta}&=2q_{1\mu}p'_{\nu}\mathrm{Tr}\left[\gamma^{\mu}\gamma^{\alpha}\g
   &= 8p^{\sigma}q_{2}^{\tau}x_{\sigma\alpha\tau\beta}\label{eq:M}
 \end{align}
 %
-が得られる．
+が得られる．また,
 %
 \begin{align}
   x^{\mu\alpha\nu\beta}x_{\sigma\alpha\tau\beta}&=(g^{\mu\alpha}g^{\nu\beta}-g^{\mu\nu}g^{\alpha\beta}+g^{\mu\beta}g^{\alpha\nu}+i\epsilon^{\mu\alpha\nu\beta})\notag\\
@@ -105,7 +108,7 @@ E^{\alpha\beta}&=2q_{1\mu}p'_{\nu}\mathrm{Tr}\left[\gamma^{\mu}\gamma^{\alpha}\g
   &=4g^{\mu}_{\sigma}g^{\nu}_{\tau}\label{eq:x}
 \end{align}
 %
-式(\ref{eq:E})(\ref{eq:M})(\ref{eq:x}) を用いると、
+であるから,式(\ref{eq:E})(\ref{eq:M})(\ref{eq:x}) を用いると、
 %
 \begin{align}
   m_{\mu}m_{e}m_{\nu_{e}}m_{\nu_{\mu}}\frac{1}{2}\sum_\mathrm{spins}|\mathcal{M}|^{2}
@@ -113,6 +116,7 @@ E^{\alpha\beta}&=2q_{1\mu}p'_{\nu}\mathrm{Tr}\left[\gamma^{\mu}\gamma^{\alpha}\g
   &=4G^{2}(q_{1}p)(p'q_{2})\label{eq:spins_new}
 \end{align}
 %
+となる.\\
 式(\ref{eq:decay}) と式(\ref{eq:spins_new}) を組み合わせると微分崩壊幅は
 %
 \begin{align}
@@ -120,6 +124,7 @@ E^{\alpha\beta}&=2q_{1\mu}p'_{\nu}\mathrm{Tr}\left[\gamma^{\mu}\gamma^{\alpha}\g
   \frac{d^3\bm{q_{1}}}{E_{1}}\frac{d^3\bm{q_{2}}}{E_{2}}
 \end{align}
 %
+と計算できる.\\
 次に2 つのニュートリノの運動量に関する積分を行う．
 %
 \begin{align}
@@ -141,6 +146,7 @@ $I^{\mu\nu}(q)$ のローレンツ共変性より、一般的な形は
 g_{\mu\nu}I^{\mu\nu}(q)=4A(q^{2})+q^{2}B(q^{2})\label{eq:sub1}\\
 q_{\mu}q_{\nu}I^{\mu\nu}(q)=q^{2}A(q^{2})+(q^{2})^{2}B(q^{2})\label{eq:sub2}
 \end{subnumcases}
+である.\\
 %
 これ以降、ニュートリノの質量を0 とするので、$q_{1}^{2}=q_{2}^{2}=0$ となる．$I^{\mu\nu}(q)$ の$\delta$ 関数より、
 \begin{align}
@@ -291,6 +297,7 @@ $E'$ について積分するために$\mu^{+}$ の崩壊によって放出さ�
 %
 以上より$\mu^{+}$ の寿命$\tau_{\mu}$ は
 \[\tau_{\mu}=\frac{1}{\Gamma}=\frac{192\pi^{3}}{G^{2}m_{\mu}^{5}}\]
+となる.
 %
 %\section{the Michel parameters の理論}
 %\section{Geant4 で実際に用いたシミュレーションコード}
