@@ -22,11 +22,10 @@
 
 %\begin{document}
 
-
 %%%%%%%%%%%%%%%%%%%池満パート開始%%%%%%%%%%%%%%%%%%%
 \section{プラスチックシンチレータで取得したデータの解析と考察}
 
-プラスチックシンチレータのデータの解析では波形解析やイベント選択の手法の異なる2つの解析手法を行い，それぞれで寿命と$g$ 因子の2つを求めた．以下ではそれぞれの解析手法に解析A, Bと名付け解説し，最後にそれらの両方の結果をまとめた．
+プラスチックシンチレータのデータの解析では波形解析やイベント選択について異なる2つの解析手法を適用し，それぞれで寿命と$g$ 因子の2つを求めた．以下ではそれぞれの解析手法に解析A, Bと名付け解説し，最後にそれらの両方の結果をまとめる．
  
 \subsection{解析手法A}
 \subsubsection{解析の流れ}
@@ -38,7 +37,7 @@
 \item 宇宙線を用いた予備実験の結果から，12~MeV のエネルギーに対応する信号のピーク値を求めた．（表~\ref{12MeVpeak}）%宇宙線を用いた予備実験の説明は？？ 12MeVがMIPがPSの厚さを通った時に落とすエネルギーである説明．
 \item そのピーク値から，各チャンネルごとのthreshold を以下の値に決めた．ただし，本実験ではチャンネル~4 でフィンガーカウンターの信号を取ったので，そのthreshold は表~\ref{12MeVpeak} と関係無くイベントディスプレイを元に適当な値 (20~mV) に決めた．
 \item 寿命測定と$g$ 因子測定用には全チャンネルとも4~MeV 相当とした．4~MeV 相当にした理由については後述する．
-\item エネルギー測定用には，1 層目にのみ4~MeV 相当のthreshold を設けた．2 層目以降はthreshold を設けなかったのは，4~MeV 相当のthreshold を超えるエネルギーを持つイベントを全て取るためである．
+\item エネルギー測定用には，1 層目にのみ4~MeV 相当のthreshold を設けた．2 層目以降にthreshold を設けなかったのは，4~MeV 相当のthreshold を超えるエネルギーを持つイベントを全て取るためである．
 \end{itemize}
 \item 各チャンネルごとで，threshold を越えた時間を信号の時間 (peaktime) とした．
 \item イベントディスプレイからおおよその信号の時間幅を決め，信号が検出されてから次の信号を検出するようになるまでのveto 時間を40~ns にした．
@@ -56,7 +55,7 @@
 \item 各層のエネルギーとして，1, 2, 4 層目では両側のチャンネルのエネルギーの平均を取り，3 層目では片方のチャンネルのエネルギーを使用した．
 \item フィンガーカウンターと1 層目の両側のチャンネルの信号のコインシデンスをとり，そのときの全層のエネルギーの和を求めた．
 \item そのエネルギーにフィンガーカウンターで落とすエネルギーとして1.5~MeV を足した．
-\item フィンガーカウンターとのコインシデンスを取ったのは，検出器の中心に入った$e^{+}$ の信号のみを選択するためである．高エネルギーの$e^{+}$ が入射すると検出器との相互作用によって電磁シャワーが生じる．このシャワー中の粒子が検出器内で反応せずに外に漏れ出ると，検出されるエネルギーは実際の$e^{+}$ のエネルギーよりも低い値になる．$e^{+}$ の入射位置が検出器の端にある場合，検出器中央に入射する場合よりも電磁シャワー中の電子や陽電子が検出器の外に漏れやすい．以上のことから$e^{+}$ が検出器の中央に入射したイベントのみを解析に用いるべきだと考え，フィンガーカウンターとのコインシデンスを要求した．
+\item フィンガーカウンターとのコインシデンスを取ったのは，検出器の中心に入った$e^{+}$ の信号のみを選択するためである．高エネルギーの$e^{+}$ が入射すると検出器との相互作用によって電磁シャワーが生じる．このシャワー中の粒子が外に漏れ出ると，検出されるエネルギーは実際の$e^{+}$ のエネルギーよりも低い値になる．$e^{+}$ の入射位置が検出器の端にある場合，検出器中央に入射する場合よりも電磁シャワー中の電子や陽電子が検出器の外に漏れやすい．以上のことから$e^{+}$ が検出器の中央に入射したイベントのみを解析に用いるべきだと考え，フィンガーカウンターとのコインシデンスを要求した．
 \end{itemize}
 \end{enumerate}
 
@@ -64,7 +63,7 @@
 \begin{itemize}
 \item threshold の値を各チャンネル毎に変えていること
 \item 信号検出後にveto 時間を設けていること
-\item 層間で，およびフィンガーカウンターとコインシデンスをとっていること
+\item 層間およびフィンガーカウンターとコインシデンスをとっていること
 \end{itemize}
   
 \begin{table}[h]
@@ -87,6 +86,22 @@ PMT 名&ピーク値~[mV] \\ \hline
 \subsubsection{信号検出のthreshold 値について}
 信号検出時のthreshold の値の判断理由について触れておく．Threshold の値を1~MeV 相当から6~MeV 相当まで変化させて寿命を求めると，threshold が1~MeV 相当から高くなるにつれて寿命は短くなり，4~MeV 相当以上のときに誤差の範囲で一定の値になった．このことから3~MeV 相当以下のthreshold では低エネルギーのノイズを信号として処理していると考えた．よって，threshold の値には4~MeV 相当の電圧値が妥当だと考えた．
 
+\begin{table}[h]
+ \caption{threshold 値を変更したときの寿命(ns)}
+ \label{PS_decide_threshold}
+ \centering
+ \begin{tabular}{ccccc}\toprule
+  threshold 値 & 1層 & 1+2層 & 1〜3層 & 1〜4層 \\ \hline
+  1~MeV& $2236.4\pm 6.5$ & $2283.4\pm 9.4$ & $2292\pm 12$ & $2296\pm 24$ \\
+  2~MeV& $2223.7\pm 7.2$ & $2238.7\pm 9.6$ & $2241\pm 13$ & $2209\pm 28$ \\
+  3~MeV& $2227.6\pm 7.5$ & $2229.6\pm 9.9$ & $2227\pm 14$ & $2180\pm 31$ \\
+  4~MeV& $2223.7\pm 7.7$ & $2225  \pm 10 $ & $2218\pm 15$ & $2149\pm 35$ \\
+  5~MeV& $2223.3\pm 8.0$ & $2223  \pm 11 $ & $2204\pm 16$ & $2157\pm 42$ \\
+  6~MeV& $2217.4\pm 8.4$ & $2218  \pm 12 $ & $2197\pm 17$ & $2165\pm 51$ \\ \bottomrule
+ \end{tabular}
+
+\end{table}
+
 \subsubsection{得られた崩壊曲線とフィッティングの結果}
 図~\ref{lt_layercoin} は，磁場なし標的を用いたときのミューオンの崩壊曲線である．それを次の$f_{\mathrm{life}}(t)$ でフィッティングした結果が図~\ref{lt_layercoin_fit} である．
 \[f_{\mathrm{life}}(t) = \exp[-(t+A)/\tau]\]
@@ -95,7 +110,7 @@ PMT 名&ピーク値~[mV] \\ \hline
 \[f_{g}(t) = \exp[-(t+A)/\tau](1+B\cos(\omega t + \delta))\]
 
   
-フィッティングの範囲は1050~ns から7950~ns までとした． フィッティング範囲の決定方法は以下の通りである．今回使用したミューオンビームの分布はFWHM $\sim$ 100~ns ，すなわち$\sigma \sim 50~\mathrm{ns}$ のガウス分布と考えることができる．図~\ref{lt_layercoin} のヒストグラムがピーク値をとる約800~ns をガウシアンのピークだと考えて，その点から$5\sigma \sim 250~\mathrm{ns}$ はフィッティングの対象外とした．また，ピークを検出してから40~ns のveto 時間をとるという解析方法から，8000~ns から後ろに40~ns 分は解析に用いることができない．以上のことからフィッティング範囲を決定した．
+フィッティングの範囲は1050~ns から7950~ns までとした． フィッティング範囲の決定方法は以下の通りである．今回使用したミューオンビームの分布はFWHM $\sim$ 100~ns ，すなわち$\sigma \sim 50~\mathrm{ns}$ のガウス分布と考えることができる．図~\ref{lt_layercoin} のヒストグラムがピーク値をとる約800~ns をガウシアンのピークだと考えて，その点から$5\sigma$ ($\sim 250~\mathrm{ns}$ )はフィッティングの対象外とした．また，ピークを検出してから40~ns のveto 時間をとるという解析方法から，8000~ns から前の40~ns 分は解析に用いることができない．以上のことからフィッティング範囲を決定した．
   
 フィッティングの結果は表~\ref{fit_lt}, \ref{fit_g}のようになった．表中の誤差はフィッティングに由来する統計誤差である．また，表~\ref{fit_g} においてFC はフィンガーカウンターを表す．
   
@@ -127,38 +142,38 @@ FC+ 1 + 2 + 3 + 4 & 2142 $\pm$ 45 & $ (4.649 \pm 0.024) $ & 2.021 $\pm$ 0.011 \\
 
 \begin{figure}[H]
 \centering
-\begin{subfigure}{\columnwidth}
-\centering
-\includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/lt_layercoin.pdf}
-\caption{層でコインシデンスを取って得られたヒストグラム（磁場なし標的）}
-\label{lt_layercoin}
-\end{subfigure}
-\begin{subfigure}{\columnwidth}
-\centering
+%\begin{subfigure}{\columnwidth}
+%\centering
+%\includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/lt_layercoin.pdf}
+%\caption{層でコインシデンスを取って得られたヒストグラム（磁場なし標的）}
+%\label{lt_layercoin}
+%\end{subfigure}
+%\begin{subfigure}{\columnwidth}
+%\centering
 \includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/lt_layercoin_fit.pdf}
-\caption{$f_{\mathrm{life}}(t)$ でフィッティングをした図}
+\caption{層でコインシデンスをとったヒストグラムを$f_{\mathrm{life}}(t)$ でフィッティングした結果（磁場なし標的）}
 \label{lt_layercoin_fit}
-\end{subfigure}
-\caption{フィッティングした図}
-\label{lt_layercoin_all}
+%\end{subfigure}
+%\caption{フィッティングした図}
+%\label{lt_layercoin_all}
 \end{figure}
   
 \begin{figure}[H]
 \centering
-\begin{subfigure}{\columnwidth}
-\centering
-\includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/g_layer_f_coin.pdf}
-\caption{FC と層でコインシデンスを取って得られたヒストグラム（磁場あり標的）}
-\label{g_layercoin}
-\end{subfigure}
-\begin{subfigure}{\columnwidth}
-\centering
+%\begin{subfigure}{\columnwidth}
+%\centering
+%\includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/g_layer_f_coin.pdf}
+%\caption{FC と層でコインシデンスを取って得られたヒストグラム（磁場あり標的）}
+%\label{g_layercoin}
+%\end{subfigure}
+%\begin{subfigure}{\columnwidth}
+%\centering
 \includegraphics[height = 0.9\columnwidth , angle = -90]{figure/ikemitsu/g_layer_f_coin_fit.pdf}
-\caption{$f_{g}(t)$ でフィッティングをした図}
+\caption{FC と層でコインシデンスをとったヒストグラムを$f_{g}(t)$ でフィッティングをした結果（磁場あり標的）}
 \label{g_layercoin_fit}
-\end{subfigure}
-\caption{フィッティングした図}
-\label{g_layercoin_all}
+%\end{subfigure}
+%\caption{フィッティングした図}
+%\label{g_layercoin_all}
 \end{figure}
 
 \subsubsection{フィッティング範囲の妥当性について}
@@ -244,7 +259,7 @@ FC + 1 + 2 + 3 + 4 & 1975 $\pm$ 186& $(4.64 \pm 0.11) $ & 2.016 $\pm$ 0.046 \\ \
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.6\columnwidth,angle=-90]{figure/ikemitsu/lt_difference_fit.pdf}
-\caption{各フィッティング範囲毎に，全層コインシデンス以外の3 点を定数でフィッティングした様子}
+\caption{各フィッティング範囲毎に，全層コインシデンス以外の3 点を定数でフィッティングした結果}
 \label{lt_diff_fit}
 \end{figure}
 
@@ -282,7 +297,7 @@ $2222.8\pm5.7 _{-75}$ & $2.0044\pm 0.0031^{+0.017}$ \\ \bottomrule
 \end{minipage}
 \end{figure}
   
-ミューオンのスピンに対して角度$\theta$ の方向に崩壊する$e^{+}$ のエネルギー分布は，式~\eqref{eq:theory_michel} で与えられた．この式に$\rho$ 以外のパラメータの値として，標準模型で予想されている$\eta = 0 , \;\xi = 1 , \;\xi \delta = 3/4$ を代入して計算すると，
+ミューオンのスピンに対して角度$\theta$ の方向に崩壊する$e^{+}$ のエネルギー分布は，式~\eqref{eq:theory_michel} で与えられる．この式に$\rho$ 以外のパラメータの値として，標準模型で予想されている$\eta = 0 , \;\xi = 1 , \;\xi \delta = 3/4$ を代入して計算すると，
 \[\frac{d\Gamma}{dx} \propto x^{2} [\frac{2}{3}(\rho + \frac{3}{8}\cos \theta - \frac{1}{8})(4x-3) + \frac{1}{4}(\cos \theta + 3)]\]
 となる．
 
@@ -299,7 +314,7 @@ $2222.8\pm5.7 _{-75}$ & $2.0044\pm 0.0031^{+0.017}$ \\ \bottomrule
 したがって，解析においては測定されるエネルギーにPMT 由来のゆらぎがあることを考慮する必要がある．
   %解析的にこの課題を解決するには，シミュレーションによって入射粒子のエネルギーと観測されるエネルギーの対応を求めてfitting関数にその寄与を組み込む必要がある．
 
-具体的には，まず，エネルギー$E_\mathrm{in}$ をもつ粒子が検出器中で失うエネルギー$E_\mathrm{loss}$ の分布をシミュレーションによって求め，それを適当な関数で近似する．これを0から50~MeV の$E_\mathrm{in}$ に対して行い，$E_\mathrm{loss}$ の分布関数$f(E_\mathrm{in}, E_\mathrm{loss})$ を求める．次に，入射粒子のエネルギー分布$g_{\mathrm{real}}(E)$ を$f(E_\mathrm{in}, E_\mathrm{loss})$ でたたみ込み積分することで，損失エネルギーの分布関数$g_{\mathrm{loss}}(E)$ が得られる．最後に，PMT に起因するゆらぎの寄与として$g_{\mathrm{loss}}(E)$ をガウシアンでたたみ込み積分して，予想される測定値の分布関数$g_{\mathrm{measure}}(E)$ が得られる．得られた$g_{\mathrm{measure}}(E)$ を用いてフィッティングを行う．
+具体的にはまず，エネルギー$E_\mathrm{in}$ をもつ粒子が検出器中で失うエネルギー$E_\mathrm{loss}$ の分布をシミュレーションによって求め，それを適当な関数で近似する．これを0から50~MeV の$E_\mathrm{in}$ に対して行い，$E_\mathrm{loss}$ の分布関数$f(E_\mathrm{in}, E_\mathrm{loss})$ を求める．次に，入射粒子のエネルギー分布$g_{\mathrm{real}}(E)$ を$f(E_\mathrm{in}, E_\mathrm{loss})$ でたたみ込み積分することで，損失エネルギーの分布関数$g_{\mathrm{loss}}(E)$ が得られる．最後に，PMT に起因するゆらぎの寄与として$g_{\mathrm{loss}}(E)$ をガウシアンでたたみ込み積分して，予想される測定値の分布関数$g_{\mathrm{measure}}(E)$ が得られる．得られた$g_{\mathrm{measure}}(E)$ を用いてフィッティングを行う．
   %解析的にこの課題を解決するには，シミュレーションによって入射粒子のエネルギーと観測されるエネルギーの対応を求めてfitting関数にその寄与を組み込む必要がある．%それでそれに対してどうするのか？
   
 また，この実験ではプラスチックシンチレータのエネルギー較正に改善の余地が大いに残されている．一つの方法としてベータ線源の$Q$~値を求めることで較正点を増やすことができる．他に，宇宙線ミューオンを用いたキャリブレーションならば，フィンガーカウンターとのコインシデンスを取ることによって宇宙線の飛跡を制限して測定を行うことが考えられる．こうすることで測定される宇宙線の損失エネルギーの幅は図~\ref{ps_langau} よりも狭くなり，また，いくつかの飛跡に対してエネルギー測定を行うことで異なる損失エネルギーに対する電荷量を求められる．すなわち，較正点が増えて各点における誤差が小さくなると予想される．したがって，測定する宇宙線の飛跡を制限することで較正直線の誤差を小さくすることができると考えられる．
