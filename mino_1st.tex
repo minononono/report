@@ -275,4 +275,37 @@ RUN19 & $2.038 \pm 0.089^{+0.008}_{-0.018} $  \\ \bottomrule
 
 したがって，二つの値をまとめて，$g = 2.062 \pm 0.050^{+0.009}_{-0.020}$ という値が得られた．ここで系統誤差は二つのうち大きい方を選んだ．
 
+\subsubsection{プラスチックシンチレータとの位相差の確認}
+\label{subsubsec:PhaseCheck}
+
+NaI シンチレータとプラスチックシンチレータの$g$ 因子の解析から$\cos$ 振動の初期位相$\delta$ に注目すると，これら二つの位相差は実験中の物理的セットアップに起因していると考えられる．
+実際，二つのシンチレータは標的に対しておよそ$87^{\circ}$ の角度をつけて配置していたため，それにともなって初期位相もおよそ$87^{\circ}$ 分の差をもっているはずである．
+
+これらの事実を解析から確かめるために，まず二つの検出器から得られたデータの時間原点をそろえる必要がある．
+これら二つの検出器間には時間分解能などの性能差もあるが，そもそも信号の伝送に用いたケーブルの長さが違うために時間原点がそろっていない．
+今回は時間原点をそろえるために\ref{subsubsec:PSLife} でものべた高速$e^{+}$ 粒子による小さなピークを用いることを考えた．
+今回のセットアップにおいて二つの検出器からビーム出口までの長さはビームライン全体の長さに比べると小さく，生成ターゲットから二つの検出器までに$e^{+}$ が飛来するまでの時間はほぼ等しいと考えられるので，このピークをそろえることで時間原点とすることができる．
+NaI シンチレータの$e^{+}$ ピーク探索とそれを用いた原点調整後のヒストグラムを図~\ref{fig:NaITimeOrigin}に示す．また，プラスチックシンチレータで同様のことを行ったものを図~\ref{fig:PSTimeOrigin} に示す．
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 0.9\textwidth]{figure/mino/NaITimeOrigin.png}
+	\caption{(左) NaI シンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム}
+	\label{fig:NaITimeOrigin}
+	\includegraphics[width = 0.9\textwidth]{figure/mino/PSTimeOrigin.png}
+	\caption{(左) プラスチックシンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム}
+	\label{fig:PSTimeOrigin}
+\end{figure}
+
+それぞれのフィッティングから得られた初期位相$\delta$ を表\ref{tab:InitPhases} に示す．
+\begin{table}[h]
+	\centering
+	\caption{各検出器の初期位相}
+	\begin{tabular}{cc}\toprule
+	検出器 & $\delta~[\mathrm{rad.}]$ \\ \midrule
+	NaI シンチレータ & $-0.54 \pm 0.04$ \\
+	プラスチックシンチレータ & $\phantom{-}1.10 \pm 0.02$ \\ \bottomrule
+	\end{tabular}\label{tab:InitPhases}
+\end{table}%
+表\ref{tab:InitPhases} から位相差は$1.64 \pm 0.06 \sim \pi / 2$ となり，セットアップの角度と整合していることが確認できた．
+
 %\end{document}
