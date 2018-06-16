@@ -89,7 +89,7 @@ $\mu^{+}$ の崩壊は図\ref{zu:muondecay} のようなファインマン図で
 &\times \frac{-(-g_{\alpha\beta} + k_{\alpha}k_{\beta}/m_{W}^2)}{k^{2} - m_{W}^2 + i\epsilon}\left[\Bar{v}(\bm{p})\gamma^{\beta}(1 - \gamma_5)v(\bm{q_{2}})\right]
 \label{eq:theory_muondecayamp}
 \end{align}%下の文章に対応する記号がありません
-と書ける．ただし$p, q, k, \alpha, \beta$などは図\ref{zu:muondecay} に対応し，$g_{W}$ は弱い相互作用の結合定数である．その他の記法は付録に記載している通りである．ここで，$m_{W}^2$ が$k^2$ にくらべて十分大きいとし，$m_{W} \rightarrow \infty$の極限をとって計算すると，$V-A$理論の結果と一致する.この詳細な計算は付録A に掲載するが結果として$\mu^+$ の寿命
+と書ける．ただし$p, q, k, \alpha, \beta$などは図\ref{zu:muondecay} に対応し，$g_{W}$ は弱い相互作用の結合定数である．その他の記法は付録Aに記載している通りである．ここで，$m_{W}^2$ が$k^2$ にくらべて十分大きいとし，$m_{W} \rightarrow \infty$の極限をとって計算すると，$V-A$理論の結果と一致する.この詳細な計算は付録A に掲載するが結果として$\mu^+$ の寿命
 \begin{equation}
 \tau_{\mu} = \frac{192\pi^3}{G^{2} m_{\mu}^{5}}
 \label{eq:thory_muonlifetime}
@@ -119,7 +119,7 @@ $\theta = \pi/2$ の位置で，もしくは全$\theta$にわたって測定し�
 Lorentz 共変な相互作用においては$\rho$ は $0, 0.75, 1$ のいずれかになることが分かっている\cite{michel_interaction}．入射粒子数で規格化すると，結局$\Gamma$ は$\rho$ によらないので式\eqref{eq:theory_michel2} をそのまま描いて，測定で得られるグラフの形は図\ref{zu:michelpar} のいずれかのようになる．
 \begin{figure}[htbp]
 \centering
-\includegraphics[width = 0.5\textwidth]{figure/abe/michelgraph.png}
+\includegraphics[width = 0.5\textwidth]{figure/abe/michelgraph.eps}
 \caption{Michel 崩壊の各$\rho$ に対するスペクトル}
 \label{zu:michelpar}
 \end{figure}
@@ -141,6 +141,13 @@ Lorentz 共変な相互作用においては$\rho$ は $0, 0.75, 1$ のいずれ
 である\cite{PDG}．
 	
 \subsection{ミューオンの$g$因子}
+
+ミューオンの$g$ 因子は
+\begin{equation}
+\mu_\mu= g \cdot \frac{e\hbar}{2m_{\mu}c} \cdot \frac{S}{\hbar}
+\end{equation}
+で定義される無次元量である．
+
 $\mu^{+}$ を含む，ディラック場で表されるようなフェルミ粒子の運動は次のDirac 方程式で記述される．
 \begin{equation}
 (i\Slash{\partial} - m)\psi(x) = 0
@@ -184,7 +191,7 @@ i\hbar\frac{\partial}{\partial t}\chi_{1} = \left\{\frac{(\bm{p} - e\bm{A})^{2}}
 \end{equation}
 という，Pauli 方程式が得られる．ここで$\bm{B} = \nabla \times \bm{A}$ であり，磁束密度を表す．式\eqref{eq:theory_pauli} よりスピン$\hbar\bm{\sigma}/2$ がもつ磁気モーメントは軌道角運動量の場合の二倍であり，この場合$g$ 因子は2 であることがわかる．
 
-上のような計算を行えばDirac 方程式からミューオンの$g$ 因子は2 と求まる．QED （量子電磁力学）による考察を行うと，その結果$g$ 因子には補正がかかることが分かっている．$g$ 因子のこの2 からのずれを異常磁気能率 (anomalous magnetic moment) と呼ぶ．例えば二次の摂動において異常磁気能率に寄与する過程はSchwinger によって説明された図\ref{zu:vertexcorr} で表される過程である．
+上のような計算を行えばDirac 方程式からミューオンの$g$ 因子は2 と求まる．QED （量子電磁力学）による考察を行うと，その結果$g$ 因子には補正がかかることが分かっている．$g$ 因子のこの2 からのずれを異常磁気能率 (anomalous magnetic moment) と呼ぶ．例えば二次の摂動において異常磁気能率に寄与する過程は図\ref{zu:vertexcorr} で表される過程である．\cite{schwinger}
 
 \begin{figure}[h]
 \centering
@@ -220,13 +227,13 @@ i\hbar\frac{\partial}{\partial t}\chi_{1} = \left\{\frac{(\bm{p} - e\bm{A})^{2}}
 である．%\cite{}
 これらはQED の正しさを証明する一方で，標準模型の理論値とも$3\sigma$ 以上の有意な差があり，ここに新たな物理があることが期待されている．実際，未発見の粒子が存在して上に述べたような過程の他にその粒子の寄与を考えると，計算するべきファインマン図が増え，その分異常磁気能率に対する計算値も変わることになる．
 
-そのため，$g$ 因子の測定は新しい物理の探索を目的として現在の素粒子物理学実験においてもっとも精密な計算と測定が行われている例である．
+$g$ 因子の測定は新しい物理の探索を目的として現在の素粒子物理学実験においてもっとも精密な計算と測定が行われている例である．
 
 \section{実験原理}
 本節では今回の実験の原理について説明する．今回の実験ではミューオン ($\mu^{+}$) ビームを用いてミューオンの崩壊寿命，ミッシェルパラメータ，そして$g$ 因子を測定する．そのために用いる検出器としてNaI (Tl) シンチレータとプラスチックシンチレータを採用する．なお，ミューオンビームの詳細は次節に含めている．
 
 \subsection{寿命測定の原理}
-ミューオンビームは標的で止められる．静止したミューオンは式\eqref{eq:thory_muonlifetime}の寿命を持つため,
+ミューオンビームは標的で止められる．静止したミューオンは式\eqref{eq:thory_muonlifetime}の寿命$(\tau_\mu)$を持つため,
 \begin{equation}
 \frac{dN_\mu}{dt} = -\frac{1}{\tau_\mu} N_{\mu}
 \end{equation}
@@ -237,9 +244,9 @@ i\hbar\frac{\partial}{\partial t}\chi_{1} = \left\{\frac{(\bm{p} - e\bm{A})^{2}}
 で減少する．つまり陽電子を検出し，計数の時間変化を指数関数でフィッティングすれば寿命を求めることができる．
 
 \subsection{ミッシェルパラメータ測定の原理}
-今回はミッシェルパラメータのうち$\rho$ を測定するための実験を行なった．理論の節と述べたように$\rho$ の測定にはミュオンのスピンの向きに対して，$\theta = \pi / 2$ の位置で観測，または無偏極のミューオンのエネルギーを測定しなくてはならない.
+今回はミッシェルパラメータのうち$\rho$ を測定するための実験を行なった．理論の節で述べたように$\rho$ の測定にはミュオンのスピンの向きに対して，$\theta = \pi / 2$ の位置で観測，または無偏極のミューオンが崩壊した時の$e^{+}$のエネルギー分布を測定しなくてはならない.
 
-ミュオンビームは進行方向にスピン偏極しているため，標的からビーム方向に対して$90^{\circ}$ の向きに検出器を設置してエネルギーを測定，得られたエネルギースペクトルを式\eqref{eq:theory_michel2} でフィッティングすれば，$\rho$ を求めることができる．この際，最大50~MeVの陽電子が出るので，50~MeV陽電子を止めきるような検出器が要求される．また実際には，$90^{\circ}$ 方向に検出器を置くことが困難だったことやデータ量の関係から，後述する$g$ 因子測定のデータを利用して，全スピン方向で積分した無偏極ミューオンとして$\rho$ を求めた．また，この解析によりスピン部分のデータが得られたため，最終的にはミッシェルパラメータの$\xi,\;\delta$ の解析も行った．
+ミューオンビームは進行方向にスピン偏極しているため，標的からビーム方向に対して$90^{\circ}$ の向きに検出器を設置してエネルギーを測定，得られたエネルギースペクトルを式\eqref{eq:theory_michel2} でフィッティングすれば，$\rho$ を求めることができる．この際，最大50~MeVの陽電子が出るので，50~MeV陽電子を止められるような検出器が要求される．また実際には，$90^{\circ}$ 方向に検出器を置くことが困難だったことやデータ量の関係から，後述する$g$ 因子測定のデータを利用して，全スピン方向で積分した無偏極ミューオンとして$\rho$ を求めた．また，この解析によりスピン部分のデータが得られたため，最終的にはミッシェルパラメータの$\xi,\;\delta$ の解析も行った．
 
 \subsection{$g$ 因子測定の原理}
 ミュオンのスピンは磁場中で歳差運動をする．一様磁場中において，磁場方向を$z$軸とすると，磁場とスピンの相互作用のハミルトニアンは，
@@ -275,18 +282,18 @@ i\hbar\frac{\partial}{\partial t}\chi_{1} = \left\{\frac{(\bm{p} - e\bm{A})^{2}}
 
 \subsection{検出器サイズの見積もり}
 今回の実験ではミューオンの崩壊の際に放出される陽電子を測定するが，この陽電子の最大エネルギーはおよそ50~MeVである事を前節で確認した．
-もし検出器に50~MeVの陽電子が物質に入射すると，制動放射と対生成による電磁シャワーを形成する．今回の検出器は全吸収型のカロリメータとして設計したため，その電磁シャワーが検出器の寸法内に収まるように設計しなければならない．電磁シャワーの広がりはその内部にシャワーのエネルギーの90~％が含まれるような長さで記述され，その長さをモリエール半径$R_\mathrm{M}$ と呼ぶ．モリエール半径は次のように定義される．
+もし検出器に50~MeVの陽電子が入射すると，制動放射と対生成による電磁シャワーを形成する．今回の検出器は全吸収型のカロリメータとして設計したため，その電磁シャワーが検出器の寸法内に収まるように設計しなければならない．電磁シャワーの広がりはその内部にシャワーのエネルギーの90~％が含まれるような長さで記述され，その長さをモリエール半径$R_\mathrm{M}$ と呼ぶ．モリエール半径は次のように定義される．
 \begin{equation}
 R_\mathrm{M} = L_\mathrm{rad}\frac{21.2~\mathrm{MeV}}{E_\mathrm{c}}
 \end{equation}
 ここで$L_\mathrm{rad}$ は放射長，$E_\mathrm{c}$ はcritical energy である．NaI およびプラスチックシンチレータ (PS) における$L_{\rm rad}$ と$E_\mathrm{c}$ ，$R_\mathrm{M}$ の値を表\ref{tab:abe_rm} に示す．
-\begin{table}[hbtp]
+\begin{table}[thb]
 \centering
 \caption{物質ごとの$L_\mathrm{rad}$と$E_\mathrm{c}$，およびモリエール半径$R_\mathrm{M}$}
-\begin{tabular}{cccc}\toprule
-物質 & $L_\mathrm{rad}~[\mathrm{cm}]$ & $E_\mathrm{c}~[\mathrm{MeV}]$ & $R_\mathrm{M}~[\mathrm{cm}]$ \\ \midrule
+\begin{tabular}{cccc}
+物質 & $L_\mathrm{rad}~[\mathrm{cm}]$ & $E_\mathrm{c}~[\mathrm{MeV}]$ & $R_\mathrm{M}~[\mathrm{cm}]$ \\ 
 NaI & 2.59 & 17.4 & 3.2 \\
-PS & 42.9 & 109 & 8.34 \\ \bottomrule
+PS & 42.9 & 109 & 8.34 \\ 
 \end{tabular}
 \label{tab:abe_rm}
 \end{table}
