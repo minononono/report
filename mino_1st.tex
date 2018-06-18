@@ -146,9 +146,10 @@ NaIは減衰時間が長く主にその部分でパイルアップが起きて�
 
 \subsection{NaI を用いた寿命と$g$ 因子の解析}
 \subsubsection{使用データ}
-NaI では実験で得られたデータのうち，寿命測定用に磁場なしのデータとしてRUN15，$g$ 因子測定用に磁場ありのデータとしてRUN18, RUN19 のデータを用いて解析を行った．
-RUN15 のサンプル数は1030点でビームが到達してから4120~ns，RUN18 とRUN19 のサンプル数は2050 点で8200~ns の時間までのデータを記録した.
-解析に用いたRUNは表\ref{tab:RUN_info} のようなデータであった.
+寿命測定用に磁場なしで測定を行ったRUN15，$g$ 因子測定用に磁場ありで走ったRUN18, RUN19 のデータを用いて解析を行った．
+RUN15における波形記録のサンプル数は250MHzで1030点，ビーム信号が到達してから4120~nsの波形を記録した．
+RUN18 とRUN19 のサンプル数は2050 点で8200~ns の時間までの波形を記録した．
+解析に用いたデータを表\ref{tab:RUN_info} にまとめる．
 
 \begin{table}[H]%RUN Information
 \caption{用いたRUN の情報}
@@ -162,21 +163,21 @@ RUN19 & 53.97 & 297 & 446578 \\ \bottomrule
 \label{tab:RUN_info}
 \end{table}
 
-図\ref{fig:no_mag}-\ref{fig:with_mag_RUN19} は解析に用いた磁場なしと磁場ありの場合の時間分布で中心のNaI とフィンガーカウンターでコインシデンスを取った.
+図\ref{fig:no_mag}-\ref{fig:with_mag_RUN19} は磁場なしと磁場ありで中心のNaI とフィンガーカウンターでコインシデンスを取った場合の時間分布である．
 % コインシデンスという表現でいいか？
 \begin{figure}[H]
 \centering
-\includegraphics[width  = 0.5\textwidth]{figure/mino/no_mag.png}
+\includegraphics[width  = 0.5\textwidth]{figure/mino/no_mag.eps}
 \caption{磁場がないときの時間分布 (RUN15)}
 \label{fig:no_mag}
 \begin{minipage}{0.45\hsize}
 \centering
-\includegraphics[width  = 1.0\textwidth]{figure/mino/with_mag_RUN18.png}
+\includegraphics[width  = 1.0\textwidth]{figure/mino/with_mag_RUN18.eps}
 \caption{磁場があるときの時間分布 (RUN18)}
 \end{minipage}
 \begin{minipage}{0.45\hsize}
 \centering
-\includegraphics[width  = 1.0\textwidth]{figure/mino/with_mag_RUN19.png}
+\includegraphics[width  = 1.0\textwidth]{figure/mino/with_mag_RUN19.eps}
 \caption{磁場があるときの時間分布 (RUN19)}
 \label{fig:with_mag_RUN19}
 \end{minipage}
@@ -185,27 +186,30 @@ RUN19 & 53.97 & 297 & 446578 \\ \bottomrule
 %--------- peak ratio -----------------------------------------------------------
 
 \subsubsection{時間分解能}
-ピークに対する一定の高さの比 (50~\%) を超えたところを信号の時間として用いて寿命と$g$ 因子のフィッティングを行った．図\ref{fig:Original} は中心のNaI とフィンガーカウンターでコインシデンスを取った時の図で， 縦軸が時間差，横軸が中心のNaI で落としたエネルギーを表しており，この図からエネルギーに対して時間差がほとんど一定でTQ補正の必要はないことを確認した．
+ピークに対する一定の高さの比 (50~\%) を超えたところを信号の時刻として用いて，寿命と$g$ 因子を求めた．
+図\ref{fig:Original} に，縦軸がNaI とフィンガーカウンターの時間差，横軸が中心のNaI で落としたエネルギーの分布を示す．
+中心のNaI とフィンガーカウンターでコインシデンスを取った時のイベントのこの図から，エネルギーに対して時間差がほとんど一定で信号の時刻の補正は必要ないことを確認した．
 
 \begin{figure}[H]%TQ compensation check
 \centering
-\includegraphics[width  = 0.5\textwidth]{figure/mino/Original.png}
+\includegraphics[width  = 0.5\textwidth]{figure/mino/Original.eps}
 \caption{中心のNaI とフィンガーカウンターの時間差}
 \label{fig:Original}
 \end{figure}
 
-ただし，時間分解能が低エネルギーでは波形信号が小さい影響で高エネルギー側と比べて悪いため，5~MeV より高いエネルギーの信号を用いて解析を行った．図~\ref{fig:NaI_peak_gaus_fitting} は1~MeV 毎にエネルギーで区切って時間をガウシアンでフィッティングしたものである．また，図~\ref{fig:NaI_peak_time_resolution} はそうして得られた時間分解能$\sigma$ を横軸をエネルギーとしてプロットしたもので低エネルギーは時間分解能が悪いことが確認できる．
+ただし，低エネルギーでは波形信号が小さい影響で高エネルギー側と比べて時間分解能が悪いため，5~MeV より高いエネルギーの信号を用いて解析を行った．図~\ref{fig:NaI_peak_gaus_fitting} は0-4~MeVの低エネルギーのイベントを1~MeV 毎に区切って時刻をガウシアンでフィッティングしたものである．
+また，図~\ref{fig:NaI_peak_time_resolution} はフィッティングで得られたガウシアンの$\sigma$ を，エネルギーの関数としてプロットしたもので，低エネルギーは時間分解能が悪いことが確認できる．
 
 \begin{figure}[H]%time resolution
 \begin{minipage}{0.5\hsize}
 \centering
-\includegraphics[width  = 0.8\textwidth]{figure/mino/gausfitting_ratio.png}
-\caption{ガウシアンのフィッティング}
+\includegraphics[width  = 0.8\textwidth]{figure/mino/gausfitting_ratio.eps}
+\caption{0-4~MeVの低エネルギーのイベントを1~MeV 毎に区切って時刻をガウシアンでフィッティング}
 \label{fig:NaI_peak_gaus_fitting}
 \end{minipage}
 \begin{minipage}{0.5\hsize}
 \centering
-\includegraphics[width  = 0.8\textwidth]{figure/mino/timeresolution_ratio.png}
+\includegraphics[width  = 0.8\textwidth]{figure/mino/timeresolution_ratio.eps}
 \caption{1~MeV 毎に時間分解能をプロット}
 \label{fig:NaI_peak_time_resolution}
 \end{minipage}
@@ -214,16 +218,18 @@ RUN19 & 53.97 & 297 & 446578 \\ \bottomrule
 %-------- lifetime fitting ----------------------------------------------------------
 
 \subsubsection{ミューオン寿命解析}
-銅板標的を用いたRUN15 の解析からミューオンの寿命を求めた．
-得られた時間分布に対して以下の式~\eqref{eq:lifetime} で表される寿命の関数$f(t)$を用いてフィッティングを行った．バックグラウンドの影響を加味して定数項を加え，RUN15 のデータは4120~ns までしかデータを記録していなかったため，フィッティング範囲は1200~ns から4000~ns とした．統計誤差はROOTのフィッティングによるものである.
+銅板標的を用いたRUN15 のデータからミューオンの寿命を求めた．
+得られた時間分布に対して以下の式~\eqref{eq:lifetime} で表される関数$f(t)$を用いてフィッティングを行った．バックグラウンドの影響を加味して定数項を加えた．
+RUN15 のデータは4120~ns までしかデータを記録していなかったため，フィッティング範囲は1200~ns から4000~ns とした．
+誤差はフィッティング時の統計によるものである.
 %プラスチックシンチレータ側は定数項を含まないフィッティングもしている。
 \begin{gather}
-f(t) = A\exp(-t / \tau)+C \label{eq:lifetime}\\
-\tau = 2.184 \pm 0.052~[\mu \mathrm{s}] \notag
+f(t) = A\exp(-t / \tau)+C \label{eq:lifetime}
 \end{gather}
+結果は $\tau = 2.184 \pm 0.052~\mu \mathrm{s}$~となった．
 \begin{figure}[H]
 \centering
-\includegraphics[width  = 0.7\textwidth]{figure/mino/lifetime_NaI_ratio.png}
+\includegraphics[width  = 0.7\textwidth]{figure/mino/lifetime_NaI_ratio.eps}
 \caption{寿命フィッティング}
 \end{figure}
 
@@ -231,13 +237,13 @@ f(t) = A\exp(-t / \tau)+C \label{eq:lifetime}\\
 
 \subsubsection{ミューオン$g$ 因子解析}
 
-次に磁場標的を用いたRUN18 とRUN19 の解析からミューオンの$g$ 因子を求めた．RUN18 のデータは全Event を用いて解析を行ったが，RUN19 は先述の通り途中で磁石が外れて磁場の値が変化したため，磁場の変化を確認した結果から最初の30000~Events を除いたデータを用いた．
+次に磁場標的を用いたRUN18 とRUN19 の解析からミューオンの$g$ 因子を求めた．RUN18 のデータは全event を用いて解析を行ったが，RUN19 は先述の通り途中で磁石が外れて磁場の値が変化したため，磁場の変化を確認した結果から最初の30000~events を除いたデータを用いた．
 
-RUN18 とRUN19 から得られた時間分布に対して式\eqref{eq:gfactor} で表される$g$ 因子の関数$g(t)$を用いてフィッティングを行った．ここで寿命解析の時と同様に定数項を加え，フィッティング範囲は振動がきちんと見えている1600~ns から8000~ns までとした．
+RUN18 とRUN19 から得られた時間分布に対して式\eqref{eq:gfactor} で表される関数$g(t)$を用いてフィッティングを行った．ここで寿命解析の時と同様に定数項を加え，フィッティング範囲は振動がきちんと見えている1600~ns から8000~ns までとした．
 
-RUN18 とRUN19 のフィッティング結果をまとめると表~\ref{tab:gfactor_result} となった.
-ただし表~\ref{tab:gfactor_result} において$g$ 因子の計算にはプラスチックシンチレータの場合と同様に各点の磁場をビームプロファイルのガウシアンで加重平均した値，RUN18では$B$=56.06~G，RUN19では$B$=53.97~G を用いた.
-また，統計誤差としてはROOTのフィッティングによって得られたものを載せており，磁場の影響を含めたものについては後述する．
+RUN18 とRUN19 のフィッティング結果を表~\ref{tab:gfactor_result} にまとめる.
+ただし表~\ref{tab:gfactor_result} における$g$ 因子の計算には，プラスチックシンチレータの場合と同様に各点の磁場をビームプロファイルのガウシアンで加重平均した値，RUN18では$B$=56.06~G，RUN19では$B$=53.97~G を用いた.
+また，誤差はフィッティング時の統計により得られたものを載せており，磁場の影響を含めたものについては後述する．
 
 \begin{gather}
 g(t) = A\exp(-t / \tau)\{1+B\cos(\omega t+\delta)\}+C\label{eq:gfactor}
@@ -255,11 +261,11 @@ RUN19 & 2.126 $\pm$ 0.030 & 4.630 $\pm$ 0.015 & 2.038 $\pm$ 0.007 \\ \bottomrule
 
 \begin{figure}[H]
 \begin{minipage}{0.5\hsize}
-\includegraphics[width  = 1.0\textwidth]{figure/mino/gfactor_ratio_RUN18.png}
+\includegraphics[width  = 1.0\textwidth]{figure/mino/gfactor_ratio_RUN18.eps}
 \caption{RUN18 を用いた$g$ 因子のフィッティング}
 \end{minipage}
 \begin{minipage}{0.5\hsize}
-\includegraphics[width  = 1.0\textwidth]{figure/mino/gfactor_ratio_RUN19.png}
+\includegraphics[width  = 1.0\textwidth]{figure/mino/gfactor_ratio_RUN19.eps}
 \caption{RUN19 を用いた$g$ 因子のフィッティング}
 \end{minipage}
 \end{figure}
@@ -268,7 +274,7 @@ RUN19 & 2.126 $\pm$ 0.030 & 4.630 $\pm$ 0.015 & 2.038 $\pm$ 0.007 \\ \bottomrule
 
 \subsubsection{磁場の系統誤差について}
 
-プラスチックシンチレータの場合と同様にRUN18 とRUN19 の$g$ 因子解析に用いた磁場の値はビームプロファイルをもとに加重平均をとった値であるため，ビームの不定性による磁場の
+プラスチックシンチレータの場合と同様に，RUN18 とRUN19 の$g$ 因子解析に用いた磁場の値はビームプロファイルをもとに加重平均をとった値であるため，ビームの不定性による磁場の
 加重平均の誤差を考察した．\\
 ビーム強度のガウシアンの広がり$\sigma_{x}，\sigma_{y}$ を動かしてRUN18 とRUN19 の場合での加重平均磁場の最大値と最小値を求めたところ表~\ref{tab:mag_max_min} のようになった．
 
@@ -283,7 +289,7 @@ RUN19 & 54.44\;($\sigma_{x}=3.9，\sigma_{y}=1.0$) & 53.76\;($\sigma_{x}=3.9，\
 \label{tab:mag_max_min}
 \end{table}
 
-磁場が最大・最小，そしてもとのビームプロファイルのときの$g$ 因子を求めると表\ref{tab:mag_g}の値が得られた．また，磁場の測定誤差を含んだ$g$ 因子の統計誤差については，磁場の誤差$\delta B$ を考慮するとプラスチックシンチレータで求めた誤差伝播の式\eqref{eq:PSgosa}より，$g$ 因子の誤差$\sigma_{B}$ は表~\ref{tab:g_error} の値が得られた．
+磁場が最大・最小，そしてもとのビームプロファイルのときの$g$ 因子を表\ref{tab:mag_g}に示す．また，磁場の測定誤差を含んだ$g$ 因子の統計誤差については，磁場の誤差$\delta B$ を考慮するとプラスチックシンチレータで求めた誤差伝播の式\eqref{eq:PSgosa}より，$g$ 因子の誤差$\sigma_{B}$ は表~\ref{tab:g_error} の値が得られた．
 
 \begin{table}[H]
 \caption{磁場$B$ の値とそれらに対応する$g$ 因子の値}
@@ -307,7 +313,7 @@ RUN19 & 2.36 & 0.089 \\ \bottomrule
 \label{tab:g_error}
 \end{table}
 
-以上の統計誤差と系統誤差をまとめると，RUN18 とRUN19 の$g$ 因子は表\ref{tab:NaIggosamatome}のようになった．
+RUN18 とRUN19 の$g$ 因子の統計誤差と系統誤差を表\ref{tab:NaIggosamatome}にまとめる．
 ここで誤差の第一項は磁場の影響を含めた統計誤差であり，第二項はビームプロファイルの不定性による系統誤差である．
 
 \begin{table}[H]%g因子の誤差のまとめ
@@ -323,7 +329,7 @@ RUN19 & $2.038 \pm 0.089^{+0.008}_{-0.018} $  \\ \bottomrule
 \endgroup
 \end{table}
 
-したがって，二つの値をまとめて，$g = 2.062 \pm 0.050^{+0.009}_{-0.020}$ という値が得られた．ここで系統誤差は二つのうち大きい方を選んだ．
+二つの値をまとめて，$g = 2.062 \pm 0.050^{+0.009}_{-0.020}$ という値が得られた．ここで系統誤差は二つのうち大きい方を選んだ．
 
 \subsubsection{プラスチックシンチレータとの位相差の確認}
 \label{subsubsec:PhaseCheck}
@@ -338,7 +344,7 @@ NaI シンチレータとプラスチックシンチレータの$g$ 因子の解
 NaI シンチレータの$e^{+}$ ピーク探索とそれを用いた原点調整後のヒストグラムを図~\ref{fig:NaITimeOrigin}に示す．また，プラスチックシンチレータで同様のことを行ったものを図~\ref{fig:PSTimeOrigin} に示す．
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.9\textwidth]{figure/mino/NaITimeOrigin.png}
+	\includegraphics[width = 0.9\textwidth]{figure/mino/NaITimeOrigin.eps}
 	\caption{(左) NaI シンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム}
 	\label{fig:NaITimeOrigin}
 	%\includegraphics[width = 0.9\textwidth]{figure/mino/PSTimeOrigin.png}
