@@ -89,7 +89,7 @@ WFD (CAEN Waveform Digitizer V1721) で得られたイベント / 波形の例�
 実際，運動エネルギーが4.1~MeV の$\mu^{+}$ は運動量$p = 29.4~\mathrm{MeV}$ を持っており，このとき速さ$\beta$ は$\beta = 0.27$ であるのに対して，同じ運動量を持つ$e^{+}$ は$\beta = 1.00$ となり$e^{+}$ のほうが3 - 4 倍速い．
 1 層目とのコインシデンスをとることでこのピークが低くなるのは，このコインシデンスにより粒子の飛来した方向を制限でき，銅板標的由来の信号の割合が多くなるためと考えられる．
 
-図~\ref{fig:PSLifeDist} のヒストグラムに式\eqref{eq:PSLifeFitFunc} 
+図~\ref{fig:PSLifeDist} のヒストグラムに%式\eqref{eq:PSLifeFitFunc} 
 \begin{equation}
 f(t) = A \exp(-t / \tau) + \mathrm{const.}
 \label{eq:PSLifeFitFunc}
@@ -146,7 +146,7 @@ f(t) = A \exp(-t / \tau) + \mathrm{const.}
 	\label{fig:PSgFactorDist}
 \end{figure}%
 
-図~\ref{fig:PSgFactorDist} のヒストグラムに式\eqref{eq:PSgFactorFitFunc}
+図~\ref{fig:PSgFactorDist} のヒストグラムに%式\eqref{eq:PSgFactorFitFunc}
 \begin{equation}
 g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 \label{eq:PSgFactorFitFunc}
@@ -167,7 +167,7 @@ g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 	\centering
 	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorFit_Layer3.eps}
 	\end{minipage}
-	\caption{図~\ref{fig:PSgFactorDist} のヒストグラムに$f(t)$ でフィッティングを行った結果．それぞれ (上) 1 層目，(左下) 2 層目コインシデンスあり，(右下) 4 層目コインシデンスありのものである}
+	\caption{図~\ref{fig:PSgFactorDist} のヒストグラムに$g(t)$ でフィッティングを行った結果．それぞれ (上) 1 層目，(左下) 2 層目コインシデンスあり，(右下) 4 層目コインシデンスありのものである}
 	\label{fig:PSgFactorFit}
 \end{figure}%
 \begin{table}[h]
@@ -223,7 +223,7 @@ $\sigma_{x}, \sigma_{y}$ を動かす範囲は磁場標的の大きさが事前�
 \delta g = \sqrt{\left(\delta\omega\right)^{2}\left(\frac{\partial g}{\partial\omega}\right)^{2} + \left(\delta B\right)^{2}\left(\frac{\partial g}{\partial B}\right)^{2}}
 \label{eq:PSgosa}
 \end{equation}%
-$\delta B = 0.008~\mathrm{G}$となったので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
+$\delta B = 2.36~\mathrm{G}$となったので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
 \begin{table}
 	\centering
 	\caption{磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差}
