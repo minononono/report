@@ -8,9 +8,10 @@
 
 \subsection{解析手法B}
 \label{subsec:PSAnalyses}
-% コインシデンス，フィッティングは他の節はアルファベット表記が多い
+
 \subsubsection{使用データ}
 \label{subsubsec:PSData}
+
 実験で得られたデータのうち，解析に用いたのは3 日目に磁場標的を用いたランと4 日目に銅板標的を用いたランとの2 つであり，それぞれのデータを表~\ref{tab:PSdata} に示す．
 \begin{table}[h]
 	\centering
@@ -27,16 +28,17 @@
 
 \subsubsection{WFD波形の解析}
 \label{subsubsec:PSEventDisplay}
+
 WFD (CAEN Waveform Digitizer V1721) で得られたイベント / 波形の例を図~\ref{fig:PSEventDisplayAll}, \ref{fig:PSEventDisplayZoom} に示す．
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSEventDisplayAll.png}
-	\caption{プラスチックシンチレータで得られた波形 ($8~\mu\mathrm{s}$ 全体)．線の種類がそれぞれのチャンネルに対応しており，層の番号は標的に近い方から1 から4 までである．}
+	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSEventDisplayAll.eps}
+	\caption{プラスチックシンチレータで得られた波形 ($8~\mu\mathrm{s}$ 全体)．線の種類がそれぞれのチャンネルに対応している．}
 	\label{fig:PSEventDisplayAll}
 \end{figure}%
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSEventDisplayZoom.png}
+	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSEventDisplayZoom.eps}
 	\caption{プラスチックシンチレータで得られた波形 (一部拡大)．図~\ref{fig:PSEventDisplayAll} の2.6 - 3.1~$\mu$s を拡大したものである．}
 	\label{fig:PSEventDisplayZoom}
 \end{figure}%
@@ -47,6 +49,7 @@ WFD (CAEN Waveform Digitizer V1721) で得られたイベント / 波形の例�
 
 \subsubsection{ミューオン寿命解析}
 \label{subsubsec:PSLife}
+
 まず，銅板標的を用いたランのデータからミューオンの寿命を求めた．
 \ref{subsubsec:PSEventDisplay} で述べたようにthreshold を設定し，固定threshold を越えたところから初めてthreshold 以下になるところまでを一つの崩壊$e^{+}$ による信号として，threshold を超えた瞬間をその信号が持つ時刻とした．
 その後，3 層目を除く各層については以下の方法でコインシデンスをとった．
@@ -62,30 +65,31 @@ WFD (CAEN Waveform Digitizer V1721) で得られたイベント / 波形の例�
 	\centering
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSLifetimeDist_Layer0.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSLifeDist_Layer0.eps}
 	\end{minipage}
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSLifetimeDist_Layer1.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSLifeDist_Layer1.eps}
 	\end{minipage}
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSLifetimeDist_Layer3.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSLifeDist_Layer3.eps}
 	\end{minipage}
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSLifetimeDistNoCoin_Layer3.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSLifeDist_Layer1_nocoin.eps}
 	\end{minipage}
-	\caption{磁場がないときの時刻分布ヒストグラム．それぞれ (左上) 1 層目，(右上) 2 層目コインシデンスあり，(左下) 4 層目コインシデンスあり，(右下) 4 層目コインシデンスなしの時刻情報である．崩壊現象に特徴的な指数関数に従った減衰が見られる．}
+	\caption{磁場がないときの時刻分布ヒストグラム．それぞれ (左上) 1 層目，(右上) 2 層目コインシデンスあり，(左下) 4 層目コインシデンスあり，(右下) 2 層目コインシデンスなしの時刻情報である．崩壊現象に特徴的な指数関数に従った減衰が見られる．}
 	\label{fig:PSLifeDist}
 \end{figure}%
 
-得られた時間分布における$t = 200$ - $400~\mathrm{ns}$ のピークは，図~\ref{fig:PSLifeDist} の下二つを比較すると分かるように，コインシデンスをとることによって小さくなる．
+得られた時間分布における$t = 200$ - $400~\mathrm{ns}$ のピークは，図~\ref{fig:PSLifeDist} の右二つを比較すると分かるように，コインシデンスをとることによって小さくなる．
 このピークは$\pi$ の崩壊によってできた表面ミューオンがすぐに崩壊し生成した$e^{+}$ が，ビームラインを通り抜けて直接検出器に当たったときの信号によるものと考えられる．
 ビームラインにおいては運動量で粒子を選択しており (今回は運動エネルギーが4.1~MeV の粒子を選択している) ，このようにしてできた$e^{+}$ は同じ運動量の$\mu^{+}$ よりも高速で検出器に到達する．
+実際，運動エネルギーが4.1~MeV の$\mu^{+}$ は運動量$p = 29.4~\mathrm{MeV}$ を持っており，このとき速さ$\beta$ は$\beta = 0.27$ であるのに対して，同じ運動量を持つ$e^{+}$ は$\beta = 1.00$ となり$e^{+}$ のほうが3 - 4 倍速い．
 1 層目とのコインシデンスをとることでこのピークが低くなるのは，このコインシデンスにより粒子の飛来した方向を制限でき，銅板標的由来の信号の割合が多くなるためと考えられる．
 
-図~\ref{fig:PSLifeDist_Layer0} - \ref{fig:PSLifeDist_Layer3} のヒストグラムに式\eqref{eq:PSLifeFitFunc} 
+図~\ref{fig:PSLifeDist} のヒストグラムに式\eqref{eq:PSLifeFitFunc} 
 \begin{equation}
 f(t) = A \exp(-t / \tau) + \mathrm{const.}
 \label{eq:PSLifeFitFunc}
@@ -95,17 +99,14 @@ f(t) = A \exp(-t / \tau) + \mathrm{const.}
 フィッティング結果を図~\ref{fig:PSLifeFit} および表~\ref{tab:PSLifetime} に示す．誤差は統計によるものである．
 \begin{figure}[h]
 	\centering
+	\includegraphics[width = 0.45\textwidth]{figure/odagawa/PSLifeFit_Layer0.eps}\\
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = 0.45\textwidth]{figure/odagawa/PSLifetimeFit_Layer0.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSLifeFit_Layer1.eps}
 	\end{minipage}
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSLifetimeFit_Layer1.png}
-	\end{minipage}
-	\begin{minipage}{0.45\textwidth}
-	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSLifetimeFit_Layer3.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSLifeFit_Layer3.eps}
 	\end{minipage}
 	\caption{図~\ref{fig:PSLifeDist} のヒストグラムに$f(t)$ でフィッティングを行った結果．それぞれ (上) 1 層目，(左下) 2 層目コインシデンスあり，(右下) 4 層目コインシデンスありのものである．}
 	\label{fig:PSLifeFit}
@@ -132,17 +133,14 @@ f(t) = A \exp(-t / \tau) + \mathrm{const.}
 \ref{subsubsec:PSLife} と同様に得られた時刻情報を図~\ref{fig:PSgFactorDist} に示す．
 \begin{figure}[h]
 	\centering
+	\includegraphics[width = 0.45\textwidth]{figure/odagawa/PSgFactorDist_Layer0.eps}\\
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = 0.45\textwidth]{figure/odagawa/PSgFactorDist_Layer0.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorDist_Layer1.eps}
 	\end{minipage}
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorDist_Layer1.png}
-	\end{minipage}
-	\begin{minipage}{0.45\textwidth}
-	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorDist_Layer3.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorDist_Layer3.eps}
 	\end{minipage}
 	\caption{磁場があるときの時刻分布ヒストグラム．それぞれ (上) 1 層目，(左下) 2 層目コインシデンスあり，(右下) 4 層目コインシデンスありのものである．指数関数減衰にミューオンの歳差運動由来と思われる振動が重なっている．}
 	\label{fig:PSgFactorDist}
@@ -160,17 +158,14 @@ g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 また，誤差としては\ref{subsubsec:PSLife} と同様にフィッティングの統計によるものを載せており，磁場の影響を含めたものについては後述する．
 \begin{figure}[h]
 	\centering
+	\includegraphics[width = 0.45\textwidth]{figure/odagawa/PSgFactorFit_Layer0.eps}\\
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = 0.45\textwidth]{figure/odagawa/PSgFactorFit_Layer0.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorFit_Layer1.eps}
 	\end{minipage}
 	\begin{minipage}{0.45\textwidth}
 	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorFit_Layer1.png}
-	\end{minipage}
-	\begin{minipage}{0.45\textwidth}
-	\centering
-	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorFit_Layer3.png}
+	\includegraphics[width = \textwidth]{figure/odagawa/PSgFactorFit_Layer3.eps}
 	\end{minipage}
 	\caption{図~\ref{fig:PSgFactorDist} のヒストグラムに$f(t)$ でフィッティングを行った結果．それぞれ (上) 1 層目，(左下) 2 層目コインシデンスあり，(右下) 4 層目コインシデンスありのものである}
 	\label{fig:PSgFactorFit}
@@ -190,11 +185,18 @@ g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 
 \subsubsection{磁場の系統誤差について}
 \label{subsubsec:MagSysErr}
-\ref{subsubsec:PSgFactor} において$g$ 因子解析に用いた磁場の値$B = 53.97~[\mathrm{G}]$ は事前にMLF の三宅さんから頂いたビームプロファイルをもとに加重平均をとった値であるが，このビームプロファイルの不定性により加重平均の値は変化する．
+
+\ref{subsubsec:PSgFactor} において$g$ 因子解析に用いた磁場の値$B = 53.97~\mathrm{G}$ は事前にMLF の三宅さんから頂いたビームプロファイルをもとに加重平均をとった値であるが，このビームプロファイルの不定性により加重平均の値は変化する．
 今回はビームの広がりはガウシアンにしたがって分布すると仮定したうえでガウシアンの広がりを変化させ，それによる磁場への影響をみた．
 
-ガウシアンの$x$ 方向の広がりを$\sigma_{x}$，$y$ 方向の広がりを$\sigma_{y}$ とし，$\sigma_{x}$ を2.0~cm から3.9 ~cm まで，$\sigma_{y}$ を1.0~cm から2.9~cm まで0.1~cm 刻みで変化させて加重平均磁場の値を求めた．得られた磁場の最大値・最小値を表~\ref{tab:MagSysErr} に示す．ここで用いた磁場の値はすべて表~10のものである．
-ここで$\sigma_{x}, \sigma_{y}$ を動かす範囲は磁場標的の大きさが事前にいただいたビームプロファイルのガウシアンの標準偏差$1\sigma$ に入る点を上限として十分な広さをとった．
+ガウシアンの$x$ 方向の広がりを$\sigma_{x}$，$y$ 方向の広がりを$\sigma_{y}$ とし，$\sigma_{x}$ を2.0~cm から3.9 ~cm まで，$\sigma_{y}$ を1.0~cm から2.9~cm まで0.1~cm 刻みで変化させて加重平均磁場の値を求めた．得られた2 次元分布を図~\ref{fig:PSMagMinMax} に，その最大値・最小値を表~\ref{tab:MagSysErr} に示す．ここで用いた磁場の値はすべて表~10のものである．
+$\sigma_{x}, \sigma_{y}$ を動かす範囲は磁場標的の大きさが事前にいただいたビームプロファイルのガウシアンの標準偏差$1\sigma$ に入る点を上限として十分な広さをとった．
+\begin{figure}[h]
+	\centering
+	\includegraphics[width = 0.9\textwidth]{figure/odagawa/magminmax.eps}
+	\caption{$\sigma_{x}, \;\sigma_{y}$ を0.1~cm 刻みで動かしたときの磁場の加重平均の値．中心付近の点はいただいていたビームプロファイルでの値を示している．最大値をとったのは$\sigma_{x} = 3.9, \;\sigma_{y} = 1.0$ のとき，最小値をとったのは$\sigma_{x} = 3.9, \;\sigma_{y} = 2.9$ のときであった．}
+	\label{fig:PSMagMinMax}
+\end{figure}
 \begin{table}[h]
 	\centering
 	\caption{$\sigma_{x}$，$\sigma_{y}$を動かしたときの磁場$B$ の最大値と最小値~[G]}
@@ -217,13 +219,11 @@ g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 \end{table}%
 
 また，磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差については，誤差伝播の式，式\eqref{eq:PSgosa} を用いて計算した．
-$\delta B = 0.008~\mathrm{G}$となったので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
-
 \begin{equation}
 \delta g = \sqrt{\left(\delta\omega\right)^{2}\left(\frac{\partial g}{\partial\omega}\right)^{2} + \left(\delta B\right)^{2}\left(\frac{\partial g}{\partial B}\right)^{2}}
 \label{eq:PSgosa}
 \end{equation}%
-
+$\delta B = 0.008~\mathrm{G}$となったので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
 \begin{table}
 	\centering
 	\caption{磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差}
@@ -244,6 +244,7 @@ $\delta B = 0.008~\mathrm{G}$となったので，$\delta g$ は表~\ref{tab:PSg
 %%%%%%%%%%%%%%%
 \subsubsection{磁場の変化の確認}
 \label{subsubsec:PSMagChangeCheck}
+
 $g$ 因子測定のための磁場標的を置いたランの途中で磁石配置が崩れ，磁場の値が変わっていたことは本文中でも述べたが，解析においてそのことを確認した．
 
 \ref{subsubsec:PSgFactor} のようなフィッティングをする際に，用いるイベントを9000~events (6~min) ごとに区切ってフィッティングを行った，それぞれ得られた$\omega$ をの値を図~\ref{fig:PSOmegaCheck} に示す．
@@ -253,45 +254,14 @@ $g$ 因子測定のための磁場標的を置いたランの途中で磁石配�
 なお，変化前後の加重平均をとった磁場の値はそれぞれ56.06~G と53.97~G であった．
 \begin{figure}[h]
 	\centering
-	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSOmegaCheck.png}
-	\caption{ラン中における$\omega$ の時間変化}
+	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSOmegaCheck.eps}
+	\caption{ラン中における$\omega$ の時間変化．最初の20~分間を過ぎたあたりから$\omega$ の値が変化している様子が見られる．}
 	\label{fig:PSOmegaCheck}
 \end{figure}
 
-\subsubsection{NaI シンチレータとの位相差の確認}
-\label{subsubsec:PhaseCheck}
-NaI シンチレータとプラスチックシンチレータの$g$ 因子の解析から$\cos$ 振動の初期位相$\delta$ に注目すると，これら二つの位相差は実験中の物理的セットアップに起因していると考えられる．
-実際，二つのシンチレータは標的に対しておよそ$87^{\circ}$ の角度をつけて配置していたため，それにともなって初期位相もおよそ$87^{\circ}$ 分の差をもっているはずである．
-
-これらの事実を解析から確かめるために，まず二つの検出器から得られたデータの時間原点をそろえる必要がある．
-これら二つの検出器間には時間分解能などの性能差もあるが，そもそも信号の伝送に用いたケーブルの長さが違うために時間原点がそろっていない．
-今回は時間原点をそろえるために\ref{subsubsec:PSLife} でものべた高速$e^{+}$ 粒子による小さなピークを用いることを考えた．
-今回のセットアップにおいて二つの検出器からビーム出口までの長さはビームライン全体の長さに比べると小さく，生成ターゲットから二つの検出器までに$e^{+}$ が飛来するまでの時間はほぼ等しいと考えられるので，このピークをそろえることで時間原点とすることができる．
-NaI シンチレータの$e^{+}$ ピーク探索とそれを用いた原点調整後のヒストグラムを図~\ref{fig:NaITimeOrigin}に示す．また，プラスチックシンチレータで同様のことを行ったものを図~\ref{fig:PSTimeOrigin} に示す．
-\begin{figure}[h]
-	\centering
-	\includegraphics[width = 0.9\textwidth]{figure/odagawa/NaITimeOrigin.png}
-	\caption{(左) NaI シンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム}
-	\label{fig:NaITimeOrigin}
-	\includegraphics[width = 0.9\textwidth]{figure/odagawa/PSTimeOrigin.png}
-	\caption{(左) プラスチックシンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム}
-	\label{fig:PSTimeOrigin}
-\end{figure}
-
-それぞれのフィッティングから得られた初期位相$\delta$ を表\ref{tab:InitPhases} に示す．
-\begin{table}[h]
-	\centering
-	\caption{各検出器の初期位相}
-	\begin{tabular}{cc}\toprule
-	検出器 & $\delta~[\mathrm{rad.}]$ \\ \midrule
-	NaI シンチレータ & $-0.54 \pm 0.04$ \\
-	プラスチックシンチレータ & $\phantom{-}1.10 \pm 0.02$ \\ \bottomrule
-	\end{tabular}\label{tab:InitPhases}
-\end{table}%
-表\ref{tab:InitPhases} から位相差は$1.64 \pm 0.06 \sim \pi / 2$ となり，セットアップの角度と整合していることが確認できた．
-
 \subsection{PS の解析まとめ}
 \label{subsec:PSmatome}
+
 二つの解析手法を用いてミューオンの寿命，および$g$ 因子を求めた．これらの結果を表~\ref{tab:matome_PS} にまとめた．
 \begin{table}[h]
 	\centering
