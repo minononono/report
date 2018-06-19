@@ -1,4 +1,4 @@
-%\documentclass[uplatex,dvipdfmx]{jsarticle}
+OB%\documentclass[uplatex,dvipdfmx]{jsarticle}
  
 %\usepackage[dvipdfmx]{graphicx}
 %\usepackage{graphicx}
@@ -309,13 +309,13 @@ $y \backslash x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\ \hline \hline
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=1\textwidth]{figure/tajima/mag1.eps}
-\caption{磁場の強さの分布図(磁石が外れる前)}
+\caption{磁場の強さの分布図(磁石が外れる前)．横軸をx，縦軸をyとした．赤線に囲われた領域が銅板領域である．}
 \label{mag1}
 \end{minipage}
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=1\textwidth]{figure/tajima/vec1.eps}
-\caption{xy平面における磁場ベクトル（磁石が外れた後）．背面の色はz軸方向の磁場の大きさを表し，矢印の長さは磁場ベクトルの大きさに対応している．}
+\caption{xy平面における磁場ベクトル（磁石が外れた後）．横軸をx，縦軸をyとした．背面の色はz軸方向の磁場の大きさを表し，矢印の長さは磁場ベクトルの大きさに対応している．}
 \label{vec1}
 \end{minipage}
 \end{figure}
@@ -340,7 +340,7 @@ $y \backslash x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\ \hline \hline
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=1\textwidth]{figure/tajima/mag2.eps}
-\caption{磁場の強さの分布図(磁石が外れた後)．左手奥の磁石が外れ，隣の磁石についてしまった．これにより左部に磁場の偏りがみられる．}
+\caption{磁場の強さの分布図(磁石が外れた後)．赤線に囲われた領域が銅板領域である．左手奥の磁石が外れ，隣の磁石についてしまった．これにより左部に磁場の偏りがみられる．}
 \label{mag2}
 \end{minipage}
 \begin{minipage}{0.45\hsize}
@@ -351,7 +351,14 @@ $y \backslash x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\ \hline \hline
 \end{minipage}
 \end{figure}
 
-$g$ 因子の計算に用いる磁場を得るために，予め頂いたビームプロファイルのデータ($\sigma_x = 33.3037~\mathrm{mm}, \; \sigma_y = 19.6668~\mathrm{mm}$) を用いて加重平均をとった．結果，磁石が外れる前後の磁場がそれぞれ$56.06 \pm 1.20~\mathrm{G}$ と$53.97\pm 2.36~\mathrm{G}$ と求まった．誤差は各点の測定による誤差を伝播させることで求めた．
+$g$ 因子の計算に用いる磁場を得るために，予め頂いたビームプロファイルのデータ($\sigma_x = 33.3037~\mathrm{mm}, \; \sigma_y = 19.6668~\mathrm{mm}$) を用いて加重平均をとった．下図~\ref{beam_mag.eps}が加重平均に用いた重み分布で，平均$(\mu_x,\mu_y)=(0,0)$ ，分散$\sigma_x^2, \sigma_y^2$の２次元のガウシアンを規格化したものである．加重平均の結果，磁石が外れる前後の磁場がそれぞれ$56.06 \pm 1.20~\mathrm{G}$ と$53.97\pm 2.36~\mathrm{G}$ と求まった．誤差は統計誤差で，各点の測定の測定誤差を伝播させることで求めた．(系統誤差については後述．)
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figure/tajima/beam_mag.eps}
+\caption{加重平均に用いたビームプロファイル．赤線に囲われた領域が銅板領域である．}
+\label{beam_mag}
+\end{figure}
 
 \newpage
 
