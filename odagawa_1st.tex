@@ -181,7 +181,22 @@ g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 	\end{tabular}\label{tab:PSgFactor}
 \end{table}%
 
-\newpage
+さらに磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差については，誤差伝播の式，式\eqref{eq:PSgosa} を用いて計算した．
+\begin{equation}
+\delta g = \sqrt{\left(\delta\omega\right)^{2}\left(\frac{\partial g}{\partial\omega}\right)^{2} + \left(\delta B\right)^{2}\left(\frac{\partial g}{\partial B}\right)^{2}}
+\label{eq:PSgosa}
+\end{equation}%
+$\delta B = 2.36~\mathrm{G}$となったので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
+\begin{table}
+	\centering
+	\caption{磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差}
+	\begin{tabular}{cc}\toprule
+	層番号 & $g$ 因子の統計誤差\\ \midrule
+	1 & 0.008 \\ 
+	2 & 0.008 \\
+	4 & 0.009 \\ \bottomrule
+	\end{tabular}\label{tab:PSgStatErr}
+\end{table}%
 
 \subsubsection{磁場の系統誤差について}
 \label{subsubsec:MagSysErr}
@@ -216,23 +231,6 @@ $\sigma_{x}, \sigma_{y}$ を動かす範囲は磁場標的の大きさが事前�
 	2 & 1.995 & 2.012 & 2.020 \\
 	4 & 2.000 & 2.017 & 2.025 \\ \bottomrule 
 	\end{tabular}\label{tab:PSgSysErr}
-\end{table}%
-
-また，磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差については，誤差伝播の式，式\eqref{eq:PSgosa} を用いて計算した．
-\begin{equation}
-\delta g = \sqrt{\left(\delta\omega\right)^{2}\left(\frac{\partial g}{\partial\omega}\right)^{2} + \left(\delta B\right)^{2}\left(\frac{\partial g}{\partial B}\right)^{2}}
-\label{eq:PSgosa}
-\end{equation}%
-$\delta B = 2.36~\mathrm{G}$となったので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
-\begin{table}
-	\centering
-	\caption{磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差}
-	\begin{tabular}{cc}\toprule
-	層番号 & $g$ 因子の統計誤差\\ \midrule
-	1 & 0.008 \\ 
-	2 & 0.008 \\
-	4 & 0.009 \\ \bottomrule
-	\end{tabular}\label{tab:PSgStatErr}
 \end{table}%
 
 実際，$g$ 因子の値を考えるときは1 層目と4 層目とのコインシデンスをとったものが銅板にミューオンがあたった上で検出器に飛来したような貫通イベントをとれている可能性が高く磁場の影響を受けた$e^{+}$ が多いと考えられることからも妥当であると考えると，得られた$g$ 因子の値は
