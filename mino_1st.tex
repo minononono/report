@@ -230,7 +230,7 @@ f(t) = A\exp(-t / \tau)+C \label{eq:lifetime}
 \begin{figure}[H]
 \centering
 \includegraphics[width  = 0.7\textwidth]{figure/mino/lifetime_NaI_ratio.eps}
-\caption{寿命フィッティング}
+\caption{図~\ref{fig:no_mag} のヒストグラムに$f(t)$ でフィッティングを行った結果}
 \end{figure}
 
 %--------- g factor ---------------------------------------------------------------
@@ -270,7 +270,7 @@ RUN19 & 2.126 $\pm$ 0.030 & 4.630 $\pm$ 0.015 & 2.038 $\pm$ 0.007 \\ \bottomrule
 \end{minipage}
 \end{figure}
 
-また，磁場の測定誤差を含んだ$g$ 因子の統計誤差については，磁場の誤差$\delta B$ を考慮するとプラスチックシンチレータで求めた誤差伝播の式\eqref{eq:PSgosa}より，$g$ 因子の誤差$\sigma_{B}$ は表~\ref{tab:g_error} の値が得られた．
+また，磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差については，磁場の誤差$\delta B$ を考慮するとプラスチックシンチレータで求めた誤差伝播の式\eqref{eq:PSgosa}より，$g$ 因子の誤差$\sigma_{B}$ は表~\ref{tab:g_error} の値が得られた．
 
 \begin{table}[H]%g因子の統計誤差(磁場)
 \caption{磁場による$g$ 因子の誤差の伝播}
@@ -316,7 +316,7 @@ RUN19 & 2.020 & 2.038 & 2.046 \\ \bottomrule
 \end{table}
 
 RUN18 とRUN19 の$g$ 因子の統計誤差と系統誤差を表\ref{tab:NaIggosamatome}にまとめる．
-ここで誤差の第一項は磁場の影響を含めた統計誤差であり，第二項はビームプロファイルの不定性による系統誤差である．
+ここで誤差の第一項は統計誤差であり，第二項はビームプロファイルの不定性による系統誤差である．
 
 \begin{table}[H]%g因子の誤差のまとめ
 \caption{$g$ 因子の誤差のまとめ}
@@ -331,6 +331,7 @@ RUN19 & $2.038 \pm 0.089^{+0.008}_{-0.018} $  \\ \bottomrule
 \endgroup
 \end{table}
 
+RUN19はRUN18に比べてevent数が多いが，磁場測定機器の測定誤差を含んだ$g$ 因子の統計誤差が支配的なためRUN19の統計誤差の方が大きくなっている．\\
 二つの値をまとめて，$g = 2.062 \pm 0.050^{+0.009}_{-0.020}$ という値が得られた．ここで系統誤差は二つのうち大きい方を選んだ．
 
 \subsubsection{プラスチックシンチレータとの位相差の確認}
