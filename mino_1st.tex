@@ -270,6 +270,19 @@ RUN19 & 2.126 $\pm$ 0.030 & 4.630 $\pm$ 0.015 & 2.038 $\pm$ 0.007 \\ \bottomrule
 \end{minipage}
 \end{figure}
 
+また，磁場の測定誤差を含んだ$g$ 因子の統計誤差については，磁場の誤差$\delta B$ を考慮するとプラスチックシンチレータで求めた誤差伝播の式\eqref{eq:PSgosa}より，$g$ 因子の誤差$\sigma_{B}$ は表~\ref{tab:g_error} の値が得られた．
+
+\begin{table}[H]%g因子の統計誤差(磁場)
+\caption{磁場による$g$ 因子の誤差の伝播}
+\centering
+\begin{tabular}{ccc}\toprule
+{} & $\delta B~[\mathrm{G}]$ &  $\sigma_{B}$  \\ \midrule
+RUN18 & 1.20 & 0.046  \\
+RUN19 & 2.36 & 0.089 \\ \bottomrule
+\end{tabular}
+\label{tab:g_error}
+\end{table}
+
 %-------- systematic error -------------------------------------------------------
 
 \subsubsection{磁場の系統誤差について}
@@ -289,7 +302,7 @@ RUN19 & 54.44\;($\sigma_{x}=3.9，\sigma_{y}=1.0$) & 53.76\;($\sigma_{x}=3.9，\
 \label{tab:mag_max_min}
 \end{table}
 
-磁場が最大・最小，そしてもとのビームプロファイルのときの$g$ 因子を表\ref{tab:mag_g}に示す．また，磁場の測定誤差を含んだ$g$ 因子の統計誤差については，磁場の誤差$\delta B$ を考慮するとプラスチックシンチレータで求めた誤差伝播の式\eqref{eq:PSgosa}より，$g$ 因子の誤差$\sigma_{B}$ は表~\ref{tab:g_error} の値が得られた．
+磁場が最大・最小，そしてもとのビームプロファイルのときの$g$ 因子を表\ref{tab:mag_g}に示す．
 
 \begin{table}[H]
 \caption{磁場$B$ の値とそれらに対応する$g$ 因子の値}
@@ -300,17 +313,6 @@ RUN18 & 2.066 & 2.086 & 2.095 \\
 RUN19 & 2.020 & 2.038 & 2.046 \\ \bottomrule
 \end{tabular}
 \label{tab:mag_g}
-\end{table}
-
-\begin{table}[H]%g因子の系統誤差(磁場)
-\caption{磁場による$g$ 因子の誤差の伝播}
-\centering
-\begin{tabular}{ccc}\toprule
-{} & $\delta B~[\mathrm{G}]$ &  $\sigma_{B}$  \\ \midrule
-RUN18 & 1.20 & 0.046  \\
-RUN19 & 2.36 & 0.089 \\ \bottomrule
-\end{tabular}
-\label{tab:g_error}
 \end{table}
 
 RUN18 とRUN19 の$g$ 因子の統計誤差と系統誤差を表\ref{tab:NaIggosamatome}にまとめる．
