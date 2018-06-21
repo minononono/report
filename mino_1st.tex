@@ -14,13 +14,13 @@
 \subsection{信号解析}
 NaI 検出器で測定した波形解析の手法について述べる．
 測定波形の中で典型的なものを\figref{hatano_fig:rawdata} に示す．
-波形解析ではここからフィンガーカウンター（チャンネル1 ）が鳴っているという条件を課したときにNaI で測定したエネルギーと信号の時刻という2 つの情報を抽出した．
+波形解析ではここからフィンガーカウンター（チャンネル1）が鳴っているという条件を課したときにNaI で測定したエネルギーと信号の時刻という2 つの情報を抽出した．
 この際に信号のノイズとNaI と波形の重なり（以下，パイルアップとよぶ）の2 つが解析時の注意点となった．
 前者は信号が鳴ったという判定をするためのピーク検出をする際に問題となる．
-具体的には，本来1 つの$e^+$ からの信号であるのにノイズの影響で複数のピークとして認識してしまう．
+具体的には，本来1 つの$e^+$ からの信号であるのに，ノイズの影響で複数のピークとして認識してしまう．
 そのため，今回の解析ではノイズ除去の処理を最初に行った．
 その後ピーク検出を行った後に時間情報とエネルギー情報を取り出す．
-この際にパイルアップの処理をしないまま適当な領域で積分を行いエネルギーを求めると，別の$e^+$ からの信号でエネルギーが大きく見積もられてしまう．
+この際，パイルアップの処理をしないまま適当な領域で積分を行いエネルギーを求めると，別の$e^+$ からの信号でエネルギーが大きく見積もられてしまう．
 このため，今回の解析では波形データのサンプリングを行い，それに基づきパイルアップしてない部分の波形からパイルアップしている部分に外挿し，その分の補正を行った．
 以下具体的な処理について述べる．
 
@@ -50,7 +50,7 @@ NaI 検出器で測定した波形解析の手法について述べる．
 以上のノイズ除去を行った信号を元にピーク検出を行うことを考える．
 基本的にはthresholdを適切に設定しそれを超えたところからピークが始まったと考えることにする．
 ただし，この方法ではパイルアップしている際には過剰に信号を検出してしまう可能性がある．
-すなわち，別の信号と重なってそれがオフセットになりthreshold が下がっているのと同じ状態になり，低エネルギーの信号を拾いやすくなる．
+すなわち，別の信号と重なってそれがオフセットになることでthreshold が下がっているのと同じ状態になり，低エネルギーの信号を拾いやすくなる．
 そのため，threshold のbaseline となる値を信号が来る前の最小値とすることにした．その手法の模式図を\figref{hatano_fig:threshold}に示す．
 
 \begin{figure}[hbt]
@@ -75,6 +75,7 @@ NaI 検出器で測定した波形解析の手法について述べる．
 NaIは減衰時間が長く主にその部分でパイルアップが起きていると考えた．
 すなわち，ピークの部分は全て検出できているとし立ち下がる部分によるパイルアップのみに対処した．
 具体的には波形データのサンプルから減衰時間を測定し，それを元にピークから立ち下がり部分に$\exp(-t/\tau)$ （$\tau$: 減衰時間）の関数を仮定して外挿をするというアプローチをとった．
+
 まず，ピーク検出された信号のうちパイルアップしていない信号の減衰部分に対して指数関数でフィッティングを行った．
 パイルアップしていない信号は，次のピーク信号がくるまで400~ns 以上の間隔があるものと定義した．
 また減衰部分の領域はピーク部分の影響やバックグラウンド部分の影響を減らすため，ピークから80~ns 後から次の信号が来るまでの最後の10~\% を外した領域とした．
@@ -92,6 +93,7 @@ NaIは減衰時間が長く主にその部分でパイルアップが起きて�
 チャンネル7 のヒストグラムは2 峰になっているが，これは異なる減衰特性の2 つのNaI の信号をアナログ的に加算したためと考えられる．
 他のチャンネルのデータのピーク値もある程度のばらつきがある事が確認される．
 また外挿の際にはピークからそれがアナログ的に加算したNaI のどちらからの信号であるかを識別する事はできないため，これらを選別することを考えず各チャンネル毎に減衰時間を単純に平均し，それを減衰時間とした．
+その結果が\tabref{hatano_tab:decaytime}である．
 
 \begin{figure}[hbt]
 \centering
@@ -99,8 +101,6 @@ NaIは減衰時間が長く主にその部分でパイルアップが起きて�
 \caption{NaI の減衰時間の測定．チャンネル7が2峰あるのは異なる減衰特性の2つのNaIの信号をアナログ的に加算したためと考えられる．}
 \label{hatano_fig:decaytime}
 \end{figure}
-
-その結果が\tabref{hatano_tab:decaytime}である．
 
 \begin{table}[hbt]
 \centering
@@ -138,7 +138,7 @@ NaIは減衰時間が長く主にその部分でパイルアップが起きて�
 \begin{figure}[hbt]
 \centering
 \includegraphics[width=0.6\textwidth]{figure/hatano/coincidence.eps}
-\caption{フィンガーカウンターと各NaI の時間差}
+\caption{フィンガーカウンターと各NaI の時間差．}
 \label{hatano_fig:coincidence}
 \end{figure}
 
@@ -168,17 +168,17 @@ RUN19 & 53.97 & 297 & 446578 \\ \bottomrule
 \begin{figure}[H]
 \centering
 \includegraphics[width  = 0.5\textwidth]{figure/mino/no_mag.eps}
-\caption{磁場がないときの時間分布 (RUN15)}
+\caption{磁場がないときの時間分布 (RUN15)．}
 \label{fig:no_mag}
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width  = 1.0\textwidth]{figure/mino/with_mag_RUN18.eps}
-\caption{磁場があるときの時間分布 (RUN18)}
+\caption{磁場があるときの時間分布 (RUN18)．}
 \end{minipage}
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width  = 1.0\textwidth]{figure/mino/with_mag_RUN19.eps}
-\caption{磁場があるときの時間分布 (RUN19)}
+\caption{磁場があるときの時間分布 (RUN19)．}
 \label{fig:with_mag_RUN19}
 \end{minipage}
 \end{figure}
@@ -193,24 +193,24 @@ RUN19 & 53.97 & 297 & 446578 \\ \bottomrule
 \begin{figure}[H]%TQ compensation check
 \centering
 \includegraphics[width  = 0.5\textwidth]{figure/mino/Original.eps}
-\caption{中心のNaI とフィンガーカウンターの時間差}
+\caption{中心のNaI とフィンガーカウンターの時間差．時間差はエネルギーに依存していないことがわかる．ただし，エネルギーが5~MeV より小さいところでは時間差のばらつきが大きい．}
 \label{fig:Original}
 \end{figure}
 
-ただし，低エネルギーでは波形信号が小さい影響で高エネルギー側と比べて時間分解能が悪いため，5~MeV より高いエネルギーの信号を用いて解析を行った．図~\ref{fig:NaI_peak_gaus_fitting} は0-4~MeVの低エネルギーのイベントを1~MeV 毎に区切って時刻をガウシアンでフィッティングしたものである．
+ただし，低エネルギーでは波形信号が小さい影響で高エネルギー側と比べて時間分解能が悪いため，5~MeV より高いエネルギーの信号を用いて解析を行った．図~\ref{fig:NaI_peak_gaus_fitting} は0 - 4~MeVの低エネルギーのイベントを1~MeV 毎に区切って時刻をガウシアンでフィッティングしたものである．
 また，図~\ref{fig:NaI_peak_time_resolution} はフィッティングで得られたガウシアンの$\sigma$ を，エネルギーの関数としてプロットしたもので，低エネルギーは時間分解能が悪いことが確認できる．
 
 \begin{figure}[H]%time resolution
 \begin{minipage}{0.5\hsize}
 \centering
 \includegraphics[width  = 0.8\textwidth]{figure/mino/gausfitting_ratio.eps}
-\caption{0-4~MeVの低エネルギーのイベントを1~MeV 毎に区切って時刻をガウシアンでフィッティング}
+\caption{0-4~MeVの低エネルギーのイベントを1~MeV 毎に区切って時刻をガウシアンでフィッティングした結果．}
 \label{fig:NaI_peak_gaus_fitting}
 \end{minipage}
 \begin{minipage}{0.5\hsize}
 \centering
 \includegraphics[width  = 0.8\textwidth]{figure/mino/timeresolution_ratio.eps}
-\caption{1~MeV 毎に時間分解能をプロット}
+\caption{1~MeV 毎に時間分解能をプロットした結果．}
 \label{fig:NaI_peak_time_resolution}
 \end{minipage}
 \end{figure}
@@ -230,7 +230,7 @@ f(t) = A\exp(-t / \tau)+C \label{eq:lifetime}
 \begin{figure}[H]
 \centering
 \includegraphics[width  = 0.7\textwidth]{figure/mino/lifetime_NaI_ratio.eps}
-\caption{図~\ref{fig:no_mag} のヒストグラムに$f(t)$ でフィッティングを行った結果}
+\caption{図~\ref{fig:no_mag} のヒストグラムに$f(t)$ でフィッティングを行った結果．}
 \end{figure}
 
 %--------- g factor ---------------------------------------------------------------
@@ -262,11 +262,11 @@ RUN19 & 2.126 $\pm$ 0.030 & 4.630 $\pm$ 0.015 & 2.038 $\pm$ 0.007 \\ \bottomrule
 \begin{figure}[H]
 \begin{minipage}{0.5\hsize}
 \includegraphics[width  = 1.0\textwidth]{figure/mino/gfactor_ratio_RUN18.eps}
-\caption{RUN18 を用いた$g$ 因子のフィッティング}
+\caption{RUN18 を用いた$g$ 因子のフィッティング．}
 \end{minipage}
 \begin{minipage}{0.5\hsize}
 \includegraphics[width  = 1.0\textwidth]{figure/mino/gfactor_ratio_RUN19.eps}
-\caption{RUN19 を用いた$g$ 因子のフィッティング}
+\caption{RUN19 を用いた$g$ 因子のフィッティング．}
 \end{minipage}
 \end{figure}
 
@@ -348,11 +348,11 @@ NaI シンチレータの$e^{+}$ ピーク探索とそれを用いた原点調�
 \begin{figure}[h]
 	\centering
 	\includegraphics[width = 0.9\textwidth]{figure/mino/NaITimeOrigin.eps}
-	\caption{(左) NaI シンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム}
+	\caption{(左) NaI シンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム．}
 	\label{fig:NaITimeOrigin}
 	%\includegraphics[width = 0.9\textwidth]{figure/mino/PSTimeOrigin.png}
 	\includegraphics[width = 0.9\textwidth]{figure/mino/PSOriginCheck.eps}
-	\caption{(左) プラスチックシンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム}
+	\caption{(左) プラスチックシンチレータにおける$e^{+}$ イベントの時刻分布．(右) 原点調節後のヒストグラム．}
 	\label{fig:PSTimeOrigin}
 \end{figure}
 
