@@ -33,7 +33,7 @@ $g$ 因子測定に用いた磁場印加標的を図~\ref{tar_mag} に示す．
 \begin{minipage}{0.45\hsize}
 \begin{center}
 \includegraphics[width=1\textwidth]{figure/tajima/cu_target.jpg}
-\caption{銅板標的}
+\caption{銅板標的．}
 \label{tar_cu}
 \end{center}
 \end{minipage}
@@ -41,7 +41,7 @@ $g$ 因子測定に用いた磁場印加標的を図~\ref{tar_mag} に示す．
 \begin{minipage}{0.45\hsize}
 \begin{center}
 \includegraphics[width=1\textwidth]{figure/tajima/mag.jpg}
-\caption{磁場発生装置と標的 \protect\footnotemark}
+\caption{磁場発生装置と標的 \protect\footnotemark．}
 \label{tar_mag}
 \end{center}
 \end{minipage}
@@ -49,20 +49,19 @@ $g$ 因子測定に用いた磁場印加標的を図~\ref{tar_mag} に示す．
 \footnotetext{写真では下方の磁石が外れているが，これは実験前に修復した．}
 
 \subsubsection{磁場の発生原理について: $\cos \theta$配置}
-磁場の生成には$\cos n \theta$ 巻き ($n=1$) の電磁石を参考にした．$\cos n \theta$ 巻きの電磁石の考え方は以下のものである．図~\ref{cos2}, \ref{cos4} のように，十分長い円環上を電流が$z$ 軸方向に流れているとする．この電流密度が$\cos n\theta$ （ここで$\theta$ は円柱座標 ($r，\theta，z$) における$\theta$ のことで，$n$ は整数）に比例したとする．すると原点付近の領域に， $2n$ 極磁場が形成されるというものである．導出の概略は，円環各点が形成する磁場をその点の周りでテーラー展開し，これを$\theta$ について積分すると$2n$ 極磁場を形成する項のみが残るというものである．\cite{mag}
-
+磁場の生成には$\cos n \theta$ 巻き ($n=1$) の電磁石を参考にした．$\cos n \theta$ 巻きの電磁石の考え方は以下のものである．図~\ref{cos2}, \ref{cos4} のように，十分長い円環上を電流が$z$ 軸方向に流れているとする．この電流密度が$\cos n\theta$ （ここで$\theta$ は円柱座標 ($r，\theta，z$) における$\theta$ のことで，$n$ は整数）に比例したとする．すると原点付近の領域に， $2n$ 極磁場が形成されるというものである．導出の概略は，円環各点が形成する磁場をその点の周りでテーラー展開し，これを$\theta$ について積分すると$2n$ 極磁場を形成する項のみが残るというものである\cite{magnet}．
 \begin{figure}[H]
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=0.8\textwidth]{figure/tajima/cos.png}
-\caption{$\cos\theta$ : 2 極磁石\cite{magnet}}
+\caption{$\cos\theta$ : 2 極磁石\cite{magnet}．}
 \label{cos2}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=0.7\textwidth]{figure/tajima/cos2.png}
-\caption{$\cos 2 \theta$ : 4 極磁石\cite{magnet}}
+\caption{$\cos 2 \theta$ : 4 極磁石\cite{magnet}．}
 \label{cos4}
 \end{minipage}
 \end{figure}
@@ -74,7 +73,7 @@ $g$ 因子測定に用いた磁場印加標的を図~\ref{tar_mag} に示す．
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{figure/tajima/femm_modify1-1.pdf}
-\caption{FEMMによる2次元シミュレーション}\label{femm}
+\caption{FEMMによる2次元シミュレーション結果．真ん中の赤線で囲まれた部分が銅板標的に対応する．}\label{femm}
 \end{figure}
 
 
@@ -113,18 +112,18 @@ PMT 名 & HV値 \\ \midrule
 \label{cosmicray}
 \end{figure}%
 
-宇宙線によるピークの部分を，Landau 関数をガウシアンで畳み込み積分した関数（以下，Langauss 関数と呼ぶ．）でフィッテイングを行った．ガウシアンで畳み込み積分をしたのは，プラスチックシンチレータとPMT で測定されるエネルギーには比較的大きいゆらぎがあるからである．そしてフィッテイングにより得られた最頻値をエネルギー損失12~MeV に対応する電荷量とした．ただし，最頻値に対応するエネルギー損失の見積もりは次の2つの仮定を基にしている．
+宇宙線によるピークの部分を，Landau 関数をガウシアンで畳み込み積分した関数（以下，Langauss 関数と呼ぶ．）でフィッティングを行った．ガウシアンで畳み込み積分をしたのは，プラスチックシンチレータとPMT で測定されるエネルギーには比較的大きいゆらぎがあるからである．そしてフィッテイングにより得られた最頻値をエネルギー損失12~MeV に対応する電荷量とした．ただし，最頻値に対応するエネルギー損失の見積もりは次の2つの仮定を基にしている．
 \begin{itemize}
 \item 宇宙線ミューオンは最小電離粒子でありプラスチックシンチレータ中でのエネルギー損失は$dE/dx \sim 2~\mathrm{MeV/cm}$ である．
 \item 最頻値をとるのは宇宙線がシンチレータの底面に対して垂直に入射したとき，すなわち1~層を通過する飛跡の長さが6~cm のときである．
 \end{itemize}
 この仮定から，1~層でのエネルギー損失の最頻値は$2~\mathrm{MeV/cm} \times 6~\mathrm{cm} = 12~\mathrm{MeV}$ に対応すると判断した\cite{leo}．
-さらにペデスタルをガウシアンでフィットしてエネルギーの0点に対応する電荷を求めた．図~\ref{ps_langau} は各チャンネルの積分電荷の分布をLangauss 関数(赤線)でフィッティングしたものである.図~\ref{ps_cali} は宇宙線較正の結果を図にしたものである．黒色の誤差バー付きの点が較正点，赤色の直線が二点を基に引いた直線である．
+さらにペデスタルをガウシアンでフィットしてエネルギーの0点に対応する電荷を求めた．図~\ref{ps_langau} は各チャンネルの積分電荷の分布をLangauss 関数 (赤線)でフィッティングしたものである．図~\ref{ps_cali} は宇宙線較正の結果を示したものである．黒色の誤差バー付きの点が較正点，赤色の直線が二点を基に引いた直線である．
 
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.7\textwidth,angle=-90]{figure/ikemitsu/fit_langau_modify.pdf}
-\caption{Langauss 関数を用いた宇宙線ピークのフィッティング．横軸を信号の電荷量の積分値~[pC],縦軸をカウント数とした. }
+\caption{Langauss 関数を用いた宇宙線ピークのフィッティング．横軸を信号の電荷量の積分値~[pC], 縦軸をカウント数とした．}
 \label{ps_langau}
 \end{figure} 
 \begin{figure}[H]
@@ -155,9 +154,9 @@ PMT 名 & HV値 \\ \midrule
 \subsubsection{NaI のゲイン測定}
 本実験で用いるNaI 検出器が出力する信号は，NaI の9 本とフィンガーカウンターの計10 個であった．一方でNaI の信号の処理に用いるWFD の入力できるチャンネル数は8 つであった．このため，WFD に入力する前にNaI からの信号をアナログの段階で足し合わせて信号の数を絞る必要があった．
 
-各ch 間で，NaI 結晶自体の発光量も違い，NaI に付属するPMT のゲインもHV 値（PMT にかける高電圧）に対する依存性が個体毎に大きく異なる．一方で，足し合わせるNaI の信号の大きさは同じエネルギーに対して同じにしなければならかったため，それぞれのNaI のゲインカーブの測定を行った．この測定したゲインからどのようにNaI の信号を足し合わせるかを決めた．
+各チャンネル間で，NaI 結晶自体の発光量も違い，NaI に付属するPMT のゲインもHV 値（PMT にかける高電圧）に対する依存性が個体毎に大きく異なる．一方で，足し合わせるNaI の信号の大きさは同じエネルギーに対して同じにしなければならかったため，それぞれのNaI のゲインカーブの測定を行った．この測定したゲインからどのようにNaI の信号を足し合わせるかを決めた．
 
-まずNaI のゲインを測定するためにHV 値を変えながら線源${}^{137}\mathrm{Cs}$ を用いて，検出器用に用意した計11本のNaI （1 から順番に11 まで番号を付けた）の電荷の測定を行った（この線源は661.7keV のガンマ線を放出する）\cite{IAEA_ENSDF} ．プラスチックシンチレータの宇宙線較正と同様にして，WFD からの電圧信号から電荷分布を得た．これを光電ピークと考えられるところでそれぞれガウシアンでフィッティングし，得られた平均値をゲインとした．さらにゲインについて以下の式が成り立つとし，両対数でフィッティングを行った\cite{Hamamatsu_PMT} ．
+まずNaI のゲインを測定するためにHV 値を変えながら線源${}^{137}\mathrm{Cs}$ を用いて，検出器用に用意した計11本のNaI （1 から順番に11 まで番号を付けた）の電荷の測定を行った（この線源は661.7keV のガンマ線を放出する）\cite{IAEA_ENSDF}．プラスチックシンチレータの宇宙線較正と同様にして，WFD からの電圧信号から電荷分布を得た．これを光電ピークと考えられるところでそれぞれガウシアンでフィッティングし，得られた平均値をゲインとした．さらにゲインについて以下の式が成り立つとし，両対数でフィッティングを行った．\cite{Hamamatsu_PMT} ．
 \begin{equation}
 \mathrm{Gain}~[\mathrm{pC}] = a \times \mathrm{HV}~[\mathrm{kV}]^b \label{gain_curve}  
 \end{equation}
@@ -176,7 +175,7 @@ PMT 名 & HV値 \\ \midrule
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=1.1\textwidth]{figure/tajima/charge_resolution.eps}
-\caption{ゲインと分解能の対応．横軸を分解能，縦軸をゲイン~[pC]1とした．}
+\caption{ゲインと分解能の対応．横軸を分解能，縦軸をゲイン~[pC]とした．}
 \label{resoHV}
 \end{minipage}
 \end{figure}
@@ -269,7 +268,7 @@ NaI でエネルギーを測定するために， 宇宙線を用いてエネル
 \centering
 \hspace*{-1em}
 \includegraphics[width=1\textwidth]{figure/tajima/NaI7_Setup2.eps}
-\caption{あるセットアップにおける宇宙線測定の結果をLangauss 関数でフィッテイングしたもの．横軸を電荷量~[pC]，縦軸をカウント数とした．}\label{langau}
+\caption{あるセットアップにおける宇宙線測定の結果をLangauss 関数でフィッテイングした結果．横軸を電荷量~[pC]，縦軸をカウント数とした．}\label{langau}
 \end{minipage}\hfill
 \begin{minipage}{0.45\hsize}
 \centering
@@ -295,17 +294,18 @@ $g$ 因子測定のための磁場装置の測定を3 軸テスラメータで�
 \centering
 \caption{各点の磁場の強さ（磁石が外れる前）}\label{MF1}
 \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}\hline
-$y \backslash x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\ \hline \hline
-3 & 51.48 & 54.98 & 55.33 & 55.55 & 55.42 & 54.77 & 54.44 & 53.27 & 51.75 \\ \hline
-2 & 56.25 & 56.78 & 56.87 & 56.84 & 56.41 & 56.16 & 55.93 & 55.71 & 55.35 \\ \hline
-1 & 57.15 & 57.50 & 57.39 & 57.11 & 56.72 & 56.53 & 56.48 & 56.50 & 56.44 \\ \hline
+$y \backslash x$ & -40 & -30 & -20 & -10 & 0 & 10 & 20 & 30 & 40 \\ \hline \hline
+30 & 51.48 & 54.98 & 55.33 & 55.55 & 55.42 & 54.77 & 54.44 & 53.27 & 51.75 \\ \hline
+20 & 56.25 & 56.78 & 56.87 & 56.84 & 56.41 & 56.16 & 55.93 & 55.71 & 55.35 \\ \hline
+10 & 57.15 & 57.50 & 57.39 & 57.11 & 56.72 & 56.53 & 56.48 & 56.50 & 56.44 \\ \hline
 0 & 57.60 & 57.49 & 57.19 & 56.72 & 56.54 & 56.48 & 56.53 & 56.58 & 55.98 \\ \hline
--1 & 56.66 & 56.78 & 56.66 & 56.48 & 56.39 & 56.34 & 56.35 & 56.31 & 56.12 \\ \hline
--2 & 53.45 & 54.74 & 55.29 & 55.54 & 55.60 & 55.60 & 55.53 & 55.14 & 54.3 \\ \hline
--3 & 50.62 & 51.95 & 53.45 & 53.93 & 54.20 & 54.20 & 54.05 & 53.11 & 51.25 \\ \hline
+-10 & 56.66 & 56.78 & 56.66 & 56.48 & 56.39 & 56.34 & 56.35 & 56.31 & 56.12 \\ \hline
+-20 & 53.45 & 54.74 & 55.29 & 55.54 & 55.60 & 55.60 & 55.53 & 55.14 & 54.3 \\ \hline
+-30 & 50.62 & 51.95 & 53.45 & 53.93 & 54.20 & 54.20 & 54.05 & 53.11 & 51.25 \\ \hline
 \end{tabular}
 \end{table}
 \begin{figure}[H]
+\centering
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=1\textwidth]{figure/tajima/mag1.eps}
@@ -326,17 +326,18 @@ $y \backslash x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\ \hline \hline
 \centering
 \caption{各点の磁場の強さ(磁石が外れた後)}\label{MF2}
 \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}\hline
-$y \backslash x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 \\ \hline \hline
-3 & 55.41 & 55.93 & 55.79 & 54.78 & 53.30 & 50.73 & 46.89 & 46.34 & 41.95 \\ \hline
-2 & 57.25 & 57.06 & 56.28 & 54.92 & 53.77 & 52.01 & 49.83 & 48.45 & 48.44 \\ \hline
-1 & 57.72 & 57.30 & 56.52 & 55.61 & 54.34 & 52.97 & 51.84 & 51.08 & 50.49 \\ \hline
+$y \backslash x$ & -40 & -30 & -20 & -10 & 0 & 10 & 20 & 30 & 40 \\ \hline \hline
+30 & 55.41 & 55.93 & 55.79 & 54.78 & 53.30 & 50.73 & 46.89 & 46.34 & 41.95 \\ \hline
+20 & 57.25 & 57.06 & 56.28 & 54.92 & 53.77 & 52.01 & 49.83 & 48.45 & 48.44 \\ \hline
+10 & 57.72 & 57.30 & 56.52 & 55.61 & 54.34 & 52.97 & 51.84 & 51.08 & 50.49 \\ \hline
 0 & 57.55 & 56.94 & 56.30 & 55.54 & 54.61 & 53.67 & 52.98 & 52.40 & 52.34 \\ \hline
--1 & 57.00 & 56.57 & 55.94 & 55.24 & 54.58 & 53.99 & 53.45 & 53.05 & 52.73 \\ \hline
--2 & 55.48 & 55.37 & 55.04 & 54.64 & 54.30 & 53.83 & 53.39 & 52.53 & 51.81 \\ \hline
--3 & 52.23 & 53.03 & 53.28 & 53.29 & 53.18 & 52.71 & 52.00 & 51.51 & 50.12 \\ \hline
+-10 & 57.00 & 56.57 & 55.94 & 55.24 & 54.58 & 53.99 & 53.45 & 53.05 & 52.73 \\ \hline
+-20 & 55.48 & 55.37 & 55.04 & 54.64 & 54.30 & 53.83 & 53.39 & 52.53 & 51.81 \\ \hline
+-30 & 52.23 & 53.03 & 53.28 & 53.29 & 53.18 & 52.71 & 52.00 & 51.51 & 50.12 \\ \hline
 \end{tabular}
 \end{table}
 \begin{figure}[H]
+\centering
 \begin{minipage}{0.45\hsize}
 \centering
 \includegraphics[width=1\textwidth]{figure/tajima/mag2.eps}
