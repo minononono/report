@@ -181,26 +181,31 @@ g(t) = A \exp(-t / \tau) [1 + B \cos(\delta + \omega t)] + \mathrm{const.}
 	\end{tabular}\label{tab:PSgFactor}
 \end{table}%
 
-さらに磁場の統計誤差を含んだ$g$ 因子の統計誤差については，誤差伝播の式，式\eqref{eq:PSgosa} を用いて計算した．
+\subsubsection{磁場による$g$~因子の系統誤差について}
+\label{subsubsec:MagSysErr}
+
+磁場に誤差は二種類あり，一つは各測定点の統計誤差を加重平均にて伝播させたもの，もう一つはビームプロファイルの不定性に由来するものである．
+これらの誤差を$g$ 因子の系統誤差とした，誤差伝播の式，式\eqref{eq:PSgosa} を用いて計算した．
 \begin{equation}
 \delta g = \sqrt{\left(\delta\omega\right)^{2}\left(\frac{\partial g}{\partial\omega}\right)^{2} + \left(\delta B\right)^{2}\left(\frac{\partial g}{\partial B}\right)^{2}}
 \label{eq:PSgosa}
 \end{equation}%
-ここで，$\delta B$ は63 の各計測点で得られた標準偏差をビームプロファイルで重み付けしたものであり，$\delta B = 0.01~\mathrm{G}$ なので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
-\begin{table}
-	\centering
-	\caption{磁場の統計誤差を含んだ$g$ 因子の統計誤差}
-	\begin{tabular}{cc}\toprule
-	層番号 & $g$ 因子の統計誤差\\ \midrule
-	1 & 0.002 \\ 
-	2 & 0.002 \\
-	4 & 0.002 \\ \bottomrule
-	\end{tabular}\label{tab:PSgStatErr}
-\end{table}%
+まず前者の系統誤差について記す．
+磁場の統計誤差は予備実験から$\delta B = 0.01~\mathrm{G}$である．これを式~\eqref{eq:PSgosa}で伝播させた結果，各層における$g$~因子の誤差は$0.001$より小さくなった．
+この値は最小有効桁より小さいので，後者の系統誤差のみを考えることにした．
+%ここで，$\delta B$ は63 の各計測点で得られた標準偏差をビームプロファイルで重み付けしたものであり，$\delta B = 0.01~\mathrm{G}$ なので，$\delta g$ は表~\ref{tab:PSgStatErr} のようになった．
+%\begin{table}
+%	\centering
+%	\caption{磁場の統計誤差を含んだ$g$ 因子の統計誤差}
+%	\begin{tabular}{cc}\toprule
+%	層番号 & $g$ 因子の統計誤差\\ \midrule
+%	1 & 0.002 \\ 
+%	2 & 0.002 \\
+%	4 & 0.002 \\ \bottomrule
+%	\end{tabular}\label{tab:PSgStatErr}
+%\end{table}%
 
-\subsubsection{磁場の系統誤差について}
-\label{subsubsec:MagSysErr}
-
+次に後者の系統誤差について記す．
 \ref{subsubsec:PSgFactor} において$g$ 因子解析に用いた磁場の値$B = 53.97~\mathrm{G}$ は事前にMLF の三宅さんから頂いたビームプロファイルをもとに加重平均をとった値であるが，このビームプロファイルの不定性により加重平均の値は変化する．
 今回はビームの広がりはガウシアンにしたがって分布すると仮定したうえでガウシアンの広がりを変化させ，それによる磁場への影響をみた．
 
@@ -236,7 +241,7 @@ $\sigma_{x}, \sigma_{y}$ を動かす範囲は磁場標的の大きさが事前�
 実際，$g$ 因子の値を考えるときは1 層目と4 層目とのコインシデンスをとったものが銅板にミューオンがあたった上で検出器に飛来したような貫通イベントをとれている可能性が高く磁場の影響を受けた$e^{+}$ が多いと考えられることからも妥当であると考えると，得られた$g$ 因子の値は
 \[g = 2.017 \pm 0.002 ^{+0.008}_{-0.017}\]
 となった．
-ここで誤差の第一項は統計誤差であり，第二項はビームプロフィルの不定性による系統誤差である．
+ここで誤差の第一項は統計誤差であり，第二項は磁場による系統誤差である．
 
 %以下二つはAppendix にまわす？
 %%%%%%%%%%%%%%%
