@@ -22,7 +22,7 @@ P(a) = \prod_{i=1}^N \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(y_i-f_a(x_i)
 すると$P(p)$ （尤度関数）が最も大きくなる$a$ が推定値(最尤推定値)である．
 ここで尤度関数の対数をとると，
 \begin{equation}
-  \log(P(a)) = C + \sigma_{i=1}^N \left(-\frac{(y_i-f_a(x_i))^2}{2{\sigma_i}^2}\right)
+  \log(P(a)) = C + \sum_{i=1}^N \left(-\frac{(y_i-f_a(x_i))^2}{2{\sigma_i}^2}\right)
 \end{equation}
 となる．
 ここで第一項は分散のみから決まり無視でき，第二項は負の値なのでここを$-\chi^2$ とおく．この時に尤度関数を最も大きくするときは$-\chi^2$ を最小にした時である．
